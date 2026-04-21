@@ -1,0 +1,53 @@
+/* Styles.css de CardPrincipal */
+
+.pelicula-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb; /* El gris clarito de la muestra */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra casi invisible */
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pelicula-card:hover {
+  transform: translateY(-2px); /* Un toque de interactividad */
+}
+
+/* El Header: Título y Botones en la misma línea */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Contenedor de info secundaria (Director y Año) */
+/* Los ponemos en una línea para que no ocupen tanto espacio */
+.info-secundaria {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+  color: #6b7280; /* Gris de la muestra */
+  font-size: 0.9rem;
+}
+
+/* Los botones de acción (Editar/Eliminar) */
+.botones {
+  display: flex;
+  justify-content: flex-end; /* Los tira a la derecha */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Si quieres que la imagen no sea gigante */
+.imagen img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover; /* Para que no se deforme */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

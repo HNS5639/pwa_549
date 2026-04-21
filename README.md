@@ -1,2 +1,1 @@
-# pwa_549
-Trabajo practico con dominio propio de Programacion Web Avanzada del grupo +549
+README  provisorio, solo por el momento. Pero este en teoria es el repositorio del trabajo practico. 

@@ -1,0 +1,57 @@
+.formulario-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Para que no se estire demasiado */
+  margin: 2rem auto; /* Centra el form en la página */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.pares{
+  flex-direction: row;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #f9fafb; /* Fondo apenas gris */
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0f172a; /* El color oscuro que venimos usando */
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+  background-color: #fff;
+}
+
+.form-group textarea {
+  resize: vertical; /* Permite estirar abajo pero no a los costados */
+  min-height: 100px;
+}
+
+.form-botones {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}

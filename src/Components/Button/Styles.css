@@ -1,0 +1,50 @@
+/* estilo para los botones (debería definir alguna variable para el color background */
+.boton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* esquinas redondeadas */
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease; /* suaviza hover */
+}
+
+/* hover */
+.boton:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* pequeño zoom */
+}
+
+/* centrar el botón */
+.contenedor {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
+
+.btn-agregar {
+  background-color: var(--btn-dark);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio para el iconito de '+' */
+}
+
+.btn-agregar:hover {
+  opacity: 0.9;
+}
+
+/* Para las etiquetas "Serie" o "Película" dentro de la card */
+.badge {
+  background-color: #f3f4f6;
+  color: var(--text-gray);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}

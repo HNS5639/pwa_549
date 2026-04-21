@@ -1,0 +1,22 @@
+footer {
+  width: 95%;
+  padding: 2rem 1rem;
+  margin-top: 4rem; /* Espacio extra para que no se pegue a las tarjetas */
+  border-top: 1px solid #e5e7eb; /* La misma línea sutil que el header */
+  text-align: center;
+  background-color: #ffffff;
+}
+
+footer p {
+  color: #6b7280; /* Gris muted */
+  font-size: 0.85rem;
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+/* Un detalle para el nombre del grupo */
+footer p:last-child {
+  font-weight: 600;
+  color: #374151; /* Un gris un poquito más oscuro */
+  letter-spacing: 0.5px;
+}
