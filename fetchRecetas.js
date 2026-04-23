@@ -1,6 +1,6 @@
 import fs from 'fs';
 // 1. Configuración
-const API_KEY = 'a18d22895d594d5b84b0763012d2e1d8'; // Reemplaza esto con tu key real
+const API_KEY = 'key'; // 
 const AMOUNT = 100; // Cantidad de recetas
 const URL = `https://api.spoonacular.com/recipes/random?number=${AMOUNT}&apiKey=${API_KEY}`;
 
