@@ -1,18 +1,22 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar/Navbar'
-import './App.css'
-import { BrowserRouter } from 'react-router'
+import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router";
+import Favorites from "./pages/Favorites/Favorites";
+import Home from "./pages/Home/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <BrowserRouter>
-    <Navbar />
-    <h1>app</h1>
+      <Navbar />
+      <RouterRoutes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </RouterRoutes>
+      <Footer />
     </BrowserRouter>
-
-  )
+  );
 }
 
-export default App
+export default App;

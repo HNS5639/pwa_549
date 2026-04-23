@@ -8,7 +8,6 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <LanguageProvider>
       <App />
-      <h1>app</h1>
     </LanguageProvider>
   </StrictMode>,
 );
