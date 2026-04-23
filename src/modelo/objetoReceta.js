@@ -17,7 +17,7 @@ const receta= {
         "string: ingregiente 1",
         "string: ingrediente 2"
       ],
-      "instructions": [ //array de instrucciones (pasos)
+      instructions: [ //array de instrucciones (pasos)
         "string: paso 1",
         "string: paso 2"
       ]
