@@ -41,7 +41,7 @@ export const recetario = [
   {
     id: 660261,
     image: "https://img.spoonacular.com/recipes/660261-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 10,
     dietary: {
@@ -90,7 +90,7 @@ export const recetario = [
   {
     id: 636207,
     image: "https://img.spoonacular.com/recipes/636207-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -141,7 +141,7 @@ export const recetario = [
   {
     id: 636581,
     image: "https://img.spoonacular.com/recipes/636581-556x370.",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 8,
     dietary: {
@@ -240,7 +240,7 @@ export const recetario = [
   {
     id: 640318,
     image: "https://img.spoonacular.com/recipes/640318-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 25,
     servings: 2,
     dietary: {
@@ -289,7 +289,7 @@ export const recetario = [
   {
     id: 645647,
     image: "https://img.spoonacular.com/recipes/645647-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -340,7 +340,7 @@ export const recetario = [
   {
     id: 642556,
     image: "https://img.spoonacular.com/recipes/642556-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 75,
     servings: 4,
     dietary: {
@@ -389,7 +389,7 @@ export const recetario = [
   {
     id: 716424,
     image: "https://img.spoonacular.com/recipes/716424-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 1,
     dietary: {
@@ -424,7 +424,7 @@ export const recetario = [
   {
     id: 665203,
     image: "https://img.spoonacular.com/recipes/665203-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 6,
     dietary: {
@@ -481,7 +481,7 @@ export const recetario = [
   {
     id: 665484,
     image: "https://img.spoonacular.com/recipes/665484-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 24,
     dietary: {
@@ -532,7 +532,7 @@ export const recetario = [
   {
     id: 634345,
     image: "https://img.spoonacular.com/recipes/634345-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -583,7 +583,7 @@ export const recetario = [
   {
     id: 651765,
     image: "https://img.spoonacular.com/recipes/651765-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 2,
     dietary: {
@@ -648,7 +648,7 @@ export const recetario = [
   {
     id: 649328,
     image: "https://img.spoonacular.com/recipes/649328-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 20,
     dietary: {
@@ -707,7 +707,7 @@ export const recetario = [
   {
     id: 641732,
     image: "https://img.spoonacular.com/recipes/641732-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -748,7 +748,7 @@ export const recetario = [
   {
     id: 641145,
     image: "https://img.spoonacular.com/recipes/641145-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 75,
     servings: 4,
     dietary: {
@@ -807,7 +807,7 @@ export const recetario = [
   {
     id: 665257,
     image: "https://img.spoonacular.com/recipes/665257-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 24,
     dietary: {
@@ -870,7 +870,7 @@ export const recetario = [
   {
     id: 635675,
     image: "https://img.spoonacular.com/recipes/635675-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 6,
     dietary: {
@@ -973,7 +973,7 @@ export const recetario = [
   {
     id: 663050,
     image: "https://img.spoonacular.com/recipes/663050-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 15,
     servings: 4,
     dietary: {
@@ -1032,7 +1032,7 @@ export const recetario = [
   {
     id: 663845,
     image: "https://img.spoonacular.com/recipes/663845-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 1,
     dietary: {
@@ -1073,7 +1073,7 @@ export const recetario = [
   {
     id: 646626,
     image: "https://img.spoonacular.com/recipes/646626-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -1138,7 +1138,7 @@ export const recetario = [
   {
     id: 637014,
     image: "https://img.spoonacular.com/recipes/637014-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 180,
     servings: 10,
     dietary: {
@@ -1193,7 +1193,7 @@ export const recetario = [
   {
     id: 637658,
     image: "https://img.spoonacular.com/recipes/637658-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -1258,7 +1258,7 @@ export const recetario = [
   {
     id: 646982,
     image: "https://img.spoonacular.com/recipes/646982-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 25,
     servings: 2,
     dietary: {
@@ -1313,7 +1313,7 @@ export const recetario = [
   {
     id: 631783,
     image: "https://img.spoonacular.com/recipes/631783-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 24,
     dietary: {
@@ -1376,7 +1376,7 @@ export const recetario = [
   {
     id: 645696,
     image: "https://img.spoonacular.com/recipes/645696-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 5,
     dietary: {
@@ -1441,7 +1441,7 @@ export const recetario = [
   {
     id: 716409,
     image: "https://img.spoonacular.com/recipes/716409-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 2,
     dietary: {
@@ -1482,7 +1482,7 @@ export const recetario = [
   {
     id: 643916,
     image: "https://img.spoonacular.com/recipes/643916-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 8,
     dietary: {
@@ -1547,7 +1547,7 @@ export const recetario = [
   {
     id: 636131,
     image: "https://img.spoonacular.com/recipes/636131-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 8,
     dietary: {
@@ -1612,7 +1612,7 @@ export const recetario = [
   {
     id: 634588,
     image: "https://img.spoonacular.com/recipes/634588-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 8,
     dietary: {
@@ -1689,7 +1689,7 @@ export const recetario = [
   {
     id: 641261,
     image: "https://img.spoonacular.com/recipes/641261-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -1752,7 +1752,7 @@ export const recetario = [
   {
     id: 716627,
     image: "https://img.spoonacular.com/recipes/716627-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 35,
     servings: 2,
     dietary: {
@@ -1809,7 +1809,7 @@ export const recetario = [
   {
     id: 640383,
     image: "https://img.spoonacular.com/recipes/640383-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 60,
     servings: 6,
     dietary: {
@@ -1862,7 +1862,7 @@ export const recetario = [
   {
     id: 640185,
     image: "https://img.spoonacular.com/recipes/640185-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 3,
     dietary: {
@@ -1951,7 +1951,7 @@ export const recetario = [
   {
     id: 651585,
     image: "https://img.spoonacular.com/recipes/651585-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 6,
     dietary: {
@@ -2018,7 +2018,7 @@ export const recetario = [
   {
     id: 664101,
     image: "https://img.spoonacular.com/recipes/664101-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 8,
     dietary: {
@@ -2089,7 +2089,7 @@ export const recetario = [
   {
     id: 641745,
     image: "https://img.spoonacular.com/recipes/641745-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 12,
     dietary: {
@@ -2138,7 +2138,7 @@ export const recetario = [
   {
     id: 664392,
     image: "https://img.spoonacular.com/recipes/664392-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 9,
     dietary: {
@@ -2201,7 +2201,7 @@ export const recetario = [
   {
     id: 639512,
     image: "https://img.spoonacular.com/recipes/639512-556x370.png",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 2,
     dietary: {
@@ -2260,7 +2260,7 @@ export const recetario = [
   {
     id: 1017374,
     image: "https://img.spoonacular.com/recipes/1017374-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 30,
     servings: 12,
     dietary: {
@@ -2319,7 +2319,7 @@ export const recetario = [
   {
     id: 637593,
     image: "https://img.spoonacular.com/recipes/637593-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 45,
     servings: 4,
     dietary: {
@@ -2392,7 +2392,7 @@ export const recetario = [
   {
     id: 1064362,
     image: "https://img.spoonacular.com/recipes/1064362-556x370.jpg",
-    isFavorite: false,
+    isFavorite: true,
     cookingTime: 255,
     servings: 6,
     dietary: {

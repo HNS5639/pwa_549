@@ -27,7 +27,7 @@ export function LanguageProvider({ children }) {
   );
 }
 
-// hook para usarlo fácil
+//para usarlo fácil
 export function useLanguage() {
   return useContext(LanguageContext);
 }
