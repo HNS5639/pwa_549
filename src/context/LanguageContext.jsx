@@ -3,13 +3,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState("es");
-
-  // carga desde localStorage al iniciar
-  useEffect(() => {
+  const [lang, setLang] = useState(() => {
     const savedLang = localStorage.getItem("lang");
-    if (savedLang) setLang(savedLang);
-  }, []);
+    return savedLang ? savedLang : "es";
+  });
 
   // guardar cuando cambia
   useEffect(() => {
@@ -27,7 +24,7 @@ export function LanguageProvider({ children }) {
   );
 }
 
-//para usarlo fácil
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLanguage() {
   return useContext(LanguageContext);
 }
