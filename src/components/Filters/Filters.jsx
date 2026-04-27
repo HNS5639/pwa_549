@@ -75,7 +75,7 @@ function Filter({ filtros, setFiltros }) {
 
       <BotonAccion
         texto={texts[lang].placeHolder.limpiar}
-        onClick={(e) =>
+        onClick={() =>
           setFiltros({
             titulo: "",
             ingredientes: "",
