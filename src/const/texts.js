@@ -2,6 +2,7 @@ export const texts = {
   es: {
     favorites: "Favoritos",
     home: "Inicio",
+    filters: "Filtros",
     sinFavoritos: "No existen favoritos para mostrar.",
     placeHolder: {
       titulo: "Buscar por titulo...",
@@ -19,6 +20,7 @@ export const texts = {
   en: {
     favorites: "Favorites",
     home: "Home",
+    filters: "Filters",
     sinFavoritos: "There are no favorites to show.",
     placeHolder: {
       titulo: "Search by title...",

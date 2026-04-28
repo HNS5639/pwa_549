@@ -1,0 +1,870 @@
+[
+  {
+    "id": 716417,
+    "image": "https://img.spoonacular.com/recipes/716417-556x370.jpg",
+    "isFavorite": false,
+    "cookingTime": 45,
+    "servings": 4,
+    "dietary": {
+      "isGlutenFree": false,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Strawberry Shortcake w. Mini Strawberry PopTarts",
+        "description": "Strawberry Shortcake w. Mini Strawberry PopTarts takes around 45 minutes from beginning to end. This recipe serves 4. One portion of this dish contains approximately 4g of protein, 13g of fat, and a total of 306 calories. For $1.82 per serving, this recipe covers 10% of your daily requirements of vitamins and minerals. It works well as a breakfast. Many people made this recipe, and 168 would say it hit the spot. It is brought to you by fullbellysisters.blogspot.com. It is perfect for Mother's Day. A mixture of strawberry jam, strawberries, tsp vanilla sugar, and a handful of other ingredients are all it takes to make this recipe so delicious. All things considered, we decided this recipe deserves a spoonacular score of 65%. This score is solid. Mini Strawberry Shortcake Pies, Mini Strawberry Shortcake Milkshakes, and Strawberry Shortcake with Mini Angel Food Cakes are very similar to this recipe.",
+        "ingredients": [
+          "1 Tbs + 1 cup heavy whipping cream",
+          "1 pie crust dough, homemade or store-bought",
+          "pinch of sea salt",
+          "1 lb. strawberries (I always get Driscoll's organic—yes, even when I'm not writing about Driscoll's)",
+          "1/4 cup strawberry jam",
+          "1 tsp + 2 tsp vanilla sugar (or plain sugar)"
+        ],
+        "instructions": []
+      },
+      "es": {
+        "title": "Pastel de fresa con mini Pop-Tarts de fresa",
+        "description": "El pastel de fresas con mini Pop-Tarts de fresa se prepara en unos 45 minutos. Esta receta rinde para 4 personas. Una porción contiene aproximadamente 4 g de proteína, 13 g de grasa y un total de 306 calorías. Por $1.82 por porción, esta receta cubre el 10% de tus necesidades diarias de vitaminas y minerales. Es ideal para el desayuno. Muchas personas prepararon esta receta y 168 dijeron que les encantó. Es cortesía de fullbellysisters.blogspot.com. Es perfecta para el Día de la Madre. Una mezcla de mermelada de fresa, fresas, una cucharadita de azúcar de vainilla y algunos otros ingredientes son todo lo que se necesita para que esta receta sea tan deliciosa. En general, decidimos que esta receta merece una puntuación de 65%. Esta puntuación es excelente. Las mini tartas de fresas, los mini batidos de fresas y el pastel de fresas con mini pasteles de ángel son muy similares a esta receta.",
+        "ingredients": [
+          "1 cucharada + 1 taza de crema para batir",
+          "1 masa para tarta, casera o comprada",
+          "una pizca de sal marina",
+          "450 g de fresas (siempre compro fresas orgánicas Driscoll's, incluso cuando no escribo sobre Driscoll's)",
+          "1/4 taza de mermelada de fresa",
+          "1 cucharadita + 2 cucharaditas de azúcar de vainilla (o azúcar común)"
+        ],
+        "instructions": []
+      }
+    }
+  },
+  {
+    "id": 660261,
+    "image": "https://img.spoonacular.com/recipes/660261-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 10,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "vegano"
+    },
+    "content": {
+      "en": {
+        "title": "Slow Cooked Applesauce",
+        "description": "Slow Cooked Applesauce takes approximately 45 minutes from beginning to end. This recipe serves 10. One portion of this dish contains roughly 0g of protein, 0g of fat, and a total of 62 calories. For 32 cents per serving, this recipe covers 1% of your daily requirements of vitamins and minerals. Not a lot of people really liked this side dish. This recipe is liked by 2 foodies and cooks. This recipe from Foodista requires salt, nutmeg, brown sugar, and cinnamon. It is a good option if you're following a gluten free, dairy free, lacto ovo vegetarian, and vegan diet. With a spoonacular score of 16%, this dish is rather bad. If you like this recipe, you might also like recipes such as Slow Cooked Applesauce, Slow Cooker Applesauce, and Slow Cooker Applesauce.",
+        "ingredients": [
+          "5 apples from a local tree if possible",
+          "1 cup water (more if necessary)",
+          "3 tablespoons brown sugar",
+          "1/2 teaspoon cinnamon",
+          "pinch of nutmeg",
+          "pinch of salt"
+        ],
+        "instructions": [
+          "Peel and core apples. Thinly slice and rough chop them.",
+          "Add them to a medium-to large pot over medium-high heat on the stove.",
+          "Add water and stir. Once the water starts to simmer, reduce heat to med-low and stir.",
+          "Add cinnamon, nutmeg and salt and stir. Cook over medium low heat for 2 hours, stirring occasionally. Depending on how you like the consistency of your applesauce, cook another hour for softer sauce."
+        ]
+      },
+      "es": {
+        "title": "Puré de manzana cocinado a fuego lento",
+        "description": "La compota de manzana cocinada a fuego lento tarda aproximadamente 45 minutos de principio a fin. Esta receta rinde para 10 personas. Una porción de este plato contiene aproximadamente 0 g de proteína, 0 g de grasa y un total de 62 calorías. Por 32 centavos por porción, esta receta cubre el 1% de tus necesidades diarias de vitaminas y minerales. A la mayoría de la gente no le gustó este acompañamiento. Esta receta gusta a 2 amantes de la comida y cocineros. Esta receta de Foodista requiere sal, nuez moscada, azúcar moreno y canela. Es una buena opción si sigues una dieta sin gluten, sin lácteos, lacto ovo vegetariana y vegana. Con una puntuación de spoonacular del 16%, este plato es bastante malo. Si te gusta esta receta, también te pueden gustar recetas como compota de manzana cocinada a fuego lento, compota de manzana en olla de cocción lenta y compota de manzana en olla de cocción lenta.",
+        "ingredients": [
+          "5 manzanas de un árbol local, si es posible",
+          "1 taza de agua (más si es necesario)",
+          "3 cucharadas de azúcar moreno",
+          "1/2 cucharadita de canela",
+          "una pizca de nuez moscada",
+          "una pizca de sal"
+        ],
+        "instructions": [
+          "Pela y descorazona las manzanas. Córtalas en rodajas finas y pícalas en trozos grandes.",
+          "Agrégalas a una olla mediana o grande a fuego medio-alto.",
+          "Agrega agua y revuelve. Cuando el agua empiece a hervir a fuego lento, reduce el fuego a medio-bajo y revuelve.",
+          "Agrega canela, nuez moscada y sal y revuelve. Cocina a fuego medio-bajo durante 2 horas, revolviendo ocasionalmente. Dependiendo de la consistencia que prefieras para tu puré de manzana, cocina una hora más para obtener una salsa más suave."
+        ]
+      }
+    }
+  },
+  {
+    "id": 636207,
+    "image": "https://img.spoonacular.com/recipes/636207-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 4,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "vegetariano"
+    },
+    "content": {
+      "en": {
+        "title": "Broccoli Rabe and Breaded Veal Scallopini",
+        "description": "Broccoli Rabe and Breaded Veal Scallopini could be just the gluten free, lacto ovo vegetarian, and primal recipe you've been looking for. One serving contains 224 calories, 6g of protein, and 21g of fat. This recipe serves 4. For $1.16 per serving, this recipe covers 18% of your daily requirements of vitamins and minerals. 3 people were glad they tried this recipe. This recipe from Foodista requires onion, butter, egg, and salt and pepper. From preparation to the plate, this recipe takes about 45 minutes. It works well as an affordable side dish. With a spoonacular score of 60%, this dish is good. Similar recipes are Sauteed Veal with Lemon on a Bed of Broccoli Rabe, Best Veal Scallopini, and Veal Scallopini.",
+        "ingredients": [
+          "1 pound (500 g) broccoli rabe",
+          "2 tablespoons butter",
+          "1 egg, beaten in a bowl",
+          "Olive oil",
+          "salt and pepper",
+          "1 small yellow onion"
+        ],
+        "instructions": [
+          "Wash and steam the broccoli rabe for a few minutes (3 or",
+          "in a pressure cooker.Thinly slice the onion. Peel the garlic clove, cut in half and remove the stem.",
+          "Heat up 1 or 2 tbsp olive oil in a deep pan.Saut the onion and garlic for a few minutes on medium heat until translucent.",
+          "Add the broccoli rabe, close with a lid and cook for a few minutes.",
+          "Cut the tomatoes in 4 or 8 wedges depending on their size, add to the pan and cook several more minutes.Season with salt and pepper and serve.Proceed as follows with each scalopini:Season with salt and pepper.Dip in beaten egg.Dip in bread crumb and cover evenly.Pan fry in a good amount of butter (add more butter before flipping as the bread crumb will absorb it), 1 or 2 minutes on each side over high heat."
+        ]
+      },
+      "es": {
+        "title": "Brócoli Rabe y Scallopini de ternera empanizados",
+        "description": "Scallopini de brócoli rabe y ternera empanizada podrían ser la receta primaria, lacto ovo vegetariana y sin gluten que estabas buscando. Una porción contiene 224 calorías, 6 g de proteína y 21 g de grasa. Esta receta sirve para 4 personas. Por $1.16 por porción, esta receta cubre el 18% de tus requerimientos diarios de vitaminas y minerales. 3 personas se alegraron de haber probado esta receta. Esta receta de Foodista requiere cebolla, mantequilla, huevo y sal y pimienta. Desde la preparación hasta el plato, esta receta tarda unos 45 minutos. Funciona bien como guarnición asequible. Con una puntuación cucharacular del 60%, este plato es bueno. Recetas similares son ternera salteada con limón sobre una cama de brócoli rabe, los mejores vieiras de ternera y vieiras de ternera.",
+        "ingredients": [
+          "500 g (1 libra) de brócoli rabe",
+          "2 cucharadas de mantequilla",
+          "1 huevo batido en un bol",
+          "Aceite de oliva",
+          "sal y pimienta",
+          "1 cebolla amarilla pequeña"
+        ],
+        "instructions": [
+          "Lavar y cocinar al vapor el brócoli rabe durante unos minutos (3 o",
+          "en olla express. Cortar la cebolla en rodajas finas. Pelar el diente de ajo, cortarlo por la mitad y quitarle el tallo.",
+          "Calentar 1 o 2 cucharadas de aceite de oliva en una sartén honda. Saltear la cebolla y el ajo durante unos minutos a fuego medio hasta que estén transparentes.",
+          "Añadir el brócoli rabe, cerrar con una tapa y cocinar unos minutos.",
+          "Cortar los tomates en 4 u 8 gajos dependiendo Según su tamaño, agregue a la sartén y cocine varios minutos más. Sazone con sal y pimienta y sirva. Proceda de la siguiente manera con cada scalopini: Sazone con sal y pimienta."
+        ]
+      }
+    }
+  },
+  {
+    "id": 636581,
+    "image": "https://img.spoonacular.com/recipes/636581-556x370.",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 8,
+    "dietary": {
+      "isGlutenFree": false,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Butternut Squash and Zucchini Lasagna-Gluten free, Vegan",
+        "description": "You can never have too many Mediterranean recipes, so give Butternut Squash and Zucchini Lasagna-Gluten free, Vegan a try. This recipe serves 8 and costs $1.14 per serving. This hor d'oeuvre has 324 calories, 4g of protein, and 28g of fat per serving. 2 people have made this recipe and would make it again. From preparation to the plate, this recipe takes about 45 minutes. If you have ground cayenne, almond milk, olive oil, and a few other ingredients on hand, you can make it. It is a good option if you're following a dairy free diet. It is brought to you by Foodista. Taking all factors into account, this recipe earns a spoonacular score of 65%, which is solid. Butternut Squash Lasagna With Zucchini Noodles (Vegan & Gluten-Free), Butternut Squash Lasagna With Zucchini Noodles (Vegan & Gluten-Free), and Butternut Squash Lasagna With Zucchini Noodles (Vegan & Gluten-Free) are very similar to this recipe.",
+        "ingredients": [
+          "1 medium butternut squash, peeled, thinly sliced",
+          "4 medium zucchini, thinly sliced lengthwise",
+          "1 1/2 boxes Tinkyada Organic Rice Lasagna sheets",
+          "3 tablespoons Daiya Cheddar Style Wedge",
+          "Fresh Sage Leaves, about 20 leaves",
+          "4 tablespoons Earth Balance Coconut Spread",
+          "2 tablespoons brown rice flour",
+          "2 cups coconut milk",
+          "1/2 cup unflavored almond milk",
+          "1 1/2 teaspoons kosher salt + additional pinch of kosher salt",
+          "1/2 teaspoon crushed black pepper",
+          "1 teaspoon dried thyme",
+          "1/2 teaspoon ground cinnamon",
+          "1/2 teaspoon ground nutmeg",
+          "1/2 teaspoon ground sage",
+          "1/4 teaspoon ground cayenne",
+          "1 1/2 tablespoons arrowroot",
+          "1 tablespoon water",
+          "olive oil",
+          "1/2 cup Daiya Cheddar Style Shredded",
+          "1/2 cup Daiya Cheddar Style Shredded"
+        ],
+        "instructions": [
+          "Casserole dish (12x9 inches)",
+          "Preheat Oven to 400 degrees F",
+          "In a baking sheet lined with parchment paper, add sliced zucchini, and sliced butternut squash.",
+          "Sprinkle pinch of salt and thyme evenly over vegetables, drizzle with olive oil.",
+          "Coat vegetables with hands for even coating of oil and seasoning.",
+          "Roast in the oven for  30 minutes.",
+          "When done, remove from oven and reduce heat to 350 degrees F.",
+          "Meanwhile for the sauce, combine water and arrowroot in a small bowl, set aside.",
+          "In a medium saucepan over medium high heat, add coconut spread, when it melts add brown rice flour, whisk until smooth.",
+          "Lower heat to medium.",
+          "Add coconut milk, almond milk, all seasonings, whisk until smooth.",
+          "When you begin to see bubbles form quickly whisk in the arrowroot mixture.",
+          "Continue to whisk for a minute until mixture has thickened to the consistency of a cream sauce.",
+          "Set aside."
+        ]
+      },
+      "es": {
+        "title": "Lasaña de calabaza y calabacín, sin gluten, vegana",
+        "description": "Nunca es posible tener demasiadas recetas mediterráneas, así que prueba lasaña vegana de calabaza y calabacín sin gluten. Esta receta sirve para 8 personas y cuesta $1,14 por porción. Este entremes tiene 324 calorías, 4 g de proteína y 28 g de grasa por porción. 2 personas han hecho esta receta y la volverían a hacer. Desde la preparación hasta el plato, esta receta tarda unos 45 minutos. Si tienes a mano cayena molida, leche de almendras, aceite de oliva y algunos otros ingredientes, puedes prepararlo. Es una buena opción si sigues una dieta sin lácteos. Se lo presenta Foodista. Teniendo en cuenta todos los factores, esta receta obtiene una puntuación cucharacular del 65%, lo cual es sólido. Lasaña de calabaza con fideos de calabacín (vegana y sin gluten), lasaña de calabaza con fideos de calabacín (vegana y sin gluten) y lasaña de calabaza con fideos de calabacín (vegana y sin gluten) son muy similares a esta receta.",
+        "ingredients": [
+          "1 calabaza mediana, pelada y cortada en rodajas finas",
+          "4 calabacines medianos, cortados en rodajas finas a lo largo",
+          "1 1/2 cajas de láminas de lasaña de arroz orgánica Tinkyada",
+          "3 cucharadas de cuña estilo queso cheddar Daiya",
+          "Hojas frescas de salvia, unas 20 hojas",
+          "4 cucharadas de crema de coco Earth Balance",
+          "2 cucharadas de harina de arroz integral",
+          "2 tazas de leche de coco",
+          "1/2 taza de leche de almendras sin sabor",
+          "1 1/2 cucharaditas de sal kosher + una pizca adicional de sal kosher",
+          "1/2 cucharadita de pimienta negra triturada",
+          "1 cucharadita de tomillo seco",
+          "1/2 cucharadita de canela molida",
+          "1/2 cucharadita de nuez moscada molida",
+          "1/2 cucharadita de salvia molida",
+          "1/4 cucharadita de cayena molida",
+          "1 1/2 cucharadas de arrurruz",
+          "1 cucharada de agua",
+          "aceite de oliva",
+          "1/2 taza estilo queso cheddar Daiya rallado",
+          "1/2 taza estilo Cheddar Daiya rallado"
+        ],
+        "instructions": [
+          "Cazuela (12x9 pulgadas)",
+          "Precaliente el horno a 400 grados F",
+          "En una bandeja para hornear forrada con papel pergamino, agregue el calabacín en rodajas y la calabaza en rodajas.",
+          "Espolvoree una pizca de sal y tomillo uniformemente sobre las verduras y rocíe con aceite de oliva.",
+          "Cubra las verduras con las manos para obtener una capa uniforme de aceite y condimento.",
+          "Asar en el horno durante 30 minutos.",
+          "Cuando esté listo, retírelo del horno y reduzca el fuego a 350 grados F.",
+          "Mientras tanto, para la salsa, combine el agua y el arrurruz en un tazón pequeño y reserve.",
+          "En una cacerola mediana a fuego medio alto, agregue la crema de coco, cuando se derrita agregue la harina de arroz integral, bata hasta que quede suave.",
+          "Baja el fuego a medio.",
+          "Agregue la leche de coco, la leche de almendras y todos los condimentos, bata hasta que quede suave.",
+          "Cuando empiece a ver que se forman burbujas, agregue rápidamente la mezcla de arrurruz.",
+          "Continúe batiendo durante un minuto hasta que la mezcla se espese y tenga la consistencia de una salsa cremosa.",
+          "Dejar de lado."
+        ]
+      }
+    }
+  },
+  {
+    "id": 640318,
+    "image": "https://img.spoonacular.com/recipes/640318-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 25,
+    "servings": 2,
+    "dietary": {
+      "isGlutenFree": false,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Crab Salad Stuffed Pita Pockets",
+        "description": "Crab Salad Stuffed Pita Pockets takes roughly 25 minutes from beginning to end. One serving contains 418 calories, 39g of protein, and 6g of fat. For $5.9 per serving, this recipe covers 52% of your daily requirements of vitamins and minerals. This recipe serves 2. 8 people found this recipe to be yummy and satisfying. If you have wholewheat pita breads, crabmeat, coriander leaves, and a few other ingredients on hand, you can make it. It is brought to you by Foodista. It is a good option if you're following a dairy free and pescatarian diet. All things considered, we decided this recipe deserves a spoonacular score of 80%. This score is good. Try Crab Salad in Pita Pockets, Stuff It {: Cobb Salad Stuffed Pita Pockets}, and Zucchini Salad Pita Pockets for similar recipes.",
+        "ingredients": [
+          "1/2 small apple, finely chopped",
+          "2 150g cans white crabmeat",
+          "1/4 cup finely chopped coriander leaves",
+          "2 tablespoons light mayonnaise",
+          "2 wholewheat pita breads",
+          "salt & pepper to taste",
+          "2 handfuls watercress",
+          "1/4 medium yellow bell pepper, finely chopped"
+        ],
+        "instructions": [
+          "Mix crabmeat, apple and bell pepper together in a bowl.Season to taste, add coriander and fold mayonnaise through.Toast pita breads until puffed up, then cut open on one side.Stuff with some watercress, then the crab mixture.",
+          "Serve immediately."
+        ]
+      },
+      "es": {
+        "title": "Bolsillos de pita rellenos de ensalada de cangrejo",
+        "description": "Los bolsillos de pita rellenos con ensalada de cangrejo tardan aproximadamente 25 minutos de principio a fin. Una porción contiene 418 calorías, 39 g de proteína y 6 g de grasa. Por $5.9 por porción, esta receta cubre el 52% de tus requerimientos diarios de vitaminas y minerales. Esta receta es para 2 personas. 8 personas encontraron esta receta deliciosa y satisfactoria. Si tienes pan pita integral, carne de cangrejo, hojas de cilantro y algunos otros ingredientes a mano, puedes prepararlo. Se lo presenta Foodista. Es una buena opción si sigues una dieta pescatariana y sin lácteos. Considerando todo esto, decidimos que esta receta merece una puntuación cucharacular del 80%. Esta puntuación es buena. Pruebe la ensalada de cangrejo en bolsillos de pita, rellénela {: bolsillos de pita rellenos con ensalada Cobb} y bolsillos de pita con ensalada de calabacín para obtener recetas similares.",
+        "ingredients": [
+          "1/2 manzana pequeña, finamente picada",
+          "2 latas de 150g de carne de cangrejo blanco",
+          "1/4 taza de hojas de cilantro finamente picadas",
+          "2 cucharadas de mayonesa light",
+          "2 panes pita integrales",
+          "sal y pimienta al gusto",
+          "2 puñados de berros",
+          "1/4 pimiento amarillo mediano, finamente picado"
+        ],
+        "instructions": [
+          "Mezcle la carne de cangrejo, la manzana y el pimiento morrón en un tazón. Sazone al gusto, agregue cilantro y agregue la mayonesa. Toste el pan de pita hasta que esté inflado, luego córtelo por un lado. Rellénelo con un poco de berros y luego con la mezcla de cangrejo.",
+          "Servir inmediatamente."
+        ]
+      }
+    }
+  },
+  {
+    "id": 645647,
+    "image": "https://img.spoonacular.com/recipes/645647-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 4,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Grilled Chicken Hunter Style",
+        "description": "Grilled Chicken Hunter Style might be a good recipe to expand your main course recipe box. One serving contains 732 calories, 84g of protein, and 38g of fat. This recipe serves 4. For $4.67 per serving, this recipe covers 41% of your daily requirements of vitamins and minerals. It is a good option if you're following a gluten free and primal diet. It can be enjoyed any time, but it is especially good for The Fourth Of July. 2 people were glad they tried this recipe. A mixture of romano cheese, mushrooms, bell pepper, and a handful of other ingredients are all it takes to make this recipe so flavorful. It is brought to you by Foodista. From preparation to the plate, this recipe takes around 45 minutes. Taking all factors into account, this recipe earns a spoonacular score of 81%, which is amazing. If you like this recipe, take a look at these similar recipes: Hunter-style Chicken, Chicken Chasseur (Hunter-Style Chicken) with Creamy Polenta with Gruyere and Parmesan, and Chicken Chasseur (Hunter-Style Chicken) with Creamy Polenta with Gruyere and Parmesan.",
+        "ingredients": [
+          "6 Boneless chicken breasts",
+          "3 ounces extra virgin olive oil",
+          "1 green bell pepper, sliced",
+          "16 ounces Mamma Lombardi's Marinara Sauce",
+          "4 ounces washed, sliced mushrooms",
+          "1 red bell pepper, sliced",
+          "4 ounces Grated Romano Cheese",
+          "salt and freshly ground black pepper to taste"
+        ],
+        "instructions": [
+          "Coat chicken breasts in 1 ounce of extra virgin olive oil and set aside.In a 2 quart sauce pot, add 2 ounces extra virgin olive oil, the green bell pepper, the red bell pepper and the mushrooms. Cook over medium heat until the vegetables begin to brown slightly.",
+          "Add the Mamma Lombardis Marinana Sauce, salt and freshly ground black pepper and simmer for approximately 12 minutes.Grill chicken breasts until thoroughly cooked and juicy.",
+          "Place on a serving tray and ladle the sauce over the chicken. Top with grated romano cheese and serve."
+        ]
+      },
+      "es": {
+        "title": "Pollo Asado Estilo Cazador",
+        "description": "Pollo a la parrilla estilo cazador podría ser una buena receta para ampliar su cuadro de recetas de plato principal. Una porción contiene 732 calorías, 84 g de proteína y 38 g de grasa. Esta receta sirve para 4 personas. Por $4.67 por porción, esta receta cubre el 41% de tus requerimientos diarios de vitaminas y minerales. Es una buena opción si sigues una dieta primaria y sin gluten. Se puede disfrutar en cualquier momento, pero es especialmente bueno para el 4 de julio. 2 personas se alegraron de haber probado esta receta. Una mezcla de queso romano, champiñones, pimiento morrón y algunos otros ingredientes es todo lo que se necesita para que esta receta sea tan sabrosa. Se lo presenta Foodista. Desde la preparación hasta el plato, esta receta tarda alrededor de 45 minutos. Teniendo en cuenta todos los factores, esta receta obtiene una puntuación cucharacular del 81%, lo cual es asombroso. Si te gusta esta receta, echa un vistazo a estas recetas similares: Pollo estilo Hunter, Pollo Chasseur (Pollo estilo Hunter) con Polenta Cremosa con Gruyere y Parmesano, y Pollo Chasseur (Pollo Estilo Hunter) con Polenta Cremosa con Gruyere y Parmesano.",
+        "ingredients": [
+          "6 pechugas de pollo deshuesadas",
+          "3 onzas de aceite de oliva virgen extra",
+          "1 pimiento verde, en rodajas",
+          "16 onzas de salsa marinara de Mamma Lombardi",
+          "4 onzas de champiñones lavados y rebanados",
+          "1 pimiento rojo, en rodajas",
+          "4 onzas de queso romano rallado",
+          "sal y pimienta negra recién molida al gusto"
+        ],
+        "instructions": [
+          "Cubra las pechugas de pollo con 1 onza de aceite de oliva virgen extra y reserve. En una cacerola de 2 cuartos, agregue 2 onzas de aceite de oliva virgen extra, el pimiento verde, el pimiento rojo y los champiñones. Cocine a fuego medio hasta que las verduras comiencen a dorarse ligeramente.",
+          "Agregue la salsa marinana Mamma Lombardis, la sal y la pimienta negra recién molida y cocine a fuego lento durante aproximadamente 12 minutos. Ase las pechugas de pollo hasta que estén bien cocidas y jugosas.",
+          "Colóquelo en una bandeja para servir y vierta la salsa sobre el pollo. Cubra con queso romano rallado y sirva."
+        ]
+      }
+    }
+  },
+  {
+    "id": 642556,
+    "image": "https://img.spoonacular.com/recipes/642556-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 75,
+    "servings": 4,
+    "dietary": {
+      "isGlutenFree": false,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Fall Farro Salad with Pomegranate, Walnut & Truffles",
+        "description": "The recipe Fall Farro Salad with Pomegranate, Walnut & Truffles can be made in roughly 1 hour and 15 minutes. For $3.3 per serving, this recipe covers 30% of your daily requirements of vitamins and minerals. This main course has 722 calories, 25g of protein, and 47g of fat per serving. This recipe serves 4. It can be enjoyed any time, but it is especially good for Autumn. 3 people were impressed by this recipe. It is brought to you by Foodista. If you have pomegranate, radicchio thinly, truffle mushroom, and a few other ingredients on hand, you can make it. Overall, this recipe earns a tremendous spoonacular score of 86%. Similar recipes are Fall Farro Salad, Fall Farro Salad with Butternut Squash, and Fall Farro Salad with Butternut Squash.",
+        "ingredients": [
+          "1/3 cup extra virgin olive oil",
+          "8 ounces (250 gr) farro or spelt",
+          "parmesan shaved into ribbons",
+          "1 pomegranate",
+          "1 small head of radicchio sliced thinly",
+          "salt and pepper",
+          "1 truffle mushroom",
+          "2-3 tablespoons (30ml) vinegar",
+          "4 ounces (100gr) toasted walnuts"
+        ],
+        "instructions": [
+          "In plenty of cold water boil farro until al dente (cooked but with a bite) - about 20-35 minutes. Feel free to add some vegetable scraps if available (unused piece of carrot, onion, celery, etc.)"
+        ]
+      },
+      "es": {
+        "title": "Ensalada De Farro De Otoño Con Granada, Nueces Y Trufas",
+        "description": "La receta de ensalada de farro de otoño con granada, nueces y trufas se puede preparar en aproximadamente 1 hora y 15 minutos. Por $3.3 por porción, esta receta cubre el 30% de tus requerimientos diarios de vitaminas y minerales. Este plato principal tiene 722 calorías, 25 g de proteína y 47 g de grasa por ración. Esta receta es para 4 personas. Se puede disfrutar en cualquier momento, pero está especialmente buena para el otoño. 3 personas quedaron impresionadas con esta receta. Se lo presenta Foodista. Si tienes granada, achicoria fina, champiñones trufados y algunos otros ingredientes a mano, puedes prepararlo. En general, esta receta obtiene una tremenda puntuación cucharacular del 86%. Recetas similares son la ensalada Farro de otoño, la ensalada Farro de otoño con calabaza y la ensalada Farro de otoño con calabaza.",
+        "ingredients": [
+          "1/3 taza de aceite de oliva virgen extra",
+          "8 onzas (250 gr) de farro o espelta",
+          "parmesano cortado en tiras",
+          "1 granada",
+          "1 cabeza pequeña de achicoria cortada en rodajas finas",
+          "sal y pimienta",
+          "1 champiñón trufado",
+          "2-3 cucharadas (30 ml) de vinagre",
+          "4 onzas (100gr) de nueces tostadas"
+        ],
+        "instructions": [
+          "En abundante agua fría hierva el farro hasta que esté al dente (cocido pero con un bocado), unos 20-35 minutos. Siéntase libre de agregar algunos restos de vegetales si están disponibles (trozo de zanahoria, cebolla, apio, etc.)"
+        ]
+      }
+    }
+  },
+  {
+    "id": 716424,
+    "image": "https://img.spoonacular.com/recipes/716424-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 1,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "vegano"
+    },
+    "content": {
+      "en": {
+        "title": "Strawberry Basil Sorbet (no Ice Cream Maker Necessary!)",
+        "description": "Strawberry Basil Sorbet (no Ice Cream Maker Necessary!) might be just the dessert you are searching for. This recipe serves 1 and costs 56 cents per serving. Watching your figure? This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe has 172 calories, 0g of protein, and 5g of fat per serving. If you have basil leaves, basil oil, honey, and a few other ingredients on hand, you can make it. Plenty of people made this recipe, and 101 would say it hit the spot. It is perfect for Mother's Day. It is brought to you by fullbellysisters.blogspot.com. From preparation to the plate, this recipe takes approximately 45 minutes. Overall, this recipe earns a rather bad spoonacular score of 25%. Similar recipes include Strawberry Sorbet (without an ice cream maker), Coconut Mango-Pineapple Sorbet + Ice Cream Maker Giveaway, and No-Ice-Cream-Maker Salted Caramel, Bourbon, Nutter Butter and Chocolate Chunk Ice Cream.",
+        "ingredients": [
+          "about 1/4c finely chopped basil leaves",
+          "1t basil oil (optional)",
+          "2-3T honey or agave",
+          "1 bag organic strawberries (my bag was 12 oz; 16 oz would be better!), thawed for about a 1/2 hour"
+        ],
+        "instructions": []
+      },
+      "es": {
+        "title": "Sorbete de fresa y albahaca (¡no se necesita máquina para hacer helados!)",
+        "description": "El sorbete de fresa y albahaca (¡no se necesita máquina para hacer helados!) podría ser el postre que estás buscando. Esta receta sirve para 1 persona y cuesta 56 centavos por porción. ¿Cuidando tu figura? Esta receta sin gluten, sin lácteos, lacto ovo vegetariana y vegana tiene 172 calorías, 0 g de proteína y 5 g de grasa por porción. Si tienes hojas de albahaca, aceite de albahaca, miel y algunos otros ingredientes a mano, puedes prepararlo. Mucha gente hizo esta receta y 101 diría que dio en el clavo. Es perfecto para el Día de la Madre. Se lo presenta fullbellysisters.blogspot.com. Desde la preparación hasta el plato, esta receta tarda aproximadamente 45 minutos. En general, esta receta obtiene una puntuación cucharacular bastante mala del 25%. Recetas similares incluyen sorbete de fresa (sin máquina para hacer helados), sorbete de coco, mango y piña + obsequio para máquina para hacer helados y helado de caramelo salado, bourbon, mantequilla de nueces y trozos de chocolate sin máquina para hacer helados.",
+        "ingredients": [
+          "aproximadamente 1/4 taza de hojas de albahaca finamente picadas",
+          "1 cucharada de aceite de albahaca (opcional)",
+          "2-3T de miel o agave",
+          "1 bolsa de fresas orgánicas (mi bolsa era de 12 oz; ¡16 oz sería mejor!), descongeladas durante aproximadamente 1/2 hora"
+        ],
+        "instructions": []
+      }
+    }
+  },
+  {
+    "id": 665203,
+    "image": "https://img.spoonacular.com/recipes/665203-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 6,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "vegetariano"
+    },
+    "content": {
+      "en": {
+        "title": "White chocolate-cranberry ice cream",
+        "description": "If you want to add more gluten free and lacto ovo vegetarian recipes to your repertoire, White chocolate-cranberry ice cream might be a recipe you should try. One serving contains 429 calories, 7g of protein, and 28g of fat. This recipe serves 6 and costs $1.45 per serving. 16 people were impressed by this recipe. It will be a hit at your Summer event. It works well as a rather inexpensive dessert. If you have chocolate, vanillan extract, caster sugar, and a few other ingredients on hand, you can make it. From preparation to the plate, this recipe takes approximately 45 minutes. It is brought to you by Foodista. With a spoonacular score of 27%, this dish is not so spectacular. Similar recipes are The Secret Ingredient (Cranberry): Cranberry Ice Cream with White Chocolate Chunks, White Chocolate Vanillan Ice Cream...without The Ice Cream Maker, and White Chocolate Buttermint Ice Cream.",
+        "ingredients": [
+          "200ml double cream",
+          "¼ cup dried cranberries",
+          "4 egg yolks",
+          "300ml full fat milk",
+          "75g caster sugar",
+          "1 tsp vanilla extract",
+          "200g white chocolate, coarsely chopped"
+        ],
+        "instructions": [
+          "In a medium saucepan boil the milk until it starts to bubble gently.",
+          "Remove from flame and set aside.Meanwhile whisk the egg yolks and sugar together for 3 minutes until pale yellow and double in volume.",
+          "Pour the milk on to the egg mixture and stir and then gently pour the mixture back in to the saucepan and simmer very lightly. Stir continuously until the custard mix thickens or coats the back of a wooden spoon.",
+          "Add the chopped chocolate stirring until the heat melts the chocolate.Cool the mixture, stir in the vanilla extract and put it in the fridge to chill.Once chilled, add the cream to the mixture. Stir and combine.",
+          "Pour the mixture into an ice cream machine and churn until frozen.",
+          "Add  dried cranberries in the last 5 minutes of churning and let the machine stir them in.",
+          "Transfer to plastic container and place in the freezer for 3 hours before serving."
+        ]
+      },
+      "es": {
+        "title": "Helado de chocolate blanco y arándanos",
+        "description": "Si desea agregar más recetas sin gluten y lacto ovo vegetarianas a su repertorio, el helado de chocolate blanco y arándanos podría ser una receta que debería probar. Una porción contiene 429 calorías, 7 g de proteína y 28 g de grasa. Esta receta sirve para 6 personas y cuesta $1,45 por porción. 16 personas quedaron impresionadas con esta receta. Será un éxito en tu evento de verano. Funciona bien como postre bastante económico. Si tienes chocolate, extracto de vainilla, azúcar en polvo y algunos otros ingredientes a mano, puedes hacerlo. Desde la preparación hasta el plato, esta receta tarda aproximadamente 45 minutos. Se lo presenta Foodista. Con una puntuación cucharacular del 27%, este plato no es tan espectacular. Recetas similares son El ingrediente secreto (arándano): helado de arándano con trozos de chocolate blanco, helado de vainilla y chocolate blanco... sin máquina para hacer helados y helado de menta y chocolate blanco.",
+        "ingredients": [
+          "200ml de nata doble",
+          "¼ de taza de arándanos secos",
+          "4 yemas de huevo",
+          "300 ml de leche entera",
+          "75 g de azúcar en polvo",
+          "1 cucharadita de extracto de vainilla",
+          "200 g de chocolate blanco, picado en trozos grandes"
+        ],
+        "instructions": [
+          "En una cacerola mediana hierve la leche hasta que empiece a burbujear suavemente.",
+          "Retirar del fuego y reservar. Mientras tanto, bata las yemas de huevo y el azúcar durante 3 minutos hasta que tengan un color amarillo pálido y dupliquen su volumen.",
+          "Vierta la leche sobre la mezcla de huevo y revuelva y luego vierta suavemente la mezcla nuevamente en la cacerola y cocine a fuego lento. Revuelva continuamente hasta que la mezcla de natillas se espese o cubra el dorso de una cuchara de madera.",
+          "Agrega el chocolate picado revolviendo hasta que el calor derrita el chocolate. Enfría la mezcla, agrega el extracto de vainilla y ponlo en el refrigerador para que se enfríe. Una vez frío, agrega la crema a la mezcla. Revuelva y combine.",
+          "Vierta la mezcla en una máquina para hacer helados y bata hasta que esté congelada.",
+          "Agregue los arándanos secos en los últimos 5 minutos de batido y deje que la máquina los revuelva.",
+          "Transfiera a un recipiente de plástico y colóquelo en el congelador durante 3 horas antes de servir."
+        ]
+      }
+    }
+  },
+  {
+    "id": 665484,
+    "image": "https://img.spoonacular.com/recipes/665484-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 24,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Xocai Oatmeal Dark Chocolate No-Bake Cookies",
+        "description": "Xocai Oatmeal Dark Chocolate No-Bake Cookies takes around 45 minutes from beginning to end. This gluten free recipe serves 24 and costs 64 cents per serving. One serving contains 265 calories, 6g of protein, and 16g of fat. 2 people have made this recipe and would make it again. It works well as an Asian dessert. This recipe from Foodista requires vanilla, sugar substitute, oats, and peanut butter. With a spoonacular score of 44%, this dish is solid. Try Xocai Irish Cream with Xocai Healthy Dark Chocolate Nuggets, Xocai Healthy Dark Chocolate Brownies, and VIDEO: How to Make a Dark Chocolate Berry Oatmeal Bake for similar recipes.",
+        "ingredients": [
+          "1/2 cup butter substitute",
+          "1 Xocai Healthy Chocolate Nugget, chopped",
+          "3 cups oats",
+          "2 cup peanut butter",
+          "1/2 cup soy milk",
+          "2 cups sugar substitute",
+          "1 tsp vanilla"
+        ],
+        "instructions": [
+          "Combine the first four ingredient in a medium sauce pan.",
+          "Heat mixture until it boils. Boils for 5 minutes, stirring constantly.",
+          "Remove from heat and stir in remaining ingredients.",
+          "Add the Nuggets last. Drop by spoonful onto wax paper or foil. Cookies will harden as they cool. Makes 24 cookies"
+        ]
+      },
+      "es": {
+        "title": "Galletas Xocai De Avena Y Chocolate Negro Sin Hornear",
+        "description": "Las galletas Xocai de avena y chocolate amargo sin hornear tardan unos 45 minutos de principio a fin. Esta receta sin gluten sirve para 24 personas y cuesta 64 centavos por porción. Una porción contiene 265 calorías, 6 g de proteína y 16 g de grasa. 2 personas han hecho esta receta y la volverían a hacer. Funciona bien como postre asiático. Esta receta de Foodista requiere vainilla, sustituto del azúcar, avena y mantequilla de maní. Con una puntuación cucharacular del 44%, este plato es sólido. Pruebe la crema irlandesa Xocai con pepitas de chocolate amargo saludables Xocai, los brownies de chocolate amargo saludables Xocai y el VIDEO: Cómo hacer un horneado de avena y bayas con chocolate amargo para obtener recetas similares.",
+        "ingredients": [
+          "1/2 taza de sustituto de mantequilla",
+          "1 pepita de chocolate saludable Xocai, picada",
+          "3 tazas de avena",
+          "2 tazas de mantequilla de maní",
+          "1/2 taza de leche de soja",
+          "2 tazas de sustituto de azúcar",
+          "1 cucharadita de vainilla"
+        ],
+        "instructions": [
+          "Combine los primeros cuatro ingredientes en una cacerola mediana.",
+          "Calienta la mezcla hasta que hierva. Hierve durante 5 minutos, revolviendo constantemente.",
+          "Retire del fuego y agregue los ingredientes restantes.",
+          "Agrega los Nuggets al final. Deje caer a cucharadas sobre papel encerado o papel de aluminio. Las galletas se endurecerán a medida que se enfríen. Rinde 24 galletas"
+        ]
+      }
+    }
+  },
+  {
+    "id": 634345,
+    "image": "https://img.spoonacular.com/recipes/634345-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 4,
+    "dietary": {
+      "isGlutenFree": false,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Barnaby's Caesar Salad",
+        "description": "If you want to add more pescatarian recipes to your recipe box, Barnaby's Caesar Salad might be a recipe you should try. This main course has 595 calories, 21g of protein, and 41g of fat per serving. For $2.38 per serving, this recipe covers 24% of your daily requirements of vitamins and minerals. This recipe serves 4. Only a few people really liked this American dish. A mixture of anchovy paste, parmigiano reggiano cheese, romaine lettuce, and a handful of other ingredients are all it takes to make this recipe so flavorful. 3 people found this recipe to be scrumptious and satisfying. It is brought to you by Foodista. From preparation to the plate, this recipe takes roughly 45 minutes. All things considered, we decided this recipe deserves a spoonacular score of 79%. This score is pretty good. If you like this recipe, you might also like recipes such as Grilled Caesar Salad with Light Caesar Salad Dressing, Chicken Caesar Salad with Garlic Croutons {and Light Caesar Dressing}, and Chicken Caesar Salad with Garlic Croutons {and Light Caesar Dressing}.",
+        "ingredients": [
+          "1 tablespoon anchovy paste",
+          "1/2 loaf ciabatta or other good Italian bread",
+          "Juice of 1 lemon",
+          "1 cup olive oil",
+          "1 1/2 cups Parmigiano Reggiano cheese, grate",
+          "Fresh cracked black pepper to taste",
+          "1 large head Romaine lettuce, chopped"
+        ],
+        "instructions": [
+          "Combine lemon juice and anchovy paste in a blender.Start blender and drizzle olive into mixture until it thickens.",
+          "Cut bread into 1 inch cubes and toast until brown. The trick here is to have it crispy on the outside and soft on the inside.",
+          "Combine lettuce and bread cubes in a salad bowl and cover with Parmigiano Reggiano (Parmesan) cheese.",
+          "Pour dressing over top and toss."
+        ]
+      },
+      "es": {
+        "title": "Ensalada César de Barnaby",
+        "description": "Si desea agregar más recetas pescatarianas a su caja de recetas, la ensalada César de Barnaby's podría ser una receta que debería probar. Este plato principal tiene 595 calorías, 21 g de proteína y 41 g de grasa por ración. Por $2.38 por porción, esta receta cubre el 24% de tus requerimientos diarios de vitaminas y minerales. Esta receta es para 4 personas. A muy pocas personas les gustó mucho este plato americano. Una mezcla de pasta de anchoas, queso parmigiano reggiano, lechuga romana y un puñado de otros ingredientes es todo lo que se necesita para que esta receta sea tan sabrosa. A 3 personas les pareció deliciosa y satisfactoria esta receta. Se lo presenta Foodista. Desde la preparación hasta el plato, esta receta tarda aproximadamente 45 minutos. Considerando todo esto, decidimos que esta receta merece una puntuación cucharacular del 79%. Esta puntuación es bastante buena. Si le gusta esta receta, es posible que también le gusten recetas como Ensalada César a la parrilla con aderezo ligero para ensalada César, Ensalada César con pollo con picatostes de ajo {y aderezo César ligero} y Ensalada César con pollo con picatostes de ajo {y aderezo César ligero}.",
+        "ingredients": [
+          "1 cucharada de pasta de anchoas",
+          "1/2 hogaza de chapata u otro buen pan italiano",
+          "Jugo de 1 limón",
+          "1 taza de aceite de oliva",
+          "1 1/2 tazas de queso Parmigiano Reggiano, rallado",
+          "Pimienta negra recién molida al gusto",
+          "1 cabeza grande de lechuga romana, picada"
+        ],
+        "instructions": [
+          "Combine el jugo de limón y la pasta de anchoas en una licuadora. Encienda la licuadora y rocíe la aceituna en la mezcla hasta que espese.",
+          "Corte el pan en cubos de 1 pulgada y tueste hasta que se dore. El truco aquí es que quede crujiente por fuera y tierno por dentro.",
+          "Combine la lechuga y los cubos de pan en una ensaladera y cúbralos con queso Parmigiano Reggiano (parmesano).",
+          "Vierta el aderezo por encima y revuelva."
+        ]
+      }
+    }
+  },
+  {
+    "id": 651765,
+    "image": "https://img.spoonacular.com/recipes/651765-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 2,
+    "dietary": {
+      "isGlutenFree": false,
+      "type": "vegetariano"
+    },
+    "content": {
+      "en": {
+        "title": "Meyer Lemon Ricotta Pancakes with Blackberry Compote",
+        "description": "If you want to add more lacto ovo vegetarian recipes to your recipe box, Meyer Lemon Ricotta Pancakes with Blackberry Compote might be a recipe you should try. This recipe serves 2 and costs $2.05 per serving. One portion of this dish contains roughly 29g of protein, 28g of fat, and a total of 614 calories. 47 people found this recipe to be yummy and satisfying. It is brought to you by Foodista. If you have lemon zest, granulated sugar, eggs, and a few other ingredients on hand, you can make it. A couple people really liked this breakfast. From preparation to the plate, this recipe takes roughly 45 minutes. With a spoonacular score of 75%, this dish is good. If you like this recipe, you might also like recipes such as Ricotta Pancakes with Blueberry-Lemon Compote, Lemon Poppy Seed Ricotta Pancakes with Blackberry Sauce, and Blueberry Lemon Ricotta Pancakes with Blackberry Vanilla Syrup.",
+        "ingredients": [
+          "3/4 cup all purpose flour",
+          "1 6 ounce container fresh blackberries",
+          "butter",
+          "3 large eggs, separated",
+          "1/2 tablespoon granulated sugar",
+          "1 1/2 tablespoons granulated sugar",
+          "1/2 teaspoon Meyer lemon zest",
+          "Zest from 1 Meyer lemon",
+          "2 tablespoons Meyer lemon juice (from 1 Meyer lemon)",
+          "1 cup ricotta",
+          "pinch of salt",
+          "1/4 cup water"
+        ],
+        "instructions": [
+          "In a small saucepan over medium heat, add the blackberries, Meyer lemon zest, sugar, and water.Stir to combine and cook until the water starts to thicken and the berries lose their shape, stirring occasionally. This should take about 10 minute.",
+          "Remove from the heat and set aside.In a medium bowl, whisk together the ricotta cheese, Meyer lemon zest, juice, sugar and egg yolks.Gradually stir in the flour until just combined.Using a stand or hand mixer, whisk the egg whites with a pinch of salt until stiff peaks are formed.Take a large spoonful of the eggs whites and stir it into the batter. With the remaining eggs whites, fold in half, slowly turning the bowl while you fold. It is fine if there are some white streaks left in the batter before you add the second half. Fold in the remaining eggs white and set the batter aside while you heat up a griddle or non-stick pan on medium heat.",
+          "Add some butter to the pre-heated pan, and swirl to coat.",
+          "Add about a 1/4 cup of batter and cook until bubbles start to form on the top and the edges begin to brown slightly.Flip the pancakes and cook for an additional minute.",
+          "Remove and keep warm, while you repeat with the remaining batter.",
+          "Serve the pancakes with the blackberry compote and if you like a little pure maple syrup."
+        ]
+      },
+      "es": {
+        "title": "Panqueques Meyer de limón y ricotta con compota de moras",
+        "description": "Si desea agregar más recetas lacto ovo vegetarianas a su caja de recetas, los panqueques Meyer de limón y ricotta con compota de moras pueden ser una receta que debe probar. Esta receta sirve para 2 y cuesta $2.05 por porción. Una porción de este plato contiene aproximadamente 29 g de proteína, 28 g de grasa y un total de 614 calorías. 47 personas encontraron esta receta deliciosa y satisfactoria. Se lo presenta Foodista. Si tienes a mano ralladura de limón, azúcar granulada, huevos y algunos ingredientes más, puedes prepararlo. A un par de personas les gustó mucho este desayuno. Desde la preparación hasta el plato, esta receta tarda aproximadamente 45 minutos. Con una puntuación cucharacular del 75%, este plato es bueno. Si le gusta esta receta, es posible que también le gusten recetas como panqueques de ricota con compota de arándanos y limón, panqueques de ricota y semillas de amapola con salsa de moras y panqueques de ricota, limón y arándanos con sirope de vainilla y moras.",
+        "ingredients": [
+          "3/4 taza de harina para todo uso",
+          "1 recipiente de 6 onzas de moras frescas",
+          "mantequilla",
+          "3 huevos grandes, separados",
+          "1/2 cucharada de azúcar granulada",
+          "1 1/2 cucharadas de azúcar granulada",
+          "1/2 cucharadita de ralladura de limón Meyer",
+          "Ralladura de 1 limón Meyer",
+          "2 cucharadas de jugo de limón Meyer (de 1 limón Meyer)",
+          "1 taza de ricota",
+          "pizca de sal",
+          "1/4 taza de agua"
+        ],
+        "instructions": [
+          "En una cacerola pequeña a fuego medio, agregue las moras, la ralladura de limón Meyer, el azúcar y el agua. Revuelva para combinar y cocine hasta que el agua comience a espesarse y las bayas pierdan su forma, revolviendo ocasionalmente. Esto debería tomar unos 10 minutos.",
+          "Retirar del fuego y reservar. En un tazón mediano, mezcle el queso ricotta, la ralladura de limón Meyer, el jugo, el azúcar y las yemas de huevo. Agregue gradualmente la harina hasta que esté combinado. Con una batidora de pie o de mano, bata las claras con una pizca de sal hasta que se formen picos rígidos. Tome una cucharada grande de las claras de huevo y revuélvalas con la masa. Con las claras restantes, doblar por la mitad, girando lentamente el bol mientras se dobla. Está bien si quedan algunas rayas blancas en la masa antes de agregar la segunda mitad. Incorpora la clara de huevo restante y reserva la masa mientras calientas una plancha o sartén antiadherente a fuego medio.",
+          "Agregue un poco de mantequilla a la sartén precalentada y revuelva para cubrir.",
+          "Agregue aproximadamente 1/4 de taza de masa y cocine hasta que comiencen a formarse burbujas en la parte superior y los bordes comiencen a dorarse ligeramente. Voltee los panqueques y cocine por un minuto más.",
+          "Retirar y mantener caliente, mientras repites con la masa restante.",
+          "Sirve las tortitas con la compota de moras y si gustas un poco de sirope puro de arce."
+        ]
+      }
+    }
+  },
+  {
+    "id": 649328,
+    "image": "https://img.spoonacular.com/recipes/649328-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 20,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "vegetariano"
+    },
+    "content": {
+      "en": {
+        "title": "Lavender Tea With Lemon French Macarons",
+        "description": "The recipe Lavender Tea With Lemon French Macarons can be made in approximately 45 minutes. This recipe serves 20 and costs 22 cents per serving. One serving contains 61 calories, 2g of protein, and 2g of fat. 3 people have tried and liked this recipe. Only a few people really liked this beverage. A mixture of lemon zest, sugar, lavender, and a handful of other ingredients are all it takes to make this recipe so flavorful. It is brought to you by Foodista. This recipe is typical of Mediterranean cuisine. It is a good option if you're following a gluten free, dairy free, lacto ovo vegetarian, and fodmap friendly diet. With a spoonacular score of 9%, this dish is very bad (but still fixable). Similar recipes include Lavender, Lemon and Honey Tea from Wolds Way Lavender Farm, Lavender Macarons with Lemon Curd, and Lavender-polenta Coffee Cake (french Lavender).",
+        "ingredients": [
+          "3/4 cup almond flour",
+          "1 pinch cream of tartar",
+          "4 large egg whites",
+          "2 tablespoons dried lavender",
+          "1/2 lemon, zested",
+          "1 cup powdered sugar",
+          "1/4 cup white sugar",
+          "4 drops yellow food coloring"
+        ],
+        "instructions": [
+          "Pulse the almond flour and powdered sugar until blended, then sift twice to make sure all larger pieces of almond are separated out and the flour is blended well.",
+          "Add the lemon zest and lavender to the flour and set aside.Pulse the white sugar in processor until very fine.In the large bowl of a standing mixer or by hand, start whipping egg whites until foamy.",
+          "Add a pinch of cream of tartar, and whip until soft peaks form.Reduce speed to low, and add the fine white sugar one tablespoon at a time.  When fully incorporated, increase speed to medium and then to high, and whip until stiff-peaked.  Timing varies on this, and this is where practice makes perfect.",
+          "Add your food coloring gel when almost completely done whipping.Sift 1/3 of the flour into the egg and fold in completely.  Repeat until all the flour is incorporated.  You want to fold in until the batter is smooth, but still light.Spoon into pastry bag fitted with a large tip (I use between 1/2 and 1 inch, depending on what I grab first).  Pipe 1 inch rounds onto parchment lined baking sheets, pulling the tip to the side so as to not leave a peak mark.  I use very thick sheets for this recipe.  Double up if needed.Tap the pan somewhat assertively on the counter to remove any trapped air and help batter to settle.",
+          "Let sit for 1/2  2 hours, until a shell forms on the top and your finger pressed lightly doesnt leave a mark.Now, bakers are completely split on the right temperature for baking macarons.  Some bake slowly at 270-350 degrees.  I tried to keep my temperamental oven at around 300 for these, holding the door slightly ajar with a spoon.  This way I can keep them in longer to assure that the insides are cooked without browning them on top, which happened with a batch that was drier / baked higher.",
+          "Bake in fully preheated oven for 5 minutes, turn the pan, and bake for around 8 minutes more, or until the feet of the macaron are a bit sturdier than soft.Cool on sheets for two minutes, then remove to rack to cool completely.Fill with prepared lemon curd and refrigerate to harden.",
+          "Serve at room temperature with tea.  Preferably wearing a skirt.  Or at least barefoot."
+        ]
+      },
+      "es": {
+        "title": "Té De Lavanda Con Macarons Franceses De Limón",
+        "description": "La receta de Macarons Franceses de Té de Lavanda y Limón se puede preparar en 45 minutos aproximadamente. Esta receta sirve para 20 personas y cuesta 22 centavos por porción. Una porción contiene 61 calorías, 2 g de proteína y 2 g de grasa. 3 personas han probado y les ha gustado esta receta. Sólo a unas pocas personas les gustó mucho esta bebida. Una mezcla de ralladura de limón, azúcar, lavanda y un puñado de otros ingredientes es todo lo que se necesita para que esta receta sea tan sabrosa. Se lo presenta Foodista. Esta receta es típica de la cocina mediterránea. Es una buena opción si sigues una dieta sin gluten, sin lácteos, lacto ovo vegetariana y compatible con fodmap. Con una puntuación cucharacular del 9%, este plato es muy malo (pero aún se puede arreglar). Recetas similares incluyen té de lavanda, limón y miel de Wolds Way Lavender Farm, macarrones de lavanda con cuajada de limón y pastel de café con lavanda y polenta (lavanda francesa).",
+        "ingredients": [
+          "3/4 taza de harina de almendras",
+          "1 pizca de crémor tártaro",
+          "4 claras de huevo grandes",
+          "2 cucharadas de lavanda seca",
+          "1/2 limón rallado",
+          "1 taza de azúcar glass",
+          "1/4 taza de azúcar blanca",
+          "4 gotas de colorante alimentario amarillo"
+        ],
+        "instructions": [
+          "Pulse la harina de almendras y el azúcar en polvo hasta que se mezclen, luego tamice dos veces para asegurarse de que todos los trozos más grandes de almendra estén separados y la harina se mezcle bien.",
+          "Agrega la ralladura de limón y la lavanda a la harina y reserva. Pulsa el azúcar blanca en el procesador hasta que esté muy fina. En el tazón grande de una batidora de pie o con la mano, comienza a batir las claras de huevo hasta que estén espumosas.",
+          "Agrega una pizca de crémor tártaro y bate hasta que se formen picos suaves. Reduce la velocidad a baja y agrega el azúcar blanca fina, una cucharada a la vez.  Cuando esté completamente incorporado, aumente la velocidad a media y luego a alta, y bata hasta que esté rígido.  El tiempo varía en esto, y aquí es donde la práctica hace la perfección.",
+          "Agregue el gel colorante para alimentos cuando esté casi completamente terminado de batir. Tamice 1/3 de la harina en el huevo e incorpore por completo.  Repetir hasta incorporar toda la harina.  Desea doblar hasta que la masa esté suave, pero aún ligera. Vierta en una manga pastelera provista de una punta grande (yo uso entre 1/2 y 1 pulgada, dependiendo de lo que tome primero).  Coloque rondas de 1 pulgada en bandejas para hornear forradas con papel pergamino, tirando de la punta hacia un lado para no dejar una marca de pico.  Utilizo láminas muy gruesas para esta receta.  Duplique si es necesario. Golpee la sartén con cierta fuerza sobre la encimera para eliminar el aire atrapado y ayudar a que la masa se asiente.",
+          "Déjelo reposar durante 1/2 a 2 horas, hasta que se forme una cáscara en la parte superior y al presionar ligeramente con el dedo no deje marca. Ahora, los panaderos están completamente divididos a la temperatura adecuada para hornear macarons.  Algunos se hornean lentamente a 270-350 grados.  Intenté mantener mi temperamental horno a alrededor de 300 para estos, manteniendo la puerta entreabierta con una cuchara.  De esta manera puedo conservarlos por más tiempo para asegurarme de que el interior esté cocido sin dorarse por encima, lo que sucedió con un lote que estaba más seco/horneado a mayor temperatura.",
+          "Hornee en horno completamente precalentado durante 5 minutos, voltee el molde y hornee por unos 8 minutos más, o hasta que las patas del macarrón estén un poco más resistentes que suaves. Déjelo enfriar en bandejas durante dos minutos, luego retírelo a la rejilla para que se enfríe por completo. Rellénelo con la cuajada de limón preparada y refrigere para que se endurezca.",
+          "Servir a temperatura ambiente con té.  Preferiblemente usar falda.  O al menos descalzo."
+        ]
+      }
+    }
+  },
+  {
+    "id": 641732,
+    "image": "https://img.spoonacular.com/recipes/641732-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 4,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "vegetariano"
+    },
+    "content": {
+      "en": {
+        "title": "Dulce De Leche Swirled Amaretto Frozen Yogurt",
+        "description": "You can never have too many dessert recipes, so give Dulce De Leche Swirled Amaretto Frozen Yogurt a try. This recipe makes 4 servings with 26 calories, 0g of protein, and 3g of fat each. For 13 cents per serving, this recipe covers 0% of your daily requirements of vitamins and minerals. This recipe is liked by 5 foodies and cooks. A mixture of vanilla yogurt, amaretto cream, dulce de leche, and a handful of other ingredients are all it takes to make this recipe so tasty. It is brought to you by Foodista. From preparation to the plate, this recipe takes roughly 45 minutes. It is a good option if you're following a gluten free and lacto ovo vegetarian diet. Overall, this recipe earns an improvable spoonacular score of 8%. Russian Dulce De Leche Waffle Cake and Instant Pot Dulce De Leche, Dulce de Leche Milkshake (Malteada de Arequipe o Dulce de Leche), and Swirled Blueberry Frozen Yogurt are very similar to this recipe.",
+        "ingredients": [
+          "1 tub of vanilla Balkan style yogurt, 650g",
+          "2 tablespoons of amaretto cream (keep cold)",
+          "2 tablespoons of dulce de leche, or caramel, or 3 caramel squares"
+        ],
+        "instructions": [
+          "Drained the yogurt overnight",
+          "Mix the amaretto cream into the yogurt & churn in your ice cream maker as according to the manufacturer's instruction.",
+          "Warm the dulce de leche, or caramel in the microwave for 30 seconds. When yogurt is done churning, layer drizzles of dulce de leche into the yogurt and store in the freezer."
+        ]
+      },
+      "es": {
+        "title": "Yogur helado de amaretto arremolinado con dulce de leche",
+        "description": "Nunca es posible tener demasiadas recetas de postres, así que prueba el yogur helado de amaretto con remolinos de dulce de leche. Esta receta rinde 4 porciones con 26 calorías, 0 g de proteína y 3 g de grasa cada una. Por 13 centavos por porción, esta receta cubre el 0% de tus requerimientos diarios de vitaminas y minerales. Esta receta gusta a 5 amantes de la gastronomía y cocineros. Una mezcla de yogur de vainilla, crema de amaretto, dulce de leche y un puñado de ingredientes más es todo lo que se necesita para que esta receta sea tan sabrosa. Se lo presenta Foodista. Desde la preparación hasta el plato, esta receta tarda aproximadamente 45 minutos. Es una buena opción si sigues una dieta sin gluten y lacto ovo vegetariana. En general, esta receta obtiene una puntuación cucharacular mejorable del 8%. El pastel de gofres ruso de dulce de leche y el dulce de leche instantáneo, el batido de dulce de leche (Malteada de Arequipe o Dulce de Leche) y el yogur helado de arándanos remolinados son muy similares a esta receta.",
+        "ingredients": [
+          "1 tarrina de yogur balcánico de vainilla, 650g",
+          "2 cucharadas de crema de amaretto (mantener fría)",
+          "2 cucharadas de dulce de leche, o caramelo, o 3 cuadritos de caramelo"
+        ],
+        "instructions": [
+          "Escurrimos el yogur durante la noche",
+          "Mezcle la crema de amaretto con el yogur y bata en su máquina para hacer helados según las instrucciones del fabricante.",
+          "Calienta el dulce de leche o caramelo en el microondas durante 30 segundos. Cuando el yogur esté listo, agregue capas de dulce de leche al yogur y guárdelo en el congelador."
+        ]
+      }
+    }
+  },
+  {
+    "id": 641145,
+    "image": "https://img.spoonacular.com/recipes/641145-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 75,
+    "servings": 4,
+    "dietary": {
+      "isGlutenFree": true,
+      "type": "carne_blanca"
+    },
+    "content": {
+      "en": {
+        "title": "Curry-Braised Chicken",
+        "description": "Forget going out to eat or ordering takeout every time you crave Indian food. Try making Curry-Braised Chicken at home. This recipe serves 4. For $2.2 per serving, this recipe covers 26% of your daily requirements of vitamins and minerals. This main course has 565 calories, 19g of protein, and 33g of fat per serving. This recipe is liked by 2 foodies and cooks. If you have lime juice, chicken breasts, coconut milk, and a few other ingredients on hand, you can make it. From preparation to the plate, this recipe takes around 1 hour and 15 minutes. It is brought to you by Foodista. It is a good option if you're following a gluten free, dairy free, and fodmap friendly diet. With a spoonacular score of 64%, this dish is good. Try Curry Braised Chicken Legs, Coconut-Curry Braised Chicken Thighs, and Curry-and-Yogurt-Braised Chicken Thighs for similar recipes.",
+        "ingredients": [
+          "basmati rice",
+          "1 Tbsp. palm or brown sugar",
+          "2 Tbsp. fish sauce",
+          "2 Tbsp. fresh lime juice, or wedges for serving",
+          "pepper",
+          "Salt",
+          "2 large boneless, skinless, chicken breasts",
+          "1 (14oz) can unsweetened coconut milk",
+          "2 Tbsp. grapeseed or vegetable oil",
+          "2 Tbsp. curry paste (green, red, or yellow)"
+        ],
+        "instructions": [
+          "Preheat your oven to 325 degrees Fahrenheit.",
+          "Cut the chicken breasts in half.",
+          "Heat oil over medium-high in a Dutch oven. Dust chicken with salt and pepper, then brown 1-2 minutes per side in the oil, working in batches. Set chicken aside.",
+          "Add curry paste to the Dutch oven, then use a wooden spoon to break up large pieces and work the paste into the hot oil. Once combined, add the coconut milk and use the wooden spoon to release any browned pieces of chicken stuck to the pot. Stir in the fish sauce and sugar.Cover the Dutch oven and place in the oven.",
+          "Bake for 45-55 minutes, or until chicken is cooked through and no longer pink.Stir in the lime juice and serve with cooked rice."
+        ]
+      },
+      "es": {
+        "title": "Pollo Estofado Al Curry",
+        "description": "Olvídate de salir a comer o pedir comida para llevar cada vez que se te antoje comida india. Intente preparar pollo estofado al curry en casa. Esta receta sirve para 4 personas. Por $2.2 por porción, esta receta cubre el 26% de tus necesidades diarias de vitaminas y minerales. Este plato principal tiene 565 calorías, 19 g de proteína y 33 g de grasa por ración. Esta receta gusta a 2 amantes de la comida y cocineros. Si tienes jugo de lima, pechugas de pollo, leche de coco y algunos otros ingredientes a mano, puedes prepararlo. Desde la preparación hasta el plato, esta receta tarda alrededor de 1 hora y 15 minutos. Se lo presenta Foodista. Es una buena opción si sigues una dieta sin gluten, sin lácteos y compatible con fodmap. Con una puntuación cucharacular del 64%, este plato es bueno. Pruebe muslos de pollo estofados con curry, muslos de pollo estofados con curry de coco y muslos de pollo estofados con curry y yogur para obtener recetas similares.",
+        "ingredients": [
+          "arroz basmati",
+          "1 cucharada. azúcar de palma o moreno",
+          "2 cucharadas. salsa de pescado",
+          "2 cucharadas. jugo de lima fresco o gajos para servir",
+          "pimienta",
+          "Sal",
+          "2 pechugas de pollo grandes, deshuesadas y sin piel",
+          "1 lata (14 oz) de leche de coco sin azúcar",
+          "2 cucharadas. aceite de semilla de uva o vegetal",
+          "2 cucharadas. pasta de curry (verde, roja o amarilla)"
+        ],
+        "instructions": [
+          "Precalienta tu horno a 325 grados Fahrenheit.",
+          "Corta las pechugas de pollo por la mitad.",
+          "Caliente el aceite a fuego medio-alto en una olla. Espolvoree el pollo con sal y pimienta, luego dórelo de 1 a 2 minutos por lado en el aceite, trabajando en tandas. Reserva el pollo.",
+          "Agregue pasta de curry a la olla, luego use una cuchara de madera para romper trozos grandes y mezcle la pasta en el aceite caliente. Una vez combinado, agregue la leche de coco y use la cuchara de madera para soltar los trozos de pollo dorados pegados a la olla. Agregue la salsa de pescado y el azúcar. Cubra la olla y colóquela en el horno.",
+          "Hornee durante 45 a 55 minutos o hasta que el pollo esté bien cocido y ya no esté rosado. Agregue el jugo de limón y sirva con arroz cocido."
+        ]
+      }
+    }
+  },
+  {
+    "id": 665257,
+    "image": "https://img.spoonacular.com/recipes/665257-556x370.jpg",
+    "isFavorite": true,
+    "cookingTime": 45,
+    "servings": 24,
+    "dietary": {
+      "isGlutenFree": false,
+      "type": "vegetariano"
+    },
+    "content": {
+      "en": {
+        "title": "Whole Grain Pumpkin Bread",
+        "description": "Whole Grain Pumpkin Bread might be just the breakfast you are searching for. One portion of this dish contains about 5g of protein, 10g of fat, and a total of 241 calories. For 47 cents per serving, this recipe covers 13% of your daily requirements of vitamins and minerals. This recipe serves 24. It is brought to you by Foodista. A couple people made this recipe, and 13 would say it hit the spot. Head to the store and pick up oil, oat bran, pumpkin, and a few other things to make it today. From preparation to the plate, this recipe takes approximately 45 minutes. It is a good option if you're following a lacto ovo vegetarian diet. With a spoonacular score of 66%, this dish is good. Similar recipes are Multi-Grain Pumpkin Cranberry Bread, Whole Grain Pumpkin Pancakes, and Whole-Grain Pumpkin Scones.",
+        "ingredients": [
+          "2 teaspoons baking soda",
+          "1 1/2 cups firmly packed light brown sugar",
+          "16 ounces can pumpkin (Libby's)",
+          "2 teaspoons cinnamon",
+          "2 eggs, well beaten",
+          "2 cups flour",
+          "1 teaspoon ground cloves",
+          "1/2 cup molasses",
+          "1 teaspoon nutmeg",
+          "cup oat bran",
+          "1 cup oil or butter",
+          "1/4 cup pecans, finely chopped",
+          "1/2 teaspoon salt",
+          "cup wheat bran",
+          "cup wheat germ",
+          "1/2 cup whole wheat flour"
+        ],
+        "instructions": [
+          "Preheat oven to 375 degrees. Grease 2 loaf pans. Beat oil, brown sugar and molasses until well blended. Blend in egg and pumpkin. Stir flours, brans, wheat germ, soda, cinnamon, cloves, nutmeg and salt into mixture just until moistened. Fold in nuts. Fill pans and bake about 1 hour, until pick comes out clean. Cool on rack. Better if served the day after cooking."
+        ]
+      },
+      "es": {
+        "title": "Pan Integral De Calabaza",
+        "description": "El pan integral de calabaza puede ser el desayuno que estás buscando. Una porción de este plato contiene aproximadamente 5 g de proteína, 10 g de grasa y un total de 241 calorías. Por 47 centavos por porción, esta receta cubre el 13% de tus necesidades diarias de vitaminas y minerales. Esta receta sirve para 24 personas. Te la ofrece Foodista. Un par de personas hicieron esta receta y 13 dirían que dio en el clavo. Dirígete a la tienda y compra aceite, salvado de avena, calabaza y algunas cosas más para prepararlo hoy. Desde la preparación hasta el plato, esta receta tarda aproximadamente 45 minutos. Es una buena opción si sigues una dieta lacto ovo vegetariana. Con una puntuación cucharacular del 66%, este plato es bueno. Recetas similares son el pan de calabaza y arándanos multicereales, los panqueques de calabaza integrales y los bollos de calabaza integrales.",
+        "ingredients": [
+          "2 cucharaditas de bicarbonato de sodio",
+          "1 1/2 tazas de azúcar moreno claro firmemente compactado",
+          "Lata de 16 onzas de calabaza (Libby's)",
+          "2 cucharaditas de canela",
+          "2 huevos bien batidos",
+          "2 tazas de harina",
+          "1 cucharadita de clavo molido",
+          "1/2 taza de melaza",
+          "1 cucharadita de nuez moscada",
+          "taza de salvado de avena",
+          "1 taza de aceite o mantequilla",
+          "1/4 taza de nueces pecanas, finamente picadas",
+          "1/2 cucharadita de sal",
+          "taza de salvado de trigo",
+          "taza de germen de trigo",
+          "1/2 taza de harina integral"
+        ],
+        "instructions": [
+          "Precalienta el horno a 375 grados. Engrase 2 moldes para pan. Batir el aceite, el azúcar moreno y la melaza hasta que estén bien mezclados. Incorpora el huevo y la calabaza. Agregue la harina, el salvado, el germen de trigo, la soda, la canela, el clavo, la nuez moscada y la sal a la mezcla hasta que se humedezcan. Incorpora las nueces. Llene los moldes y hornee aproximadamente 1 hora, hasta que el palillo salga limpio. Dejar enfriar sobre una rejilla. Mejor si se sirve al día siguiente de cocinarlo."
+        ]
+      }
+    }
+  }
+]
