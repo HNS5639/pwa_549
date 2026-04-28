@@ -4,6 +4,7 @@ export const texts = {
     home: "Inicio",
     filters: "Filtros",
     sinFavoritos: "No existen favoritos para mostrar.",
+    noReceta: "Cargando recetas...",
     placeHolder: {
       titulo: "Buscar por titulo...",
       ingredientes: "Buscar por ingredientes...",
@@ -22,6 +23,7 @@ export const texts = {
     home: "Home",
     filters: "Filters",
     sinFavoritos: "There are no favorites to show.",
+    noReceta: "Loading recipes...",
     placeHolder: {
       titulo: "Search by title...",
       ingredientes: "Search by ingredients...",

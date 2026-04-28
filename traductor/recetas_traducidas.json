@@ -1,6 +1,6 @@
 [
   {
-    "id": 716417,
+    "id": "716417",
     "image": "https://img.spoonacular.com/recipes/716417-556x370.jpg",
     "isFavorite": false,
     "cookingTime": 45,
@@ -39,7 +39,8 @@
     }
   },
   {
-    "id": 660261,
+    "id": "660261",
+    
     "image": "https://img.spoonacular.com/recipes/660261-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -88,7 +89,7 @@
     }
   },
   {
-    "id": 636207,
+    "id": "636207",
     "image": "https://img.spoonacular.com/recipes/636207-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -139,7 +140,7 @@
     }
   },
   {
-    "id": 636581,
+    "id": "636581",
     "image": "https://img.spoonacular.com/recipes/636581-556x370.",
     "isFavorite": true,
     "cookingTime": 45,
@@ -238,7 +239,7 @@
     }
   },
   {
-    "id": 640318,
+    "id": "640318",
     "image": "https://img.spoonacular.com/recipes/640318-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 25,
@@ -287,7 +288,7 @@
     }
   },
   {
-    "id": 645647,
+    "id": "645647",
     "image": "https://img.spoonacular.com/recipes/645647-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -338,7 +339,7 @@
     }
   },
   {
-    "id": 642556,
+    "id": "642556",
     "image": "https://img.spoonacular.com/recipes/642556-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 75,
@@ -387,7 +388,7 @@
     }
   },
   {
-    "id": 716424,
+    "id": "716424",
     "image": "https://img.spoonacular.com/recipes/716424-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -422,7 +423,7 @@
     }
   },
   {
-    "id": 665203,
+    "id": "665203",
     "image": "https://img.spoonacular.com/recipes/665203-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -479,7 +480,7 @@
     }
   },
   {
-    "id": 665484,
+    "id": "665484",
     "image": "https://img.spoonacular.com/recipes/665484-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -530,7 +531,7 @@
     }
   },
   {
-    "id": 634345,
+    "id": "634345",
     "image": "https://img.spoonacular.com/recipes/634345-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -581,7 +582,7 @@
     }
   },
   {
-    "id": 651765,
+    "id": "651765",
     "image": "https://img.spoonacular.com/recipes/651765-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -646,7 +647,7 @@
     }
   },
   {
-    "id": 649328,
+    "id": "649328",
     "image": "https://img.spoonacular.com/recipes/649328-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -705,7 +706,7 @@
     }
   },
   {
-    "id": 641732,
+    "id": "641732",
     "image": "https://img.spoonacular.com/recipes/641732-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -746,7 +747,7 @@
     }
   },
   {
-    "id": 641145,
+    "id": "641145",
     "image": "https://img.spoonacular.com/recipes/641145-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 75,
@@ -805,7 +806,7 @@
     }
   },
   {
-    "id": 665257,
+    "id": "665257",
     "image": "https://img.spoonacular.com/recipes/665257-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -867,21 +868,8 @@
       }
     }
   },
-
-
-
-
-
-
-
-
-
-
-
-  
-
   {
-    "id": 635675,
+    "id": "635675",
     "image": "https://img.spoonacular.com/recipes/635675-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -982,7 +970,7 @@
     }
   },
   {
-    "id": 663050,
+    "id": "663050",
     "image": "https://img.spoonacular.com/recipes/663050-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 15,
@@ -1041,7 +1029,7 @@
     }
   },
   {
-    "id": 663845,
+    "id": "663845",
     "image": "https://img.spoonacular.com/recipes/663845-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -1082,7 +1070,7 @@
     }
   },
   {
-    "id": 646626,
+    "id": "646626",
     "image": "https://img.spoonacular.com/recipes/646626-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -1147,7 +1135,7 @@
     }
   },
   {
-    "id": 637014,
+    "id": "637014",
     "image": "https://img.spoonacular.com/recipes/637014-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 180,
@@ -1202,7 +1190,7 @@
     }
   },
   {
-    "id": 637658,
+    "id": "637658",
     "image": "https://img.spoonacular.com/recipes/637658-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -1267,7 +1255,7 @@
     }
   },
   {
-    "id": 646982,
+    "id": "646982",
     "image": "https://img.spoonacular.com/recipes/646982-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 25,
@@ -1322,7 +1310,7 @@
     }
   },
   {
-    "id": 631783,
+    "id": "631783",
     "image": "https://img.spoonacular.com/recipes/631783-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -1385,7 +1373,7 @@
     }
   },
   {
-    "id": 645696,
+    "id": "645696",
     "image": "https://img.spoonacular.com/recipes/645696-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -1450,7 +1438,7 @@
     }
   },
   {
-    "id": 716409,
+    "id": "716409",
     "image": "https://img.spoonacular.com/recipes/716409-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,
@@ -1491,7 +1479,7 @@
     }
   },
   {
-    "id": 643916,
+    "id": "643916",
     "image": "https://img.spoonacular.com/recipes/643916-556x370.jpg",
     "isFavorite": true,
     "cookingTime": 45,

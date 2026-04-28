@@ -4,6 +4,8 @@ import { BotonAccion } from "../../components/Button/BotonAction";
 import Filter from "../../components/Filters/Filters";
 import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
+import { Link } from "react-router";
+import { texts } from "../../const/texts";
 //recetario de muestra (para pruebas, tiene 100 recetas)
 //import { recetario } from "../../../recetas_reales";
 
@@ -40,20 +42,22 @@ function Home() {
       </aside>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {recetarioFiltrado.length === 0 ? (
-          <p>No hay recetas pendientes.</p>
+          <p>{texts[lang].noReceta}</p>
         ) : (
-          recetarioFiltrado
-            .slice(0, limite)
-            .map((receta) => <Card key={receta.id} receta={receta} />)
+          recetarioFiltrado.slice(0, limite).map((receta) => (
+            <Link to={`/details/${receta.id}`} key={receta.id}>
+              <Card receta={receta} />
+            </Link>
+          ))
         )}
-        {limite < recetarioFiltrado.length && (
-          <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-6">
+          {limite < recetarioFiltrado.length && (
             <BotonAccion
               texto="Cargar más"
               onClick={() => setLimite(limite + 10)}
             />
-          </div>
-        )}
+          )}
+        </div>
       </section>
     </div>
   );
