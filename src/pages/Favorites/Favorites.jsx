@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "../../components/Card/Card";
+import Header from "../../components/Header/Header";
 import { recetario } from "../../../recetas_reales";
 import { texts } from "../../const/texts"
 import { useLanguage } from "../../context/LanguageContext";
@@ -8,6 +9,7 @@ import Filter from "../../components/Filters/Filters";
 
 function Favorites(){
     const { lang } = useLanguage();
+
     const [filtros, setFiltros] = useState({
     titulo: "",
     ingredientes: "",
@@ -16,11 +18,17 @@ function Favorites(){
     porciones: "",
     glutenFree: "",
   });
+  
     const favoritos = recetario.filter((receta)=>receta.isFavorite===true);
     const favoritosFiltrado = filtrosRecetas(favoritos, filtros, lang);
 
     return(
         <div>
+            <Header
+                filtros={filtros}
+                setFiltros={setFiltros}
+                titulo={texts[lang].favorites}
+            />
             <div>
             <Filter filtros={filtros} setFiltros={setFiltros}/>
             </div>

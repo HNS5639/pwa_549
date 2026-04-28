@@ -1,6 +1,8 @@
+import { Link } from "react-router";
+
 function LogoButton() {
   return (
-    <button className="flex items-center gap-4">
+    <Link to="/home" className="flex items-center gap-4">
       <img
         src="https://i.postimg.cc/kg703smH/Logo-Recetario.png"
         alt="Logo"
@@ -10,7 +12,7 @@ function LogoButton() {
       <span className="text-50xl font-serif tracking-wide">
         +549
       </span>
-    </button>
+    </Link>
   );
 }
 
