@@ -1,13 +1,27 @@
 import Card from "../../components/Card/Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BotonAccion } from "../../components/Button/BotonAction";
 import Filter from "../../components/Filters/Filters";
 import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
-//recetario de muestra
-import { recetario } from "../../../recetas_reales";
+//recetario de muestra (para pruebas, tiene 100 recetas)
+//import { recetario } from "../../../recetas_reales";
+
+//conexion con api
+import { getRecetas } from "../../service/api";
 
 function Home() {
+  //lógica de prueba
+  const [recetario, setRecetario] = useState([]);
+
+  useEffect(() => {
+    const cargarRecetas = async () => {
+      const data = await getRecetas();
+      setRecetario(data);
+    };
+    cargarRecetas();
+  }, []);
+
   const { lang } = useLanguage();
   const [limite, setLimite] = useState(10); // Mostramos solo 10 recetas al principio
   const [filtros, setFiltros] = useState({
@@ -19,13 +33,12 @@ function Home() {
     glutenFree: "",
   });
   const recetarioFiltrado = filtrosRecetas(recetario, filtros, lang);
-
   return (
-    <>
-      <div>
+    <div className="flex gap-6 p-6 bg-gray-100 min-h-screen">
+      <aside className="w-1/4">
         <Filter filtros={filtros} setFiltros={setFiltros} />
-      </div>
-      <section>
+      </aside>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {recetarioFiltrado.length === 0 ? (
           <p>No hay recetas pendientes.</p>
         ) : (
@@ -34,7 +47,7 @@ function Home() {
             .map((receta) => <Card key={receta.id} receta={receta} />)
         )}
         {limite < recetarioFiltrado.length && (
-          <div>
+          <div className="flex justify-center mt-6">
             <BotonAccion
               texto="Cargar más"
               onClick={() => setLimite(limite + 10)}
@@ -42,7 +55,7 @@ function Home() {
           </div>
         )}
       </section>
-    </>
+    </div>
   );
 }
 export default Home;

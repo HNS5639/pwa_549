@@ -36,3 +36,5 @@ const receta= {
     }
   }
 }
+//la exporto para que no me aparezca el cartel rojo de que no la estoy usando (problema de extensiones)
+export default receta;
