@@ -8,11 +8,24 @@ import { texts } from "../../const/texts";
 
 import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
+//recetario de muestra (para pruebas, tiene 100 recetas)
+//import { recetario } from "../../../recetas_reales";
 
-// recetario de muestra
-import { recetario } from "../../../recetas_reales";
+//conexion con api
+import { getRecetas } from "../../service/api";
 
 function Home() {
+  //lógica de prueba
+  const [recetario, setRecetario] = useState([]);
+
+  useEffect(() => {
+    const cargarRecetas = async () => {
+      const data = await getRecetas();
+      setRecetario(data);
+    };
+    cargarRecetas();
+  }, []);
+
   const { lang } = useLanguage();
 
   const [limite, setLimite] = useState(10);

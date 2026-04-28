@@ -6,18 +6,11 @@ function Filter({ filtros, setFiltros }) {
   //miro el lenguaje actual
   const { lang } = useLanguage();
 
-  /*  const [filtros, setFiltros] = useState({
-    titulo: "",
-    ingredientes: "",
-    type: "",
-    tiempo: "",
-    porciones: "",
-    glutenFree: "",
-  });  */
-
   return (
-    <div>
+    <div className="bg-white p-4 rounded-2xl shadow-md flex-col gap-4">
+      <h2 className="font-bold text-lg">{texts[lang].filters}</h2>
       <input
+      className="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         type="text"
         value={filtros.titulo}
         placeholder={texts[lang].placeHolder.titulo}
@@ -30,6 +23,7 @@ function Filter({ filtros, setFiltros }) {
       />
 
       <input
+       className="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         type="text"
         value={filtros.ingredientes}
         placeholder={texts[lang].placeHolder.ingredientes}
@@ -42,6 +36,7 @@ function Filter({ filtros, setFiltros }) {
       />
 
       <select
+      className="border rounded-lg p-2"
         value={filtros.type}
 
         onChange={(e) => setFiltros({ ...filtros, type: e.target.value })}
@@ -58,14 +53,18 @@ function Filter({ filtros, setFiltros }) {
       </select>
 
       <input
+      className="border rounded-lg p-2"
         type="number"
+        min={0}
         value={filtros.tiempo}
         placeholder={texts[lang].placeHolder.tiempo}
         onChange={(e) => setFiltros({ ...filtros, tiempo: e.target.value })}
       />
 
       <input
+      className="border rounded-lg p-2"
         type="number"
+        min={0}
         value={filtros.porciones}
         placeholder={texts[lang].placeHolder.porciones}
         onChange={(e) => setFiltros({ ...filtros, porciones: e.target.value })}
@@ -75,7 +74,7 @@ function Filter({ filtros, setFiltros }) {
 
       <BotonAccion
         texto={texts[lang].placeHolder.limpiar}
-        onClick={(e) =>
+        onClick={() =>
           setFiltros({
             titulo: "",
             ingredientes: "",
