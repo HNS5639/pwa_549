@@ -6,8 +6,7 @@ import { useEffect } from "react";
 import { getRecetas } from "../../service/api";
 import PagePrincipal from "../../components/pagePrincipal/pagePrincipal";
 
-function Favorites(){
-
+function Favorites() {
   //lógica de prueba
   const [recetario, setRecetario] = useState([]);
 
@@ -18,8 +17,8 @@ function Favorites(){
     };
     cargarRecetas();
   }, []);
-    const { lang } = useLanguage();
-    const [filtros, setFiltros] = useState({
+  const { lang } = useLanguage();
+  const [filtros, setFiltros] = useState({
     titulo: "",
     ingredientes: "",
     type: "",
@@ -27,11 +26,16 @@ function Favorites(){
     porciones: "",
     glutenFree: "",
   });
-    const favoritos = recetario.filter((receta)=>receta.isFavorite===true);
-    const favoritosFiltrado = filtrosRecetas(favoritos, filtros, lang);
+  const favoritos = recetario.filter((receta) => receta.isFavorite === true);
+  const favoritosFiltrado = filtrosRecetas(favoritos, filtros, lang);
 
-    return(
-    <PagePrincipal filtros={filtros} setFiltros={setFiltros} recetario={favoritosFiltrado} />
-    )
+  return (
+    <PagePrincipal
+      filtros={filtros}
+      setFiltros={setFiltros}
+      recetario={favoritosFiltrado}
+      setRecetario={setRecetario}
+    />
+  );
 }
 export default Favorites;
