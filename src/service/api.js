@@ -4,3 +4,8 @@ export const getRecetas = async () => {
   const res = await fetch(URL);
   return res.json();
 };
+
+export const getRecetaById = async (id) => {
+  const res = await fetch(`${URL}/${id}`);
+  return res.json();
+};
