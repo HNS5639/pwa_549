@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Card from "../../components/Card/Card";
-import Header from "../../components/Header/Header";
+
 import Filter from "../../components/Filters/Filters";
 import { BotonAccion } from "../../components/Button/BotonAction";
 import { texts } from "../../const/texts";
@@ -15,16 +15,23 @@ import { useLanguage } from "../../context/LanguageContext";
 import { getRecetas } from "../../service/api";
 
 function Home() {
+  
   //lógica de prueba
   const [recetario, setRecetario] = useState([]);
 
-  useEffect(() => {
-    const cargarRecetas = async () => {
+useEffect(() => {
+  const cargarRecetas = async () => {
+    try {
       const data = await getRecetas();
+      console.log(data);
       setRecetario(data);
-    };
-    cargarRecetas();
-  }, []);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  cargarRecetas();
+}, []);
 
   const { lang } = useLanguage();
 
@@ -47,7 +54,7 @@ function Home() {
 
   return (
     <>
-      {/* Nuevo Header */}
+      {/* Otro que no se que onda Header 
       <Header
         filtros={filtros}
         setFiltros={setFiltros}

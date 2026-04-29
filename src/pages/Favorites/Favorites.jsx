@@ -24,11 +24,11 @@ function Favorites(){
 
     return(
         <div>
-            <Header
+           {/*  <Header
                 filtros={filtros}
                 setFiltros={setFiltros}
                 titulo={texts[lang].favorites}
-            />
+            /> */}
             <div>
             <Filter filtros={filtros} setFiltros={setFiltros}/>
             </div>
