@@ -15,7 +15,7 @@ function Card({ receta }) {
           className="w-full h-52 object-cover"
         />
 
-        {/* Icono favorito */}
+        {/* Icono favorito  Esto se tiene que cambiar con un boton*/}
         <div className="absolute top-3 right-3 bg-white rounded-full p-2 shadow">
           {receta.isFavorite ? (
             <img
