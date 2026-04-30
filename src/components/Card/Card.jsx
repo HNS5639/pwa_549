@@ -27,9 +27,7 @@ function Card({ receta, setRecetario }) {
           <small>⏱ {receta.cookingTime}</small>
           <small>👥 {receta.servings}</small>
           {receta.dietary.isGlutenFree && (
-            <span className="text-green-600 text-xs font-semibold">
-              Sin gluten
-            </span>
+            <img src={lang==='es' ? "/libreGluten.png" : "/freeGluten.png"}/>
           )}
         </div>
       </div>

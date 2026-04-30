@@ -84,7 +84,7 @@ function Filter({ filtros, setFiltros }) {
       </div>
 
       <BotonAccion
-      className="top-2 right-2 bg-gray-100 backdrop-blur rounded-full p-1 shadow z-10 hover:scale-110 transition border-1"
+      className="top-2 right-2 bg-gray-100 backdrop-blur rounded-full p-1 shadow z-10 hover:scale-110 transition border"
         texto={texts[lang].placeHolder.limpiar}
         onClick={() =>
           setFiltros({
