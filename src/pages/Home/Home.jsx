@@ -31,7 +31,7 @@ function Home() {
   });
   const recetarioFiltrado = filtrosRecetas(recetario, filtros, lang);
   return (
-    <PagePrincipal filtros={filtros} setFiltros={setFiltros} recetario={recetarioFiltrado} />
+    <PagePrincipal filtros={filtros} setFiltros={setFiltros} recetario={recetarioFiltrado} setRecetario={setRecetario}/>
   );
 }
 export default Home;

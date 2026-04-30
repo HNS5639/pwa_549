@@ -7,7 +7,7 @@ function Filter({ filtros, setFiltros }) {
   const { lang } = useLanguage();
 
   return (
-    <div className="bg-white p-4 rounded-2xl shadow-md flex-col gap-4">
+    <div className="bg-white p-4 rounded-2xl shadow-md flex-col gap-4 sticky top-2">
       <h2 className="font-bold text-lg">{texts[lang].filters}</h2>
       <div className="p-2">
         <input
@@ -84,6 +84,7 @@ function Filter({ filtros, setFiltros }) {
       </div>
 
       <BotonAccion
+      className="top-2 right-2 bg-gray-100 backdrop-blur rounded-full p-1 shadow z-10 hover:scale-110 transition border-1"
         texto={texts[lang].placeHolder.limpiar}
         onClick={() =>
           setFiltros({
