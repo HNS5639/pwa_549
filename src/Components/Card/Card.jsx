@@ -1,59 +1,43 @@
-import "./Styles.css";
-import { BotonAccion } from "./../Button/Button";
-import { Title } from "./../Title/Title";
-import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext";
+import Title from "../Title/Title";
+import { useNavigate } from "react-router";
+import ButtonFavorite from "../ButtonFavorites/ButtonFavorites";
 
-// a esta card le quiero pasar toda la info posible
-export const CardPrincipal = ({ pelicula, iconoTitulo, eliminarPelicula }) => {
+function Card({ receta, setRecetario }) {
   const navigate = useNavigate();
-  
-  const imagenPorDefecto = pelicula.tipo === "Serie"
-    ? "https://i.ibb.co/jvQNVt25/Serie-Place-Holder.png"
-    : pelicula.tipo === "Pelicula"
-    ? "https://i.ibb.co/Tx61LJM4/Pelicula-Place-Holder.png"
-    : "https://definicion.de/wp-content/uploads/2009/02/error.png";
-
-  const imagenSrc = pelicula.url_imagen && pelicula.url_imagen.trim()
-    ? pelicula.url_imagen
-    : imagenPorDefecto;
-  
-
-
+  const { lang } = useLanguage();
   return (
-    <div className="pelicula-card">
-      <div className="imagen">
-        {/* <img src={pelicula.url_imagen} alt={pelicula.titulo} /> */}
-        <img src={imagenSrc} alt={pelicula.titulo} />
-        
+    <div
+      onClick={() => navigate(`/details/${receta.id}`)}
+      className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 h-full"
+    >
+      <div className="relative">
+        <img
+          className="w-full h-48 object-cover"
+          src={receta.image}
+          alt={receta.content[lang].title}
+        />
+        <ButtonFavorite receta={receta} setRecetario={setRecetario} />
       </div>
-      <div className="card-header">
-        <Title text={pelicula.titulo} icon={iconoTitulo}></Title>
-        <span className="contador-badge">
-          {pelicula.tipo}
-        </span>
-        <span>{"⭐".repeat(pelicula.rating)}</span>
-      </div>
-      <div className="info-secundaria">
-        <div className="director">
-          <span>Director: {pelicula.director}</span>
+      <div className="flex justify-between text-sm text-gray-500">
+        <div className="w-5/6">
+          <Title text={receta.content[lang].title} />
         </div>
-        <div className="anio">
-          <span>Año de estreno: {pelicula.anio}</span>
-        </div>
-        <div className="genero">
-          <span>Género: {pelicula.genero}</span>
+        <div className="w-1/6 flex flex-col">
+          <small>⏱ {receta.cookingTime}</small>
+          <small>👥 {receta.servings}</small>
+          {receta.dietary.isGlutenFree && (
+            <span className="text-green-600 text-xs font-semibold">
+              Sin gluten
+            </span>
+          )}
         </div>
       </div>
-      <div className="botones">
-        <BotonAccion
-          texto="Editar"
-          onClick={() => navigate(`/edit/${pelicula.id}`)}
-        ></BotonAccion>
-        <BotonAccion
-          texto="Eliminar"
-          onClick={() => eliminarPelicula(pelicula.id)}
-        ></BotonAccion>
-      </div>
+      <p className="text-sm text-gray-600 line-clamp-3">
+        {receta.content[lang].description}
+      </p>
     </div>
   );
-};
+}
+
+export default Card;
