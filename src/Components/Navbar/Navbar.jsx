@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Routes } from "../../const/routes";
 import { useLanguage } from "../../context/LanguageContext"; 
+import { texts } from "../../const/texts";
 
 const Navbar = () => {
   const { lang, toggleLanguage } = useLanguage();
@@ -29,7 +30,7 @@ const Navbar = () => {
 
         <div className="flex-1 flex justify-end items-center gap-6 text-gray-600 font-bold text-sm">
           <Link to={Routes.favorites}>
-            {lang === "es" ? "FAV ❤️" : "FAVORITES ❤️"}
+            ❤️ {texts[lang].favorites}
           </Link>
           
           <button 
