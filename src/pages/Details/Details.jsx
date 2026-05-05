@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import { getRecetaById } from "../../service/api";
-import Card from "../../components/Card/Card";
+import Card from "../../Components/Card/Card";
 
 function Details(){
     const { id } = useParams();
