@@ -20,7 +20,7 @@ function Card({ receta, setRecetario }) {
   return (
     <div
       onClick={() => navigate(`/details/${receta.id}`)}
-      className="cursor-pointer bg-white rounded-[32px] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full group"
+      className="cursor-pointer bg-white rounded-[32px] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full max-h-100 group"
     >
       <div className="relative overflow-hidden aspect-video">
         <img
