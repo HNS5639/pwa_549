@@ -2,8 +2,18 @@ import { useLanguage } from "../../context/LanguageContext";
 import Title from "../Title/Title";
 import { useNavigate } from "react-router";
 import ButtonFavorite from "../ButtonFavorites/ButtonFavorites";
+import { updateFavorite } from "../../service/api";
 
 function Card({ receta, setRecetario }) {
+  const toggleFavorite = async (receta) => {
+      const nuevoValor = !receta.isFavorite;
+      await updateFavorite(receta, nuevoValor);
+      setRecetario((prev) =>
+        prev.map((r) =>
+          r.id === receta.id ? { ...r, isFavorite: nuevoValor } : r,
+        ),
+      );
+    };
   const navigate = useNavigate();
   const { lang } = useLanguage();
   return (
@@ -17,7 +27,11 @@ function Card({ receta, setRecetario }) {
           src={receta.image}
           alt={receta.content[lang].title}
         />
-        <ButtonFavorite receta={receta} setRecetario={setRecetario} />
+        <ButtonFavorite onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleFavorite(receta);
+        }} isFavorite={receta.isFavorite} />
       </div>
       <div className="flex justify-between text-sm text-gray-500">
         <div className="w-5/6">
@@ -27,9 +41,7 @@ function Card({ receta, setRecetario }) {
           <small>⏱ {receta.cookingTime}</small>
           <small>👥 {receta.servings}</small>
           {receta.dietary.isGlutenFree && (
-            <span className="text-green-600 text-xs font-semibold">
-              Sin gluten
-            </span>
+            <img src={lang==='es' ? "/libreGluten.png" : "/freeGluten.png"}/>
           )}
         </div>
       </div>

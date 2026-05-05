@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <small>footer</small>
+        <h1>footer</h1>
     )
 }
 
