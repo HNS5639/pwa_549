@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
-import PagePrincipal from "../../components/pagePrincipal/pagePrincipal";
+import PagePrincipal from "../../Components/pagePrincipal/PagePrincipal";
 import { useInfiniteScroll } from "../../utils/useInfiniteScroll";
 //recetario de muestra (para pruebas, tiene 100 recetas)
 //import { recetario } from "../../../recetas_reales";
