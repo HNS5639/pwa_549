@@ -1,6 +1,7 @@
 import { useLanguage } from "../../context/LanguageContext";
 import { texts } from "../../const/texts";
 import { BotonAccion } from "../Button/BotonAction";
+import Title from "../Title/Title";
 
 function Filter({ filtros = {}, setFiltros }) {
   const { lang } = useLanguage();
@@ -8,10 +9,8 @@ function Filter({ filtros = {}, setFiltros }) {
   const inputStyle = "w-full bg-gray-50 border border-gray-100 rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-pink-200 focus:bg-white transition-all placeholder:text-gray-400";
 
   return (
-    <div className="bg-white p-6 rounded-[32px] shadow-sm flex flex-col gap-2 sticky top-4 border border-gray-100">
-      <h2 className="font-bold text-xl text-gray-800 mb-4 px-2">
-        {texts[lang].filters}
-      </h2>
+    <div className="bg-white p-6 rounded-[32px] shadow-sm flex flex-col gap-2 sticky top-20 border border-gray-100">
+      <Title text={texts[lang].filters}/>
 
       <div className="px-2 pb-2">
         <input
