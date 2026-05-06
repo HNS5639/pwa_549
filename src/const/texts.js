@@ -48,5 +48,4 @@ export const texts = {
     }
   },
 };
-
 //acá voy agregando los títulos, textos de botones etc para tenerlos en ambos idiomas
