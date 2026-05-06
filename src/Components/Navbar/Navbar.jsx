@@ -18,7 +18,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex-[2] max-w-md">
+        <div className="flex-2 max-w-md">
           <div className="relative">
             <input 
               type="text" 

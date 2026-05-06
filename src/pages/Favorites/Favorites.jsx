@@ -75,7 +75,7 @@ function Favorites() {
     loading,
     hasMore,
   });
-
+  const removeFavorite = true;
   const favoritosFiltrado = filtrosRecetas(recetario, filtros, lang);
 
   return (
@@ -86,6 +86,7 @@ function Favorites() {
       setRecetario={setRecetario}
       loaderRef={loaderRef}
       loading={loading}
+      removeFavorite={removeFavorite}
     />
   );
 }
