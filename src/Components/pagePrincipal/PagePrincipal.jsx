@@ -12,6 +12,7 @@ function PagePrincipal({
   setRecetario,
   loaderRef,
   loading,
+  removeFavorite
 }) {
   const { lang } = useLanguage();
   const [openFilters, setOpenFilters] = useState(false);
@@ -39,10 +40,10 @@ function PagePrincipal({
       </aside>
       <section className="w-full md:w-5/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
         {recetario.length === 0 ? (
-          <p>{texts[lang].noReceta}</p>
+          <p>{texts[lang].error}</p>
         ) : (
           recetario.map((receta) => (
-            <Card receta={receta} setRecetario={setRecetario} key={receta.id} />
+            <Card receta={receta} setRecetario={setRecetario} key={receta.id} removeFavorite={removeFavorite}/>
           ))
         )}
         {recetario.length > 0 && (

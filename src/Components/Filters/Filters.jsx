@@ -9,7 +9,7 @@ function Filter({ filtros = {}, setFiltros }) {
   const inputStyle = "w-full bg-gray-50 border border-gray-100 rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-pink-200 focus:bg-white transition-all placeholder:text-gray-400";
 
   return (
-    <div className="bg-white p-6 rounded-[32px] shadow-sm flex flex-col gap-2 sticky top-20 border border-gray-100">
+    <div className="bg-white p-6 rounded-4xl shadow-sm flex flex-col gap-2 sticky top-20 border border-gray-100">
       <Title text={texts[lang].filters}/>
 
       <div className="px-2 pb-2">
@@ -17,7 +17,7 @@ function Filter({ filtros = {}, setFiltros }) {
           className={inputStyle}
           type="text"
           value={filtros.titulo || ""}
-          placeholder={texts[lang].placeHolder.titulo}
+          placeholder={`${texts[lang].placeHolder.titulo}...`}
           onChange={(e) => setFiltros({ ...filtros, titulo: e.target.value })}
         />
       </div>
@@ -27,7 +27,7 @@ function Filter({ filtros = {}, setFiltros }) {
           className={inputStyle}
           type="text"
           value={filtros.ingredientes || ""}
-          placeholder={texts[lang].placeHolder.ingredientes}
+          placeholder={`${texts[lang].placeHolder.ingredientes}...`}
           onChange={(e) => setFiltros({ ...filtros, ingredientes: e.target.value })}
         />
       </div>

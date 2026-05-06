@@ -3,24 +3,18 @@ import Title from "../Title/Title";
 import { useNavigate } from "react-router";
 import ButtonFavorite from "../ButtonFavorites/ButtonFavorites";
 import { updateFavorite } from "../../service/api";
+import { texts } from "../../const/texts";
+import { useFavorite } from "../../utils/useFavorite";
 
 function Card({ receta, setRecetario }) {
-  const toggleFavorite = async (receta) => {
-      const nuevoValor = !receta.isFavorite;
-      await updateFavorite(receta, nuevoValor);
-      setRecetario((prev) =>
-        prev.map((r) =>
-          r.id === receta.id ? { ...r, isFavorite: nuevoValor } : r,
-        ),
-      );
-    };
+  const { toggleFavorite } = useFavorite(setRecetario);
   const navigate = useNavigate();
   const { lang } = useLanguage();
 
   return (
     <div
       onClick={() => navigate(`/details/${receta.id}`)}
-      className="cursor-pointer bg-white rounded-[32px] shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full max-h-100 group"
+      className="cursor-pointer bg-white rounded-4xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col h-full max-h-100 group"
     >
       <div className="relative overflow-hidden aspect-video">
         <img
@@ -61,7 +55,7 @@ function Card({ receta, setRecetario }) {
         {receta.dietary.isGlutenFree && (
           <div className="mt-auto">
             <span className="inline-block bg-green-50 text-green-600 text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-wider">
-              Sin gluten
+              {texts[lang].gluten}
             </span>
           </div>
         )}
