@@ -4,7 +4,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import { filtrosRecetas } from "../../utils/filtrado";
 import { useEffect } from "react";
 import { getRecetas } from "../../service/api";
-import PagePrincipal from "../../components/pagePrincipal/pagePrincipal";
+import PagePrincipal from "../../Components/pagePrincipal/pagePrincipal";
 import { useInfiniteScroll } from "../../utils/useInfiniteScroll";
 
 function Favorites() {
