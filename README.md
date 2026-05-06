@@ -22,13 +22,17 @@ Este proyecto es una aplicación web de recetas desarrollada para la cátedra de
 ## Capturas de Pantalla
 
 ### Home
-![Captura Home](public/home.png)
+![Captura Home](https://i.ibb.co/XfrQB5Ch/home.png)
 
 ### Favoritos
-![Captura Favoritos](public/favoritos.png)
+![Captura Favoritos](https://i.ibb.co/99WkGxfh/favoritos.png)
+
+### Detalles
+![Captura Detalles](https://i.ibb.co/rRbv9Wrp/detalles.png)
 
 ### Filtros de Búsqueda
-![Captura Filtros](public/filtrosBusqueda.png)
+![Captura Filtros](https://i.ibb.co/d4kjtc35/filtros-Busqueda.png)
+
 
 ---
 
