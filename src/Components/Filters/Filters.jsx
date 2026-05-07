@@ -40,7 +40,7 @@ function Filter({ filtros = {}, setFiltros }) {
         >
           <option value="">{texts[lang].placeHolder.todo}</option>
           <option value="vegano">{texts[lang].placeHolder.vegano}</option>
-          <option value="Vegetariano">{texts[lang].placeHolder.vegetariano}</option>
+          <option value="vegetariano">{texts[lang].placeHolder.vegetariano}</option>
           <option value="carne_roja">{texts[lang].placeHolder.carneRoja}</option>
           <option value="carne_blanca">{texts[lang].placeHolder.carneBlanca}</option>
         </select>

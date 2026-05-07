@@ -76,7 +76,17 @@ function Favorites() {
     hasMore,
   });
   const removeFavorite = true;
-  const favoritosFiltrado = filtrosRecetas(recetario, filtros, lang);
+  const favoritosFiltrado = filtrosRecetas(
+  recetario,
+  {
+    ...filtros
+  },
+  lang
+);
+useEffect(() => {
+  setPage(1);
+  setHasMore(true);
+}, [filtros]);
 
   return (
     <PagePrincipal
