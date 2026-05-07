@@ -3,14 +3,9 @@ const URL = "https://69eaaa7715c7e2d51269f707.mockapi.io/recetarioApi/v1/recetar
 export const getRecetas = async ({
   page = 1,
   limit = 9,
-  search = "",
   isFavorite = null,
 } = {}) => {
   let query = `?page=${page}&limit=${limit}`;
-
-  if(search){
-    query += `&search=${search}`;
-  }
 
   if(isFavorite !== null && isFavorite !== ""){
     query += `&isFavorite=${isFavorite}`

@@ -3,8 +3,6 @@ import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
 import PagePrincipal from "../../Components/pagePrincipal/PagePrincipal";
 import { useInfiniteScroll } from "../../utils/useInfiniteScroll";
-//recetario de muestra (para pruebas, tiene 100 recetas)
-//import { recetario } from "../../../recetas_reales";
 
 //conexion con api
 import { getRecetas } from "../../service/api";
@@ -48,7 +46,10 @@ function Home() {
         } else {
           setRecetario((prev) => {
             const nuevasRecetas = data.filter(
-              (recetaNueva) => !prev.some((recetaPrevia) => recetaPrevia.id === recetaNueva.id)
+              (recetaNueva) =>
+                !prev.some(
+                  (recetaPrevia) => recetaPrevia.id === recetaNueva.id,
+                ),
             );
             return [...prev, ...nuevasRecetas];
           });
@@ -60,13 +61,11 @@ function Home() {
 
     fetchRecetas();
 
-return () => {
+    return () => {
       ignore = true;
     };
-
   }, [page, filtros.titulo]);
 
-  
   const handleIntersect = useCallback(() => {
     setLoading(true);
     setPage((prev) => prev + 1);
@@ -77,17 +76,19 @@ return () => {
     hasMore,
   });
 
-
   const { lang } = useLanguage();
-
+  const removeFavorite = false;
   const recetarioFiltrado = filtrosRecetas(
-  recetario,
-  {
-    ...filtros,
-    titulo: "", // esto lo maneja la API
-  },
-  lang
-);
+    recetario,
+    {
+      ...filtros
+    },
+    lang,
+  );
+  useEffect(() => {
+  setPage(1);
+  setHasMore(true);
+}, [filtros]);
 
   return (
     <PagePrincipal
@@ -97,6 +98,7 @@ return () => {
       setRecetario={setRecetario}
       loaderRef={loaderRef}
       loading={loading}
+      removeFavorite={removeFavorite}
     />
   );
 }

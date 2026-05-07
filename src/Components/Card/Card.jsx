@@ -6,8 +6,8 @@ import { updateFavorite } from "../../service/api";
 import { texts } from "../../const/texts";
 import { useFavorite } from "../../utils/useFavorite";
 
-function Card({ receta, setRecetario }) {
-  const { toggleFavorite } = useFavorite(setRecetario);
+function Card({ receta, setRecetario, removeFavorite }) {
+  const { toggleFavorite } = useFavorite(setRecetario, null, removeFavorite);
   const navigate = useNavigate();
   const { lang } = useLanguage();
 
