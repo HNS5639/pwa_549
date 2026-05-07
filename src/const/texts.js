@@ -10,6 +10,9 @@ export const texts = {
     gluten: "Sin gluten",
     preparation: "Preparación",
     noInfo: "No existe información disponible",
+    notFoundTitle: "Página no encontrada",
+    notFoundMessage: "Parece que te has perdido buscando ingredientes.",
+    backToHome: "Volver al inicio",
     placeHolder: {
       titulo: "Titulo",
       ingredientes: "Ingredientes",
@@ -20,7 +23,10 @@ export const texts = {
       carneBlanca: "Carnes blancas",
       tiempo: "Tiempo (min)",
       porciones: "Porciones",
-      limpiar: "Limpiar filtros"
+      limpiar: "Limpiar filtros",
+      notFoundTitle: "Página no encontrada",
+    notFoundMessage: "Parece que te has perdido buscando ingredientes.",
+    backToHome: "Volver al inicio",
     }
   },
   en: {
@@ -34,6 +40,9 @@ export const texts = {
     gluten: "Free gluten",
     preparation: "Preparation",
     noInfo: "No information available",
+    notFoundTitle: "Page Not Found",
+    notFoundMessage: "It seems you got lost looking for ingredients.",
+    backToHome: "Back to Home",
     placeHolder: {
       titulo: "Title",
       ingredientes: "Ingredients",
@@ -44,7 +53,8 @@ export const texts = {
       carneBlanca: "White meat",
       tiempo: "Time (min)",
       porciones: "Portions",
-      limpiar: "Clean filters"
+      limpiar: "Clean filters",
+      
     }
   },
 };
