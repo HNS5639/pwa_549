@@ -73,7 +73,17 @@ function Favorites() {
   });
 
   const removeFavorite = true;
-  const favoritosFiltrado = filtrosRecetas(recetario, filtros, lang);
+  const favoritosFiltrado = filtrosRecetas(
+  recetario,
+  {
+    ...filtros
+  },
+  lang
+);
+useEffect(() => {
+  setPage(1);
+  setHasMore(true);
+}, [filtros]);
 
   if (!loading && favoritosFiltrado.length === 0) {
     const idiomaActual = texts[lang] || texts["es"];

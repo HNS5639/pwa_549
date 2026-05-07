@@ -3,8 +3,6 @@ import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
 import PagePrincipal from "../../Components/pagePrincipal/PagePrincipal";
 import { useInfiniteScroll } from "../../utils/useInfiniteScroll";
-//recetario de muestra (para pruebas, tiene 100 recetas)
-//import { recetario } from "../../../recetas_reales";
 
 //conexion con api
 import { getRecetas } from "../../service/api";
@@ -83,11 +81,14 @@ function Home() {
   const recetarioFiltrado = filtrosRecetas(
     recetario,
     {
-      ...filtros,
-      titulo: "", // esto lo maneja la API
+      ...filtros
     },
     lang,
   );
+  useEffect(() => {
+  setPage(1);
+  setHasMore(true);
+}, [filtros]);
 
   return (
     <PagePrincipal
