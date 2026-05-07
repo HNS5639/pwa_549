@@ -90,14 +90,10 @@ useEffect(() => {
 
     return (
       <div className="flex justify-center items-center w-full py-10 px-4">
-        <div className="bg-[#e61a60] text-black rounded-[20px] p-10 text-center max-w-[450px] w-full shadow-md flex flex-col items-center gap-3">
+        <div className="bg-white rounded-2xl shadow-md p-8 max-w-md w-full flex flex-col items-center text-center gap-4">
           
           <div className="text-5xl font-bold">🙁</div>
-          
-          <h2 className="text-xl font-black tracking-wider mt-2">
-            ERROR 404
-          </h2>
-          
+  
           <p className="text-sm font-medium leading-relaxed max-w-[320px]">
             {idiomaActual.sinFavoritos}
           </p>
