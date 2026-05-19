@@ -56,7 +56,7 @@ Si deseas ejecutarlo de forma local, sigue estas instrucciones:
    npm run dev
 
    
-# Testing  (temporalmente, solo en la rama de testing) 
+# Testing 
 
 El proyecto utiliza un entorno de testing moderno basado en Vitest y React Testing Library.
 
