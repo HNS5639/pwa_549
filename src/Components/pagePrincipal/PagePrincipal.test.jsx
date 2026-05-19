@@ -64,7 +64,7 @@ describe("Componente PagePrincipal", () => {
   it("debe mostrar loader cuando loading es true", () => {
     renderComponent({ loading: true });
 
-    expect(screen.getByText(/no receta/i)).toBeInTheDocument();
+    expect(screen.getByText(/cargando recetas/i)).toBeInTheDocument();
   });
 
   it("debe mostrar filtros al hacer click", () => {
