@@ -1,7 +1,7 @@
 import { useParams } from "react-router"; // o react-router-dom
 import { useState, useEffect } from "react";
 import { getRecetaById } from "../../service/api";
-import DetailRecipe from "../../Components/DetailRecipe/DetailRecipe.";
+import  DetailRecipe  from "../../Components/DetailRecipe/DetailRecipe";
 import { texts } from "../../const/texts";
 import { useLanguage } from "../../context/LanguageContext";
 import NotFound from "../NotFound/NotFound"; // ¡Importamos el componente de tu compañero!
