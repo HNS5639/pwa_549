@@ -7,6 +7,7 @@ import Details from "./pages/Details/Details";
 import { Routes } from "./const/routes";
 import "./App.css";
 
+import NotFound from './pages/NotFound/NotFound';
 function App() {
   return (
     <BrowserRouter>
@@ -17,12 +18,8 @@ function App() {
             <Route path={Routes.home} element={<Home />} />
             <Route path={Routes.favorites} element={<Favorites />} />
             <Route path={Routes.details} element={<Details />} />
-            <Route path="*" element={
-              <div className="flex flex-col items-center justify-center py-20">
-                <h1 className="text-4xl font-bold text-orange-500">404</h1>
-                <p className="text-xl">Lo sentimos, la receta no existe.</p>
-              </div>
-            } />
+            <Route path={Routes.notFound} element={<NotFound />} />
+            
           </RouterRoutes>
         </main>
         <Footer />
