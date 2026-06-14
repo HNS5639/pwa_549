@@ -16,13 +16,13 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-
+        {/* 
         <div className="flex-2 max-w-md flex justify-center items-center">
           <span className="text-xl font-bold text-gray-800">
             {texts[lang].recipeBook}
           </span>
         </div>
-
+        */}
         <div className="flex-1 flex justify-end items-center gap-6 text-gray-600 font-bold text-sm">
           <Link to={Routes.login}>👤</Link>
 

@@ -19,7 +19,7 @@ function Details() {
       setError(false);
       
       try {
-        const data = await getRecetaById(id);
+        const data = await getRecetaById(id, lang);
         
         if (!data || data === "Not found") {
           setError(true);
