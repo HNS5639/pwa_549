@@ -3,4 +3,6 @@ export const Routes = {
   favorites: "/favorites",
   details: "/details/:id",
   notFound: "/notFound",
+  login: "/login",
+  logout: "/logout",
 };
