@@ -25,6 +25,8 @@ function Home() {
 
   const [recetario, setRecetario] = useState([]);
 
+  const { lang } = useLanguage();
+
   useEffect(() => {
     let ignore = false;
     const fetchRecetas = async () => {
@@ -34,6 +36,7 @@ function Home() {
         page,
         limit: 9,
         search: filtros.titulo,
+        lang: lang
       });
 
       if (ignore) return;
@@ -64,7 +67,7 @@ function Home() {
     return () => {
       ignore = true;
     };
-  }, [page, filtros.titulo]);
+  }, [page, filtros.titulo, lang]);
 
   const handleIntersect = useCallback(() => {
     setLoading(true);
@@ -76,7 +79,6 @@ function Home() {
     hasMore,
   });
 
-  const { lang } = useLanguage();
   const removeFavorite = false;
   const recetarioFiltrado = filtrosRecetas(
     recetario,

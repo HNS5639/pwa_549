@@ -31,7 +31,8 @@ function Favorites() {
         page,
         limit: 9,
         search: filtros.titulo,
-        isFavorite: true,
+        // isFavorite: true,
+        lang: lang
       });
 
       if (ignore) return;
@@ -60,7 +61,7 @@ function Favorites() {
     return () => {
       ignore = true;
     };
-  }, [page, filtros.titulo]);
+  }, [page, filtros.titulo, lang]);
 
   const handleIntersect = useCallback(() => {
     if (loading || !hasMore) return;
