@@ -1,5 +1,6 @@
 export const texts = {
   es: {
+    recipeBook: "Recetario 007",
     favorites: "Favoritos",
     home: "Inicio",
     filters: "Filtros",
@@ -13,6 +14,13 @@ export const texts = {
     notFoundTitle: "Página no encontrada",
     notFoundMessage: "Parece que te has perdido buscando ingredientes.",
     backToHome: "Volver al inicio",
+    loginTitle: "Iniciar Sesión",
+    emailLabel: "Correo Electrónico",
+    passwordLabel: "Contraseña",
+    loginButton: "Ingresar",
+    logoutQuestion: "¿Deseas cerrar sesión?",
+    confirmYes: "Sí",
+    confirmNo: "No",
     placeHolder: {
       titulo: "Titulo",
       ingredientes: "Ingredientes",
@@ -25,11 +33,14 @@ export const texts = {
       porciones: "Porciones",
       limpiar: "Limpiar filtros",
       notFoundTitle: "Página no encontrada",
-    notFoundMessage: "Parece que te has perdido buscando ingredientes.",
-    backToHome: "Volver al inicio",
-    }
+      notFoundMessage: "Parece que te has perdido buscando ingredientes.",
+      backToHome: "Volver al inicio",
+      email: "ejemplo@correo.com",
+      password: "Tu contraseña",
+    },
   },
   en: {
+    recipeBook: "Recipe Book 007",
     favorites: "Favorites",
     home: "Home",
     filters: "Filters",
@@ -42,20 +53,24 @@ export const texts = {
     noInfo: "No information available",
     notFoundTitle: "Page Not Found",
     notFoundMessage: "It seems you got lost looking for ingredients.",
-    backToHome: "Back to Home",
+    backToHome: "Back to home",
+    loginTitle: "Login",
+    emailLabel: "Email Address",
+    passwordLabel: "Password",
+    loginButton: "Sign In",
+    logoutQuestion: "Do you want to log out?",
+    confirmYes: "Yes",
+    confirmNo: "No",
     placeHolder: {
       titulo: "Title",
       ingredientes: "Ingredients",
       todo: "All",
       vegano: "Vegan",
       vegetariano: "Vegetarian",
-      carneRoja: "Red meat",
-      carneBlanca: "White meat",
-      tiempo: "Time (min)",
-      porciones: "Portions",
-      limpiar: "Clean filters",
-      
-    }
+      carneRoja: "Red Meat",
+      carneBlanca: "White Meat",
+      email: "example@mail.com",
+      password: "Your password",
+    },
   },
 };
-//acá voy agregando los títulos, textos de botones etc para tenerlos en ambos idiomas

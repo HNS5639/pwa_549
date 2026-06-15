@@ -3,11 +3,13 @@ import { texts } from "../../const/texts";
 import { useFavorite } from "../../utils/useFavorite";
 import ButtonFavorite from "../ButtonFavorites/ButtonFavorites";
 
-function DetailRecipe({ receta, setReceta}) {
+function DetailRecipe({ receta, setReceta }) {
   const { lang } = useLanguage();
   const { toggleFavorite } = useFavorite(null, setReceta);
+  
+  const data = receta?.traducciones?.[0];
 
-  const data = receta?.content?.[lang];
+  if (!receta) return <p className="text-center p-6">Cargando receta...</p>;
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
@@ -16,14 +18,14 @@ function DetailRecipe({ receta, setReceta}) {
           <div className="md:w-1/2 w-full relative">
 
             <img
-              src={receta?.image}
+              src={receta?.image || receta?.urlImagen} 
               alt={data?.title}
               className="w-full h-full object-cover"
             />
 
             <ButtonFavorite 
-            isFavorite={receta.isFavorite}
-            onClick={(e) => {
+              isFavorite={receta.isFavorite}
+              onClick={(e) => {
                 e.stopPropagation();
                 toggleFavorite(receta);
               }}
@@ -36,10 +38,10 @@ function DetailRecipe({ receta, setReceta}) {
             <div className="flex gap-4 text-gray-500 text-sm">
               <span>⏱ {receta?.cookingTime} min</span>
               <span>👥 {receta?.servings}</span>
-              <span>🥗 {receta?.dietary?.type}</span>
+              <span>🥗 {receta?.type}</span> 
             </div>
 
-            {receta?.dietary?.isGlutenFree && (
+            {receta?.isGlutenFree && (
               <span className="inline-block bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full w-fit">
                 {texts[lang].gluten}
               </span>

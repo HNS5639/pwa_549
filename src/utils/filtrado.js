@@ -1,32 +1,29 @@
 export function filtrosRecetas(recetario, filtros, lang) {
-  //return del filter
   return recetario.filter((receta) => {
-    // Filtro por Titulo
-    const coincideTitulo = receta.content[lang].title
+    const traduccion = receta.traducciones?.find(t => t.lang === lang) || receta.traducciones?.[0];
+
+    if (!traduccion) return false;
+
+    const coincideTitulo = traduccion.title
       .toLowerCase()
       .includes(filtros.titulo.toLowerCase());
 
-    // filtro por Ingrediente
-    const coincideIngrediente = receta.content[lang].ingredients.some(
+    const coincideIngrediente = traduccion.ingredients.some(
       (ingredient) =>
-        ingredient.toLowerCase().includes(filtros.ingredientes.toLowerCase()),
+        ingredient.toLowerCase().includes(filtros.ingredientes.toLowerCase())
     );
 
-    // filtro por tipo  (si está vacío, trae todos)
     const coincideTipo =
-      filtros.type === "" || receta.dietary.type === filtros.type;
+      filtros.type === "" || receta.type === filtros.type;
 
-    // Filtro por tirmpo
     const coincideTiempo =
       filtros.tiempo === "" || receta.cookingTime <= filtros.tiempo;
 
-    // Filtro por porciones
     const coincidePorciones =
       filtros.porciones === "" || receta.servings >= filtros.porciones;
 
-    // Filtro por gluten (si está vacío, trae todos)
     const coincideGluten =
-      filtros.glutenFree === "" || receta.dietary.isGlutenFree === filtros.glutenFree;
+      filtros.glutenFree === "" || receta.isGlutenFree === filtros.glutenFree;
 
     return (
       coincideTitulo &&

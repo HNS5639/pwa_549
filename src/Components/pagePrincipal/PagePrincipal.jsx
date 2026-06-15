@@ -43,7 +43,7 @@ function PagePrincipal({
           <p>{texts[lang].error}</p>
         ) : (
           recetario.map((receta) => (
-            <Card receta={receta} setRecetario={setRecetario} key={receta.id} removeFavorite={removeFavorite}/>
+            <Card receta={receta} setRecetario={setRecetario} key={receta.idReceta} removeFavorite={removeFavorite}/>
           ))
         )}
         {recetario.length > 0 && (
