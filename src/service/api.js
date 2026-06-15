@@ -1,48 +1,44 @@
-const URL = "https://69eaaa7715c7e2d51269f707.mockapi.io/recetarioApi/v1/recetario";
 
-export const getRecetas = async ({
-  page = 1,
-  limit = 9,
-  isFavorite = null,
-} = {}) => {
-  let query = `?page=${page}&limit=${limit}`;
+const BASE_URL = `${import.meta.env.VITE_API_URL}/recetas`;
 
-  if(isFavorite !== null && isFavorite !== ""){
-    query += `&isFavorite=${isFavorite}`
-  }
+export const getRecetas = async ({ page = 1, limit = 9, lang = 'es'} = {}) => {
+
+  let query = `?lang=${lang}`; 
 
   try {
-    const res = await fetch(`${URL}${query}`);
+    const res = await fetch(`${BASE_URL}${query}`);
     if (!res.ok) {
       return []; 
     }
     
-    return await res.json();
+    const responseJson = await res.json();
+    return responseJson.data || []; 
   } catch (error) {
-    // Si se corta internet o hay otro error, también devolvemos array vacío
     console.error("Error trayendo recetas:", error);
     return [];
   }
 };
 
-export const getRecetaById = async (id) => {
-  const res = await fetch(`${URL}/${id}`);
-  return res.json();
+export const getRecetaById = async ( id, lang = 'es' ) => {
+
+  try {
+    const res = await fetch(`${BASE_URL}/${id}?lang=${lang}`);
+    if (!res.ok) throw new Error("No se encontró la receta");
+    
+    const responseJson = await res.json();
+    return responseJson.data; // Devolvemos solo el objeto de la receta
+  } catch (error) {
+    console.error("Error trayendo receta por ID:", error);
+    return null;
+  }
 };
 
-export const updateFavorite = async (receta, isFavorite) => {
-  const res = await fetch(`${URL}/${receta.id}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...receta,
-        isFavorite: isFavorite,
-      }),
-    }
-  );
+// Dejo esto comentado para luego diseñarlo es para el 
+// manejo de los favoritos y los usuarios 
 
-  return res.json();
+export const updateFavorite = async (receta, isFavorite) => {
+  console.warn("updateFavorite está temporalmente deshabilitado hasta migrar la tabla N:M");
+  /*
+  const res = await fetch(...)
+  */
 };
