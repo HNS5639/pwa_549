@@ -5,4 +5,6 @@ export const Routes = {
   notFound: "/notFound",
   login: "/login",
   logout: "/logout",
+  recipeEditor: "/recipe-editor",
+  recipeCreator: "/recipe-creator",
 };

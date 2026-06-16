@@ -2,8 +2,9 @@ import { useLanguage } from "../../context/LanguageContext";
 import { texts } from "../../const/texts";
 import { useFavorite } from "../../utils/useFavorite";
 import ButtonFavorite from "../ButtonFavorites/ButtonFavorites";
+import { BotonAccion } from "../Button/BotonAction";
 
-function DetailRecipe({ receta, setReceta }) {
+function DetailRecipe({ receta, setReceta, onEdit, editButtonText }) {
   const { lang } = useLanguage();
   const { toggleFavorite } = useFavorite(null, setReceta);
   
@@ -41,11 +42,20 @@ function DetailRecipe({ receta, setReceta }) {
               <span>🥗 {receta?.type}</span> 
             </div>
 
-            {receta?.isGlutenFree && (
-              <span className="inline-block bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full w-fit">
-                {texts[lang].gluten}
-              </span>
-            )}
+            <div className="flex items-center gap-4">
+              {receta?.isGlutenFree && (
+                <span className="inline-block bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full w-fit">
+                  {texts[lang].gluten}
+                </span>
+              )}
+              {onEdit && (
+                <BotonAccion 
+                  texto={editButtonText} 
+                  onClick={onEdit}
+                  className="!bg-blue-500 hover:!bg-blue-600 shadow-md text-xs py-1 px-4 rounded-lg transition-transform hover:scale-105"
+                />
+              )}
+            </div>
 
             <div>
               <h2 className="font-semibold text-lg mb-2">{texts[lang].placeHolder.ingredientes}</h2>
