@@ -53,6 +53,10 @@ const Navbar = () => {
           >
             {lang} ▼
           </button>
+
+          <Link to={Routes.recipeCreator} className="hover:text-orange-500 transition-colors text-lg" title={texts[lang].createRecipe}>
+            ➕
+          </Link>
         </div>
       </div>
     </header>

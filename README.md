@@ -10,12 +10,18 @@ Este proyecto es una aplicación web de recetas desarrollada para la cátedra de
 *   **Vite** - Herramienta de construcción y desarrollo.
 *   **React Router** - Gestión de navegación entre páginas.
 *   **Vercel** - Hosting y despliegue.
+*   **Vitest** - Tests runer.
+*   **React Testing Library** - Testeo de componentes React.
+*   **JSDOM** - Simulación de navegador.
+*   **jest-dom** - Extiende Jest con matchers personalizados.
+*   **user-event** - Simulación usuario
 
 ## Características Principales
 
 *   **Multilenguaje:** La aplicación cuenta con soporte para dos idiomas.
 *   **Navegación:** Páginas dedicadas para el **Home**, **Favoritos** y **Detalles** de cada receta.
 *   **Interactividad:** Filtros de búsqueda avanzados y scroll infinito para una mejor experiencia de usuario.
+*   **Implentación de testing**
 
 ---
 
@@ -48,3 +54,32 @@ Si deseas ejecutarlo de forma local, sigue estas instrucciones:
    npm install
 3. **Ejecutar el proyecto en entorno de desarrollo:**
    npm run dev
+
+   
+# Testing 
+
+El proyecto utiliza un entorno de testing moderno basado en Vitest y React Testing Library.
+
+## Configuración
+
+El entorno de testing está configurado con:
+
+- `jsdom` como entorno de navegador simulado
+- `setupTests.js` para importar `@testing-library/jest-dom`
+- Scripts personalizados en `package.json`
+
+## Ejecutar tests
+
+Modo interactivo:
+
+```bash
+npm run test
+```
+
+Ejecutar tests una sola vez:
+
+```bash
+npm run test:run
+```
+
+   

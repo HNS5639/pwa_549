@@ -1,10 +1,12 @@
-import { useParams } from "react-router"; // o react-router-dom
+import { useParams, useNavigate } from "react-router-dom"; 
 import { useState, useEffect } from "react";
 import { getRecetaById } from "../../service/api";
 import  DetailRecipe  from "../../Components/DetailRecipe/DetailRecipe";
 import { texts } from "../../const/texts";
 import { useLanguage } from "../../context/LanguageContext";
-import NotFound from "../NotFound/NotFound"; // ¡Importamos el componente de tu compañero!
+import { Routes } from "../../const/routes";
+import { BotonAccion } from "../../Components/Button/BotonAction";
+import NotFound from "../NotFound/NotFound"; // 
 
 function Details() {
   const { id } = useParams();
@@ -12,6 +14,9 @@ function Details() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const { lang } = useLanguage();
+  const navigate = useNavigate();
+
+  const t = texts[lang] || texts["es"];
 
   useEffect(() => {
     const cargarReceta = async () => {
@@ -44,7 +49,14 @@ function Details() {
     return <NotFound />;
   }
 
-  return <DetailRecipe receta={receta} setReceta={setReceta} />;
+  return (
+    <DetailRecipe 
+      receta={receta} 
+      setReceta={setReceta} 
+      onEdit={() => navigate(`${Routes.recipeEditor}/${id}`)}
+      editButtonText={t.editRecipe}
+    />
+  );
 }
 
 export default Details;
