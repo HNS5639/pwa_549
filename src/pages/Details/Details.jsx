@@ -6,7 +6,10 @@ import { texts } from "../../const/texts";
 import { useLanguage } from "../../context/LanguageContext";
 import { Routes } from "../../const/routes";
 import { BotonAccion } from "../../Components/Button/BotonAction";
-import NotFound from "../NotFound/NotFound"; // 
+import NotFound from "../NotFound/NotFound";
+import { useAuth } from "../../context/AuthContext"; 
+import { getFavoritosIds } from "../../service/favorite";
+
 
 function Details() {
   const { id } = useParams();
@@ -15,6 +18,9 @@ function Details() {
   const [error, setError] = useState(false);
   const { lang } = useLanguage();
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
+  const [favIds, setFavIds] = useState([]);
+
 
   const t = texts[lang] || texts["es"];
 
@@ -41,6 +47,19 @@ function Details() {
     cargarReceta();
   }, [id]);
 
+  useEffect(() => {
+      const fetchFavIds = async () => {
+        if (isAuthenticated) {
+          const ids = await getFavoritosIds();
+          setFavIds(ids.data || []);
+        } else {
+          setFavIds([]);
+        }
+      };
+      fetchFavIds();
+    }, [isAuthenticated]);
+    const removeFavorite = false;
+
   if (loading) {
     return <p className="text-center mt-20 text-gray-500">{texts[lang].noReceta}</p>; 
   }
@@ -55,6 +74,9 @@ function Details() {
       setReceta={setReceta} 
       onEdit={() => navigate(`${Routes.recipeEditor}/${id}`)}
       editButtonText={t.editRecipe}
+      removeFavorite={removeFavorite}
+      favIds={favIds}
+      setFavIds={setFavIds}
     />
   );
 }

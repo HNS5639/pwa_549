@@ -4,25 +4,28 @@ import { texts } from "../../const/texts";
 import { useLanguage } from "../../context/LanguageContext";
 import FormFields from "../../Components/FormFields/FormFields";
 import { BotonAccion } from "../../Components/Button/BotonAction";
-import { getRecetaById } from "../../service/api";
+import { getRecetaById, updateReceta } from "../../service/api";
 import { Routes } from "../../const/routes";
 
+
 const getFormDataFromRecipe = (data, lang) => {
-  const content = data?.content?.[lang] || data?.content?.es || {};
+  const traduccionBackend = data?.traducciones?.find(t => t.lang === lang) || data?.traducciones?.[0];
+  const title = traduccionBackend?.title || data?.titulo || data?.title || "";
+  const description = traduccionBackend?.description || data?.descripcion || data?.description || "";
+  const rawIngredients = traduccionBackend?.ingredients || traduccionBackend?.ingredientes || data?.ingredientes || "";
+  const ingredients = Array.isArray(rawIngredients) ? rawIngredients.join("\n") : rawIngredients;
+  const rawInstructions = traduccionBackend?.instructions || traduccionBackend?.instrucciones || data?.instrucciones || "";
+  const instructions = Array.isArray(rawInstructions) ? rawInstructions.join("\n") : rawInstructions;
 
   return {
-    title: content.title || "",
-    description: content.description || "",
-    cookingTime: data?.cookingTime || "",
-    servings: data?.servings || "",
-    type: data?.dietary?.type || "carne_blanca",
-    isGlutenFree: Boolean(data?.dietary?.isGlutenFree),
-    ingredients: Array.isArray(content.ingredients)
-      ? content.ingredients.join("\n")
-      : "",
-    instructions: Array.isArray(content.instructions)
-      ? content.instructions.join("\n")
-      : "",
+    title,
+    description,
+    cookingTime: data?.cookingTime || data?.tiempoCoccion || "", 
+    servings: data?.servings || data?.porciones || "",          
+    type: data?.type || data?.tipoDieta || data?.categoria || "carne_blanca",
+    isGlutenFree: Boolean(data?.isGlutenFree ?? data?.libreGluten),
+    ingredients,
+    instructions,
   };
 };
 
@@ -30,10 +33,8 @@ function RecipeEditor() {
   const { lang } = useLanguage();
   const navigate = useNavigate();
   const { id } = useParams();
-
   const [loading, setLoading] = useState(true);
   const t = texts[lang] || texts["es"];
-
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -51,7 +52,6 @@ function RecipeEditor() {
         navigate(Routes.home);
         return;
       }
-
       try {
         setLoading(true);
         const data = await getRecetaById(id, lang);
@@ -67,13 +67,11 @@ function RecipeEditor() {
         setLoading(false);
       }
     };
-
     cargarDatosReceta();
   }, [id, lang, navigate]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
     setFormData(prev => ({
       ...prev,
       [name]: type === "checkbox"
@@ -82,12 +80,55 @@ function RecipeEditor() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
-    alert(lang === "es" ? "Receta guardada (consola)" : "Recipe saved (console)");
-    navigate("/");
+    try {
+      const arrIngredients = formData.ingredients
+        .split(',')
+        .filter(item => item.trim() !== "");
+
+      const arrInstructions = formData.instructions
+        .split(',')
+        .filter(item => item.trim() !== "");
+
+      const otroIdioma = lang === 'es' ? 'en' : 'es';
+
+      const dataAEnviar = {
+        // urlImagen: "",
+        cookingTime: Number(formData.cookingTime),
+        servings: Number(formData.servings),
+        isGlutenFree: formData.isGlutenFree,
+        type: formData.type,
+        traducciones: [
+          // Idioma principal (el que el usuario eligió)
+          {
+            lang: lang, 
+            title: formData.title,
+            description: formData.description,
+            ingredients: arrIngredients,
+            instruction: arrInstructions
+          },
+          // Idioma clon para que no se rompa la app al cambiar el lenguaje
+          {
+            lang: otroIdioma,
+            title: `${formData.title} (Pending translation)`,
+            description: formData.description,
+            ingredients: arrIngredients.map(i => `(TR) ${i}`),
+            instruction: arrInstructions.map(i => `(TR) ${i}`)
+          }
+        ]
+      };
+
+      await updateReceta(id, dataAEnviar);
+      
+      alert(lang === "es" ? "¡Receta editada con éxito!" : "Recipe edited successfully!");
+      navigate("/");
+      
+    } catch (error) {
+      console.error(error);
+      alert("Error al guardar: " + error.message);
+    }
   };
 
   if (loading) {
@@ -100,7 +141,6 @@ function RecipeEditor() {
 
   return (
     <div className="container mx-auto py-12 px-4">
-
       <div className="-mt-12 md:-mt-20 mb-6 flex justify-center">
         <img
           src="https://i.ibb.co/wrdt6KjK/gorro-404.png"
@@ -119,7 +159,6 @@ function RecipeEditor() {
           handleChange={handleChange}
           t={t}
         />
-
         <div className="pt-8 border-t border-gray-100 flex justify-end">
           <BotonAccion 
             texto={texts[lang].placeHolder.save}
@@ -132,6 +171,4 @@ function RecipeEditor() {
     </div>
   );
 }
-
-export default RecipeEditor
-;
+export default RecipeEditor;
