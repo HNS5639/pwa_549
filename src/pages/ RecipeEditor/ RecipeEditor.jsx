@@ -5,12 +5,33 @@ import { useLanguage } from "../../context/LanguageContext";
 import FormFields from "../../Components/FormFields/FormFields";
 import { BotonAccion } from "../../Components/Button/BotonAction";
 import { getRecetaById } from "../../service/api";
+import { Routes } from "../../const/routes";
+
+const getFormDataFromRecipe = (data, lang) => {
+  const content = data?.content?.[lang] || data?.content?.es || {};
+
+  return {
+    title: content.title || "",
+    description: content.description || "",
+    cookingTime: data?.cookingTime || "",
+    servings: data?.servings || "",
+    type: data?.dietary?.type || "carne_blanca",
+    isGlutenFree: Boolean(data?.dietary?.isGlutenFree),
+    ingredients: Array.isArray(content.ingredients)
+      ? content.ingredients.join("\n")
+      : "",
+    instructions: Array.isArray(content.instructions)
+      ? content.instructions.join("\n")
+      : "",
+  };
+};
 
 function RecipeEditor() {
   const { lang } = useLanguage();
   const navigate = useNavigate();
   const { id } = useParams();
 
+  const [loading, setLoading] = useState(true);
   const t = texts[lang] || texts["es"];
 
   const [formData, setFormData] = useState({
@@ -26,32 +47,29 @@ function RecipeEditor() {
 
   useEffect(() => {
     const cargarDatosReceta = async () => {
-      if (!id) return;
+      if (!id) {
+        navigate(Routes.home);
+        return;
+      }
 
       try {
+        setLoading(true);
         const data = await getRecetaById(id, lang);
         if (data && data !== "Not found") {
-          // Obtenemos la traducción correspondiente al idioma actual
-          const contenido = data.content?.[lang] || data.content?.["es"] || {};
-          
-          setFormData({
-            title: contenido.title || "",
-            description: contenido.description || "",
-            cookingTime: data.cookingTime || "",
-            servings: data.servings || "",
-            type: data.dietary?.type || "carne_blanca",
-            isGlutenFree: data.dietary?.isGlutenFree || false,
-            ingredients: contenido.ingredients?.join("\n") || "",
-            instructions: contenido.instructions?.join("\n") || ""
-          });
+          setFormData(getFormDataFromRecipe(data, lang));
+        } else {
+          navigate(Routes.home);
         }
       } catch (error) {
         console.error("Error cargando receta para editar:", error);
+        navigate(Routes.home);
+      } finally {
+        setLoading(false);
       }
     };
 
     cargarDatosReceta();
-  }, [id, lang]);
+  }, [id, lang, navigate]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -72,6 +90,14 @@ function RecipeEditor() {
     navigate("/");
   };
 
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-[60vh]">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-orange-500"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto py-12 px-4">
 
@@ -85,6 +111,7 @@ function RecipeEditor() {
 
       <form
         onSubmit={handleSubmit}
+        aria-busy={loading}
         className="max-w-4xl mx-auto p-8 bg-white shadow-2xl rounded-3xl border border-gray-100 space-y-8"
       >
         <FormFields
