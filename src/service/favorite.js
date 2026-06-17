@@ -36,7 +36,7 @@ export const toggleFavorito = async (idReceta) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}` // ¡Acá también!
+        "Authorization": `Bearer ${token}`
       },
       body: JSON.stringify({ idReceta })
     });
