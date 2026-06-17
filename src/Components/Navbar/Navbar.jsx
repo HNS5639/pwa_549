@@ -2,9 +2,17 @@ import { Link } from "react-router-dom";
 import { Routes } from "../../const/routes";
 import { useLanguage } from "../../context/LanguageContext";
 import { texts } from "../../const/texts";
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { lang, toggleLanguage } = useLanguage();
+  const { isAuthenticated, logout } = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 py-4 shadow-sm">
@@ -24,9 +32,19 @@ const Navbar = () => {
         </div>
         */}
         <div className="flex-1 flex justify-end items-center gap-6 text-gray-600 font-bold text-sm">
-          <Link to={Routes.login}>👤</Link>
+          {isAuthenticated ? (
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+              <button onClick={handleLogout} className="hover:text-orange-500 cursor-pointer px-2">
+                🚪 Logout
+              </button>
+              <Link to={Routes.favorites} className="px-2">❤️ {texts[lang].favorites}</Link>
+            </div>
+          )
+            : (<Link to={Routes.login}>👤 Login </Link>
+            )}
 
-          <Link to={Routes.favorites}>❤️</Link>
+
+
           {/* Al final, le saque el texto (con traduccion y todo) para que queden esos iconos magicos, no quiero usar otra libreria*/}
 
           <button

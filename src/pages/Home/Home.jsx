@@ -3,6 +3,8 @@ import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
 import PagePrincipal from "../../Components/pagePrincipal/PagePrincipal";
 import { useInfiniteScroll } from "../../utils/useInfiniteScroll";
+import { getFavoritosIds } from "../../service/favorite";
+import { useAuth } from "../../context/AuthContext";
 
 //conexion con api
 import { getRecetas } from "../../service/api";
@@ -13,6 +15,8 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
   const loaderRef = useRef(null);
+  const [favIds, setFavIds] = useState([]);
+  const { isAuthenticated } = useAuth();
 
   const [filtros, setFiltros] = useState({
     titulo: "",
@@ -26,6 +30,18 @@ function Home() {
   const [recetario, setRecetario] = useState([]);
 
   const { lang } = useLanguage();
+
+  useEffect(() => {
+    const fetchFavIds = async () => {
+      if (isAuthenticated) {
+        const ids = await getFavoritosIds();
+        setFavIds(ids.data || []);
+      } else {
+        setFavIds([]);
+      }
+    };
+    fetchFavIds();
+  }, [isAuthenticated]);
 
   useEffect(() => {
     let ignore = false;
@@ -88,9 +104,9 @@ function Home() {
     lang,
   );
   useEffect(() => {
-  setPage(1);
-  setHasMore(true);
-}, [filtros]);
+    setPage(1);
+    setHasMore(true);
+  }, [filtros]);
 
   return (
     <PagePrincipal
@@ -101,6 +117,8 @@ function Home() {
       loaderRef={loaderRef}
       loading={loading}
       removeFavorite={removeFavorite}
+      favIds={favIds}
+      setFavIds={setFavIds}
     />
   );
 }
