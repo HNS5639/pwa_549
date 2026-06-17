@@ -12,7 +12,9 @@ function PagePrincipal({
   setRecetario,
   loaderRef,
   loading,
-  removeFavorite
+  removeFavorite,
+  favIds = [],
+  setFavIds
 }) {
   const { lang } = useLanguage();
   const [openFilters, setOpenFilters] = useState(false);
@@ -43,7 +45,14 @@ function PagePrincipal({
           <p>{texts[lang].error}</p>
         ) : (
           recetario.map((receta) => (
-            <Card receta={receta} setRecetario={setRecetario} key={receta.idReceta} removeFavorite={removeFavorite}/>
+            <Card
+              receta={receta}
+              setRecetario={setRecetario}
+              key={receta.idReceta}
+              removeFavorite={removeFavorite}
+              isFavorite={favIds.includes(receta.idReceta)}
+              setFavIds={setFavIds}
+            />
           ))
         )}
         {recetario.length > 0 && (

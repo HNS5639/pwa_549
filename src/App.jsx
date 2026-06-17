@@ -6,10 +6,13 @@ import Login from "./pages/Login/Login";
 import Logout from "./pages/Logout/Logout";
 import Favorites from "./pages/Favorites/Favorites";
 import Details from "./pages/Details/Details";
+import RecipeEditor from "./pages/RecipeEditor/RecipeEditor";
+import RecipeCreator from "./pages/RecipeCreator/RecipeCreator";
+import NotFound from './pages/NotFound/NotFound';
 import { Routes } from "./const/routes";
+import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import "./App.css";
 
-import NotFound from './pages/NotFound/NotFound';
 function App() {
   return (
     <BrowserRouter>
@@ -20,17 +23,37 @@ function App() {
             <Route path={Routes.home} element={<Home />} />
             <Route path={Routes.login} element={<Login />} />
             <Route path={Routes.logout} element={<Logout />} />
-            <Route path={Routes.favorites} element={<Favorites />} />
             <Route path={Routes.details} element={<Details />} />
             <Route path={Routes.notFound} element={<NotFound />} />
-            
+            <Route 
+              path={Routes.favorites} 
+              element={
+                <ProtectedRoute>
+                  <Favorites />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path={`${Routes.recipeEditor}/:id`} 
+              element={
+                <ProtectedRoute>
+                  <RecipeEditor />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path={Routes.recipeCreator} 
+              element={
+                <ProtectedRoute>
+                  <RecipeCreator />
+                </ProtectedRoute>
+              } 
+            />
           </RouterRoutes>
         </main>
         <Footer />
-        
       </div>
     </BrowserRouter>
   );
 }
-
 export default App;
