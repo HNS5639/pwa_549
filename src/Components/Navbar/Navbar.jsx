@@ -38,6 +38,10 @@ const Navbar = () => {
                 🚪 Logout
               </button>
               <Link to={Routes.favorites} className="px-2">❤️ {texts[lang].favorites}</Link>
+
+              <Link to={Routes.recipeCreator} className="hover:text-orange-500 transition-colors text-lg" title={texts[lang].createRecipe}>
+                ➕
+              </Link>
             </div>
           )
             : (<Link to={Routes.login}>👤 Login </Link>
@@ -54,9 +58,6 @@ const Navbar = () => {
             {lang} ▼
           </button>
 
-          <Link to={Routes.recipeCreator} className="hover:text-orange-500 transition-colors text-lg" title={texts[lang].createRecipe}>
-            ➕
-          </Link>
         </div>
       </div>
     </header>

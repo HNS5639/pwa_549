@@ -50,7 +50,7 @@ function PagePrincipal({
               setRecetario={setRecetario}
               key={receta.idReceta}
               removeFavorite={removeFavorite}
-              isFavorite={favIds.includes(receta.idReceta)}
+              isFavorite={favIds.some(id => String(id) === String(receta.idReceta))} 
               setFavIds={setFavIds}
             />
           ))

@@ -4,6 +4,7 @@ import { texts } from "../../const/texts";
 import { useLanguage } from "../../context/LanguageContext";
 import FormFields from "../../Components/FormFields/FormFields";
 import { BotonAccion } from "../../Components/Button/BotonAction";
+import { createReceta } from "./../../service/api";
 
 function RecipeCreator() {
   const { lang } = useLanguage();
@@ -33,24 +34,67 @@ function RecipeCreator() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
-    alert(lang === "es" ? "Receta guardada (consola)" : "Recipe saved (console)");
-    navigate("/");
+    try {
+      const arrIngredients = formData.ingredients
+        .split('\n')
+        .filter(item => item.trim() !== "");
+
+      const arrInstructions = formData.instructions
+        .split('\n')
+        .filter(item => item.trim() !== "");
+
+      const otroIdioma = lang === 'es' ? 'en' : 'es';
+
+      const dataAEnviar = {
+        // urlImagen: "",
+        cookingTime: Number(formData.cookingTime),
+        servings: Number(formData.servings),
+        isGlutenFree: formData.isGlutenFree,
+        type: formData.type,
+        traducciones: [
+          // Idioma principal (el que el usuario eligió)
+          {
+            lang: lang, 
+            title: formData.title,
+            description: formData.description,
+            ingredients: arrIngredients,
+            instruction: arrInstructions
+          },
+          // Idioma clon para que no se rompa la app al cambiar el lenguaje
+          {
+            lang: otroIdioma,
+            title: `${formData.title} (Pending translation)`,
+            description: formData.description,
+            ingredients: arrIngredients.map(i => `(TR) ${i}`),
+            instruction: arrInstructions.map(i => `(TR) ${i}`)
+          }
+        ]
+      };
+
+      await createReceta(dataAEnviar);
+      
+      alert(lang === "es" ? "¡Receta creada con éxito!" : "Recipe created successfully!");
+      navigate("/");
+      
+    } catch (error) {
+      console.error(error);
+      alert("Error al guardar: " + error.message);
+    }
   };
 
   return (
     <div className="container mx-auto py-12 px-4">
 
-      <div className="-mt-12 md:-mt-20 mb-6 flex justify-center">
+      {/* <div className="-mt-12 md:-mt-20 mb-6 flex justify-center">
         <img
           src="https://i.ibb.co/wrdt6KjK/gorro-404.png"
           alt="Gorro de cocina"
           className="w-52 md:w-72 drop-shadow-xl"
         />
-      </div>
+      </div> */}
 
       <form
         onSubmit={handleSubmit}

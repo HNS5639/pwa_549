@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { filtrosRecetas } from "../../utils/filtrado";
 import { useLanguage } from "../../context/LanguageContext";
 import PagePrincipal from "../../Components/pagePrincipal/PagePrincipal";
 import { useInfiniteScroll } from "../../utils/useInfiniteScroll";
@@ -34,8 +33,11 @@ function Home() {
   useEffect(() => {
     const fetchFavIds = async () => {
       if (isAuthenticated) {
-        const ids = await getFavoritosIds();
-        setFavIds(ids.data || []);
+        const respuestaBackend = await getFavoritosIds();
+
+        // Le pedimos la propiedad .data que es donde vienen los números [2, 3, 4]
+        setFavIds(respuestaBackend.data || []);
+
       } else {
         setFavIds([]);
       }
@@ -48,34 +50,44 @@ function Home() {
     const fetchRecetas = async () => {
       setLoading(true);
 
-      const data = await getRecetas({
+      const respuesta = await getRecetas({
         page,
         limit: 9,
+        lang: lang,
         search: filtros.titulo,
-        lang: lang
+        type: filtros.type,
+        tiempo: filtros.tiempo,
+        porciones: filtros.porciones
       });
 
       if (ignore) return;
 
-      if (data.length === 0) {
+      const listRecetas = Array.isArray(respuesta.data) ? respuesta.data : [];
+      const totalPages = respuesta.totalPages || 1;
+
+      if (listRecetas.length === 0) {
         setHasMore(false);
       } else {
         if (page === 1) {
-          setRecetario(data);
+          setRecetario(listRecetas);
         } else {
           setRecetario((prev) => {
-            const nuevasRecetas = data.filter(
+            const nuevasRecetas = listRecetas.filter(
               (recetaNueva) =>
                 !prev.some(
-                  (recetaPrevia) => recetaPrevia.id === recetaNueva.id,
+                  (recetaPrevia) => recetaPrevia.idReceta === recetaNueva.idReceta,
                 ),
             );
-            return [...prev, ...nuevasRecetas];
+            return [...prev, ...listRecetas];
           });
         }
       }
-
       setLoading(false);
+      if (page >= totalPages) {
+        setHasMore(false); // Apaga el scroll si llegamos al final
+      } else {
+        setHasMore(true);  // Lo mantiene encendido
+      }
     };
 
     fetchRecetas();
@@ -86,33 +98,44 @@ function Home() {
   }, [page, filtros.titulo, lang]);
 
   const handleIntersect = useCallback(() => {
-    setLoading(true);
     setPage((prev) => prev + 1);
   }, []);
+
+  const removeFavorite = false;
 
   useInfiniteScroll(loaderRef, handleIntersect, {
     loading,
     hasMore,
   });
 
-  const removeFavorite = false;
-  const recetarioFiltrado = filtrosRecetas(
-    recetario,
-    {
-      ...filtros
-    },
-    lang,
-  );
+
   useEffect(() => {
-    setPage(1);
-    setHasMore(true);
-  }, [filtros]);
+    let enPausa = false; // Nuestro freno de mano
+
+    const handleScroll = () => {
+      if (enPausa) return;
+
+      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+      if (scrollTop + clientHeight >= scrollHeight - 50) {
+        if (!loading && hasMore) {
+          setPage((prev) => prev + 1);
+
+          enPausa = true; // Bloqueamos el sensor
+          setTimeout(() => { enPausa = false }, 1000); // Lo liberamos 1 segundo después
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [loading, hasMore]);
 
   return (
     <PagePrincipal
       filtros={filtros}
       setFiltros={setFiltros}
-      recetario={recetarioFiltrado}
+      recetario={recetario}
       setRecetario={setRecetario}
       loaderRef={loaderRef}
       loading={loading}

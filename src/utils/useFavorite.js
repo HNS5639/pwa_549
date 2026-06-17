@@ -1,4 +1,5 @@
-import { updateFavorite } from "../service/api";
+//ya no la uso mas
+// import { updateFavorite } from "../service/api";
 
 export function useFavorite(setRecetario, setRecetaIndividual, removeFavorite = false) {
   const toggleFavorite = async (receta) => {

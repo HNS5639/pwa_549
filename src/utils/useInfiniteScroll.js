@@ -21,7 +21,7 @@ export function useInfiniteScroll(ref, onIntersect, options = {}) {
         const entry = entries[0];
 
         if (entry.isIntersecting && !loadingRef.current && hasMoreRef.current) {
-          onIntersect();
+          onIntersectRef.current(); // <-- ACÁ estaba el gran secreto
         }
       },
       { root, rootMargin, threshold }
@@ -30,7 +30,7 @@ export function useInfiniteScroll(ref, onIntersect, options = {}) {
     observer.observe(ref.current);
 
     return () => {
-      observer.disconnect(); // limpia todo
+      observer.disconnect(); 
     };
-  }, [ref, loading, hasMore, onIntersect, root, rootMargin, threshold]);
+  }, [ref, root, rootMargin, threshold]); 
 }

@@ -4,8 +4,9 @@ import { texts } from "../../const/texts";
 import { useLanguage } from "../../context/LanguageContext";
 import FormFields from "../../Components/FormFields/FormFields";
 import { BotonAccion } from "../../Components/Button/BotonAction";
-import { getRecetaById } from "../../service/api";
+import { getRecetaById, updateReceta } from "../../service/api";
 import { Routes } from "../../const/routes";
+
 
 const getFormDataFromRecipe = (data, lang) => {
   const traduccionBackend = data?.traducciones?.find(t => t.lang === lang) || data?.traducciones?.[0];
@@ -79,11 +80,55 @@ function RecipeEditor() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert(lang === "es" ? "Receta guardada (consola)" : "Recipe saved (console)");
-    navigate("/");
+
+    try {
+      const arrIngredients = formData.ingredients
+        .split(',')
+        .filter(item => item.trim() !== "");
+
+      const arrInstructions = formData.instructions
+        .split(',')
+        .filter(item => item.trim() !== "");
+
+      const otroIdioma = lang === 'es' ? 'en' : 'es';
+
+      const dataAEnviar = {
+        // urlImagen: "",
+        cookingTime: Number(formData.cookingTime),
+        servings: Number(formData.servings),
+        isGlutenFree: formData.isGlutenFree,
+        type: formData.type,
+        traducciones: [
+          // Idioma principal (el que el usuario eligió)
+          {
+            lang: lang, 
+            title: formData.title,
+            description: formData.description,
+            ingredients: arrIngredients,
+            instruction: arrInstructions
+          },
+          // Idioma clon para que no se rompa la app al cambiar el lenguaje
+          {
+            lang: otroIdioma,
+            title: `${formData.title} (Pending translation)`,
+            description: formData.description,
+            ingredients: arrIngredients.map(i => `(TR) ${i}`),
+            instruction: arrInstructions.map(i => `(TR) ${i}`)
+          }
+        ]
+      };
+
+      await updateReceta(id, dataAEnviar);
+      
+      alert(lang === "es" ? "¡Receta editada con éxito!" : "Recipe edited successfully!");
+      navigate("/");
+      
+    } catch (error) {
+      console.error(error);
+      alert("Error al guardar: " + error.message);
+    }
   };
 
   if (loading) {
