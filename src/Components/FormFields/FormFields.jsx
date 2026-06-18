@@ -117,8 +117,8 @@ const FormFields = ({ formData, handleChange, t }) => {
         </label>
 
         <textarea
-          name="instructions"
-          value={formData.instructions}
+          name="instruction"
+          value={formData.instruction}
           onChange={handleChange}
           className="p-3 border-2 border-gray-200 rounded-xl h-40 focus:border-orange-500 outline-none resize-none"
           required

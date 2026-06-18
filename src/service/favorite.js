@@ -32,7 +32,7 @@ export const toggleFavorito = async (idReceta) => {
   try {
     const token = localStorage.getItem("accessToken");
 
-    const response = await fetch("http://localhost:3000/api/favoritos/toggle", {
+    const response = await fetch(`${BASE_URL}/favoritos/toggle`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,4 +66,5 @@ export const getRecetasFavoritas = async ({ page = 1, limit = 9, lang = "es" }) 
     console.error("Error en getRecetasFavoritas:", error);
     return [];
   }
+  
 };

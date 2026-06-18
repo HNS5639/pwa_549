@@ -3,24 +3,39 @@ import { texts } from "../../const/texts";
 import { useFavorite } from "../../utils/useFavorite";
 import ButtonFavorite from "../ButtonFavorites/ButtonFavorites";
 import { BotonAccion } from "../Button/BotonAction";
-import { toggleFavorito } from "../../service/favorite";
+import { toggleFavorito, getFavoritosIds } from "../../service/favorite";
 import { useAuth } from "../../context/AuthContext";
+import { useState, useEffect } from "react";
 
-function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorite, isFavorite, setFavIds }) {
+function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorite }) {
   const { lang } = useLanguage();
-  const { toggleFavorite } = useFavorite(null, setReceta);
   const { isAuthenticated } = useAuth();
   const data = receta?.traducciones?.[0];
+  const [isFavoriteDetail, setIsFavoriteDetail] = useState(false);
+
+  useEffect(() => {
+    const checkSiEsFavorito = async () => {
+      if (isAuthenticated && receta?.idReceta) {
+        try {
+          const respuesta = await getFavoritosIds();
+          const ids = respuesta.data || [];
+          const yaEsFav = ids.some(id => String(id) === String(receta.idReceta));
+          setIsFavoriteDetail(yaEsFav);
+        } catch (error) {
+          console.error("Error al verificar favoritos en detalle", error);
+        }
+      }
+    };
+    
+    checkSiEsFavorito();
+  }, [isAuthenticated, receta?.idReceta]);
+
   const handleToggleFavorite = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     try {
       await toggleFavorito(receta.idReceta);
-      setFavIds(prev =>
-        prev.includes(receta.idReceta)
-          ? prev.filter(id => id !== receta.idReceta)
-          : [...prev, receta.idReceta]
-      );
+      setIsFavoriteDetail(prev => !prev);
 
     } catch (error) {
       console.error("No se pudo actualizar el favorito", error);
@@ -44,7 +59,7 @@ function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorit
             {isAuthenticated &&
               <ButtonFavorite
                 onClick={handleToggleFavorite}
-                isFavorite={isFavorite}
+                isFavorite={isFavoriteDetail}
               />}
           </div>
 
@@ -98,9 +113,9 @@ function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorit
 
           <div>
             <h2 className="font-semibold text-xl mb-2">{texts[lang].preparation}</h2>
-            {data?.instructions?.length > 0 ? (
+            {data?.instruction?.length > 0 ? (
               <ol className="list-decimal list-inside space-y-2 text-gray-600">
-                {data.instructions.map((step, i) => (
+                {data.instruction.map((step, i) => (
                   <li key={i}>{step}</li>
                 ))}
               </ol>
