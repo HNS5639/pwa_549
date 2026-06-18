@@ -10,7 +10,7 @@ import RecipeEditor from "./pages/RecipeEditor/RecipeEditor";
 import RecipeCreator from "./pages/RecipeCreator/RecipeCreator";
 import NotFound from './pages/NotFound/NotFound';
 import { Routes } from "./const/routes";
-import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
+import { ProtectedRoute } from "./Components/ProtectedRoute/ProtectedRoute";
 import "./App.css";
 
 function App() {
