@@ -36,7 +36,11 @@ function Card({ receta, setRecetario, removeFavorite, isFavorite, setFavIds }) {
           return [...prev, receta.idReceta];
         }
       });
-
+      if (removeFavorite) {
+        setRecetario(prevRecetas =>
+          prevRecetas.filter(r => String(r.idReceta) !== String(receta.idReceta))
+        );
+      }
     } catch (error) {
       console.error("No se pudo actualizar el favorito", error);
     }

@@ -110,7 +110,7 @@ function Home() {
 
 
   useEffect(() => {
-    let enPausa = false; // Nuestro freno de mano
+    let enPausa = false;
 
     const handleScroll = () => {
       if (enPausa) return;
@@ -121,8 +121,8 @@ function Home() {
         if (!loading && hasMore) {
           setPage((prev) => prev + 1);
 
-          enPausa = true; // Bloqueamos el sensor
-          setTimeout(() => { enPausa = false }, 1000); // Lo liberamos 1 segundo después
+          enPausa = true;
+          setTimeout(() => { enPausa = false }, 1000);
         }
       }
     };

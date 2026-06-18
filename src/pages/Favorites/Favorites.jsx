@@ -32,8 +32,13 @@ function Favorites() {
   useEffect(() => {
     const fetchFavIds = async () => {
       if (isAuthenticated) {
-        const ids = await getFavoritosIds();
-        setFavIds(ids.data || []);
+        const respuestaBackend = await getFavoritosIds();
+
+        // Le pedimos la propiedad .data que es donde vienen los números [2, 3, 4]
+        setFavIds(respuestaBackend.data || []);
+
+      } else {
+        setFavIds([]);
       }
     };
     fetchFavIds();
@@ -50,8 +55,8 @@ function Favorites() {
         limit: 9,
         lang: lang
       });
-
       const recetasNuevas = data.data || [];
+      const totalPages = data.totalPages;
 
       if (ignore) return;
 
@@ -72,6 +77,11 @@ function Favorites() {
       }
 
       setLoading(false);
+      if (page >= totalPages) {
+        setHasMore(false); // Apaga el scroll si llegamos al final
+      } else {
+        setHasMore(true);  // Lo mantiene encendido
+      }
     };
 
     fetchRecetas();
@@ -99,10 +109,28 @@ function Favorites() {
     },
     lang
   );
+
   useEffect(() => {
-    setPage(1);
-    setHasMore(true);
-  }, [filtros]);
+    let enPausa = false;
+
+    const handleScroll = () => {
+      if (enPausa) return;
+
+      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+      if (scrollTop + clientHeight >= scrollHeight - 50) {
+        if (!loading && hasMore) {
+          setPage((prev) => prev + 1);
+
+          enPausa = true;
+          setTimeout(() => { enPausa = false }, 1000);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [loading, hasMore]);
 
   if (!isAuthenticated) {
     return (

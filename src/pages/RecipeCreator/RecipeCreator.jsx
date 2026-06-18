@@ -20,7 +20,7 @@ function RecipeCreator() {
     type: "carne_blanca",
     isGlutenFree: false,
     ingredients: "",
-    instructions: ""
+    instruction: ""
   });
 
   const handleChange = (e) => {
@@ -42,7 +42,7 @@ function RecipeCreator() {
         .split('\n')
         .filter(item => item.trim() !== "");
 
-      const arrInstructions = formData.instructions
+      const arrInstructions = formData.instruction
         .split('\n')
         .filter(item => item.trim() !== "");
 

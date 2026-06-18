@@ -9,12 +9,12 @@ import { Routes } from "../../const/routes";
 
 
 const getFormDataFromRecipe = (data, lang) => {
-  const traduccionBackend = data?.traducciones?.find(t => t.lang === lang) || data?.traducciones?.[0];
-  const title = traduccionBackend?.title || data?.titulo || data?.title || "";
-  const description = traduccionBackend?.description || data?.descripcion || data?.description || "";
-  const rawIngredients = traduccionBackend?.ingredients || traduccionBackend?.ingredientes || data?.ingredientes || "";
+  const traduccionBackend = data?.traducciones?.[0];
+  const title = traduccionBackend?.title;
+  const description = traduccionBackend?.description;
+  const rawIngredients = traduccionBackend?.ingredients;
   const ingredients = Array.isArray(rawIngredients) ? rawIngredients.join("\n") : rawIngredients;
-  const rawInstructions = traduccionBackend?.instructions || traduccionBackend?.instrucciones || data?.instrucciones || "";
+  const rawInstructions = traduccionBackend?.instruction;
   const instructions = Array.isArray(rawInstructions) ? rawInstructions.join("\n") : rawInstructions;
 
   return {
@@ -25,7 +25,7 @@ const getFormDataFromRecipe = (data, lang) => {
     type: data?.type || data?.tipoDieta || data?.categoria || "carne_blanca",
     isGlutenFree: Boolean(data?.isGlutenFree ?? data?.libreGluten),
     ingredients,
-    instructions,
+    instruction,
   };
 };
 
@@ -43,7 +43,7 @@ function RecipeEditor() {
     type: "carne_blanca",
     isGlutenFree: false,
     ingredients: "",
-    instructions: ""
+    instruction: ""
   });
 
   useEffect(() => {
@@ -85,11 +85,11 @@ function RecipeEditor() {
 
     try {
       const arrIngredients = formData.ingredients
-        .split(',')
+        .split('\n')
         .filter(item => item.trim() !== "");
 
-      const arrInstructions = formData.instructions
-        .split(',')
+      const arrInstructions = formData.instruction
+        .split('\n')
         .filter(item => item.trim() !== "");
 
       const otroIdioma = lang === 'es' ? 'en' : 'es';
