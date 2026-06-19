@@ -66,4 +66,5 @@ export const getRecetasFavoritas = async ({ page = 1, limit = 9, lang = "es" }) 
     console.error("Error en getRecetasFavoritas:", error);
     return [];
   }
+  
 };
