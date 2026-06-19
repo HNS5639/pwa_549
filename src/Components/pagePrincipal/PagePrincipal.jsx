@@ -4,6 +4,7 @@ import Filter from "../Filters/Filters";
 import Card from "../Card/Card";
 import { BotonAccion } from "../Button/BotonAction";
 import { useState } from "react";
+import CookingLoader from "../Loader/CookingLoader";
 
 function PagePrincipal({
   filtros,
@@ -42,7 +43,7 @@ function PagePrincipal({
       </aside>
       <section className="w-full md:w-5/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
         {recetario.length === 0 ? (
-          <p>{texts[lang].error}</p>
+          <CookingLoader />
         ) : (
           recetario.map((receta) => (
             <Card

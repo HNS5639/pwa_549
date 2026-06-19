@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import { texts } from "../../const/texts";
 import { useLanguage } from "../../context/LanguageContext";
+import gorro404 from './../../assets/images/gorro-404.png'
 
 function NotFound() {
   const { lang } = useLanguage();
@@ -20,7 +21,7 @@ function NotFound() {
         {/* Imagen */}
         <div className="-mt-12 md:-mt-20 mb-6">
           <img
-            src="https://i.ibb.co/wrdt6KjK/gorro-404.png"
+            src={gorro404}
             alt="Gorro de cocina"
             className="w-52 md:w-72 drop-shadow-xl"
           />
