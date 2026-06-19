@@ -1,5 +1,6 @@
 export const texts = {
   es: {
+    loading: "Cocinando recetas",
     recipeBook: "Recetario 007",
     favorites: "Favoritos",
     home: "Inicio",
@@ -46,6 +47,7 @@ export const texts = {
     },
   },
   en: {
+    loading: "Cooking recipes",
     recipeBook: "Recipe Book 007",
     favorites: "Favorites",
     home: "Home",

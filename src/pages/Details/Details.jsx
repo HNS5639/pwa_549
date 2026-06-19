@@ -9,6 +9,7 @@ import { BotonAccion } from "../../Components/Button/BotonAction";
 import NotFound from "../NotFound/NotFound";
 import { useAuth } from "../../context/AuthContext"; 
 import { getFavoritosIds } from "../../service/favorite";
+import CookingLoader from "../../Components/Loader/CookingLoader";
 
 
 function Details() {
@@ -61,7 +62,7 @@ function Details() {
     const removeFavorite = false;
 
   if (loading) {
-    return <p className="text-center mt-20 text-gray-500">{texts[lang].noReceta}</p>; 
+    return <CookingLoader />; 
   }
 
   if (error || !receta) {
