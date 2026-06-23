@@ -1,3 +1,5 @@
+import { GetLocalStorage } from "./localStorage";
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 const BASE_URL = `${API_URL}/recetas`;
 
@@ -45,7 +47,7 @@ export const getRecetaById = async (id, lang = 'es') => {
 // Función para CREAR receta (POST)
 export const createReceta = async (recetaData, lang = 'es') => {
   try {
-    const token = localStorage.getItem("accessToken");
+    const token = GetLocalStorage("accessToken");
     const res = await fetch(`${BASE_URL}`, {
       method: "POST",
       headers: {
@@ -70,7 +72,7 @@ export const createReceta = async (recetaData, lang = 'es') => {
 // Función para EDITAR receta (PUT)
 export const updateReceta = async (idReceta, recetaData) => {
   try {
-    const token = localStorage.getItem("accessToken");
+    const token = GetLocalStorage("accessToken");
     const res = await fetch(`${BASE_URL}/${idReceta}`, {
       method: "PUT",
       headers: {

@@ -1,17 +1,10 @@
+import { GetLocalStorage } from "./localStorage";
+
 const BASE_URL = `${import.meta.env.VITE_API_URL}`;
-
-
-const getAuthHeaders = () => {
-  const token = localStorage.getItem("token"); 
-  return {
-    "Content-Type": "application/json",
-    "Authorization": `Bearer ${token}`
-  };
-};
 
 export const getFavoritosIds = async () => {
   try {
-    const token = localStorage.getItem("accessToken");
+    const token = GetLocalStorage("accessToken");
     const response = await fetch(`${BASE_URL}/favoritos/ids`, {
       method: "GET",
       headers: {
@@ -30,7 +23,7 @@ export const getFavoritosIds = async () => {
 
 export const toggleFavorito = async (idReceta) => {
   try {
-    const token = localStorage.getItem("accessToken");
+    const token = GetLocalStorage("accessToken");
 
     const response = await fetch(`${BASE_URL}/favoritos/toggle`, {
       method: "POST",
@@ -51,7 +44,7 @@ export const toggleFavorito = async (idReceta) => {
 
 export const getRecetasFavoritas = async ({ page = 1, limit = 9, lang = "es" }) => {
   try {
-    const token = localStorage.getItem("accessToken");
+    const token = GetLocalStorage("accessToken");
     const response = await fetch(`${BASE_URL}/favoritos?page=${page}&limit=${limit}&lang=${lang}`, {
       method: "GET",
       headers: {

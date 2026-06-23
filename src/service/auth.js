@@ -12,7 +12,7 @@ async function request(path, options = {}) {
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.error || "Error en la solicitud");
+    throw new Error(data.message || "Error en la solicitud");
   }
 
   return data;
@@ -26,7 +26,7 @@ export async function login({ email, password }) {
 }
 
 export async function register({ email, password }) {
-  return request("/api/auth/register", {
+  return request("/auth/register", {
     method: "POST",
     body: JSON.stringify({ email, password }),
   });

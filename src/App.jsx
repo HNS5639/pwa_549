@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
-import Logout from "./pages/Logout/Logout";
+import Register from "./pages/RegisterUser/RegisterUser";
 import Favorites from "./pages/Favorites/Favorites";
 import Details from "./pages/Details/Details";
 import RecipeEditor from "./pages/RecipeEditor/RecipeEditor";
@@ -22,7 +22,7 @@ function App() {
           <RouterRoutes>
             <Route path={Routes.home} element={<Home />} />
             <Route path={Routes.login} element={<Login />} />
-            <Route path={Routes.logout} element={<Logout />} />
+            <Route path={Routes.register} element={<Register />} />
             <Route path={Routes.details} element={<Details />} />
             <Route path={Routes.notFound} element={<NotFound />} />
             <Route 
