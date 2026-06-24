@@ -1,20 +1,9 @@
-import { GetLocalStorage } from "./localStorage";
-
-const BASE_URL = `${import.meta.env.VITE_API_URL}`;
+import axiosInstance from "./axiosInstance";
 
 export const getFavoritosIds = async () => {
   try {
-    const token = GetLocalStorage("accessToken");
-    const response = await fetch(`${BASE_URL}/favoritos/ids`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}` 
-      }
-    });
-    
-    if (!response.ok) throw new Error("Error al traer IDs de favoritos");
-    return await response.json();
+    const response = await axiosInstance.get(`/favoritos/ids`);
+    return response.data;
   } catch (error) {
     console.error("Error en getFavoritosIds:", error);
     return [];
@@ -23,38 +12,18 @@ export const getFavoritosIds = async () => {
 
 export const toggleFavorito = async (idReceta) => {
   try {
-    const token = GetLocalStorage("accessToken");
-
-    const response = await fetch(`${BASE_URL}/favoritos/toggle`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`
-      },
-      body: JSON.stringify({ idReceta })
-    });
-
-    if (!response.ok) throw new Error("Error al modificar favorito");
-    return await response.json();
+    const response = await axiosInstance.post(`/favoritos/toggle`, { idReceta });
+    return response.data;
   } catch (error) {
     console.error("Error en toggleFavorito:", error);
-    throw error;
+    throw new Error(error.response?.data?.error || 'Error al modificar favoritos');
   }
 };
 
 export const getRecetasFavoritas = async ({ page = 1, limit = 9, lang = "es" }) => {
   try {
-    const token = GetLocalStorage("accessToken");
-    const response = await fetch(`${BASE_URL}/favoritos?page=${page}&limit=${limit}&lang=${lang}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}` 
-      }
-    });
-
-    if (!response.ok) throw new Error("Error al traer lista de favoritos");
-    return await response.json();
+    const response = await axiosInstance.get(`/favoritos?page=${page}&limit=${limit}&lang=${lang}`);
+    return response.data;
   } catch (error) {
     console.error("Error en getRecetasFavoritas:", error);
     return [];

@@ -7,5 +7,6 @@ export const Routes = {
   logout: "/logout",
   recipeEditor: "/recipe-editor",
   recipeCreator: "/recipe-creator",
-  register: "/register"
+  register: "/register",
+  adminUser: "/admin-user"
 };

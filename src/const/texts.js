@@ -29,6 +29,9 @@ export const texts = {
     noCuenta: "¿No tenés cuenta?",
     siCuenta: "¿Tenés cuenta?",
     createAccount: "Crear",
+    notAccess: "Acceso restringido",
+    messAccess: "Para hacer eso, por favor inicia sesión",
+    messRol:"Tu usuario no tiene los privilegios necesarios para ver esta página",
     placeHolder: {
       titulo: "Titulo",
       ingredientes: "Ingredientes",
@@ -81,6 +84,9 @@ export const texts = {
     siCuenta: "you have account?",
     noCuenta: "you don't have an account?",
     createAccount: "Create",
+    notAccess: "Restricted access",
+    messAccess: "To do that, please log in",
+    messRol:"Your user account does not have the necessary privileges to view this page",
     placeHolder: {
       titulo: "Title",
       ingredientes: "Ingredients",
