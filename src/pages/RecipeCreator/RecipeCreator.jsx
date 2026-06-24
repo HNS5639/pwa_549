@@ -88,14 +88,6 @@ function RecipeCreator() {
   return (
     <div className="container mx-auto py-12 px-4">
 
-      {/* <div className="-mt-12 md:-mt-20 mb-6 flex justify-center">
-        <img
-          src="https://i.ibb.co/wrdt6KjK/gorro-404.png"
-          alt="Gorro de cocina"
-          className="w-52 md:w-72 drop-shadow-xl"
-        />
-      </div> */}
-
       <form
         onSubmit={handleSubmit}
         className="max-w-4xl mx-auto p-8 bg-white shadow-2xl rounded-3xl border border-gray-100 space-y-8"
