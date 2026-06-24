@@ -26,7 +26,7 @@ function PagePrincipal({
         className="md:hidden mb-4 bg-white p-3 rounded-xl shadow"
         onClick={() => setOpenFilters(!openFilters)}
       >
-        ☰ {texts[lang].Filter}
+        🔍 {texts[lang].Filter}
       </button>
       <aside
         className={`

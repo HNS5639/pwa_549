@@ -1,18 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Routes } from "../../const/routes";
 import { useLanguage } from "../../context/LanguageContext";
 import { texts } from "../../const/texts";
 import { useAuth } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
   const { lang, toggleLanguage } = useLanguage();
   const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleLogout = () => {
     logout();
     navigate("/");
+    setIsMenuOpen(false);
   };
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 py-4 shadow-sm">
@@ -24,42 +28,82 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
-        {/* 
-        <div className="flex-2 max-w-md flex justify-center items-center">
-          <span className="text-xl font-bold text-gray-800">
-            {texts[lang].recipeBook}
-          </span>
-        </div>
-        */}
-        <div className="flex-1 flex justify-end items-center gap-6 text-gray-600 font-bold text-sm">
+
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-2xl text-gray-800 focus:outline-none"
+        >
+          {isMenuOpen ? "✖" : "☰"}
+        </button>
+
+        <div className="hidden md:flex flex-1 justify-end items-center gap-6 text-gray-600 font-bold text-sm">
           {isAuthenticated ? (
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <button onClick={handleLogout} className="hover:text-orange-500 cursor-pointer px-2">
                 🚪 Logout
               </button>
-              <Link to={Routes.favorites} className="px-2">❤️ {texts[lang].favorites}</Link>
+              <Link to={Routes.favorites} className="px-2">
+                ❤️ {texts[lang].favorites}
+              </Link>
 
               <Link to={Routes.recipeCreator} className="hover:text-orange-500 transition-colors text-lg" title={texts[lang].createRecipe}>
-                ➕
+                ➕ {texts[lang].create}
+              </Link>
+
+              <Link to={Routes.adminUser}>
+                ⚙️ {texts[lang].adminUser}
               </Link>
             </div>
           )
-            : (<Link to={Routes.login}>👤 Login </Link>
+            : (<Link to={Routes.login}>
+              👤 Login
+            </Link>
             )}
-
-
-
-          {/* Al final, le saque el texto (con traduccion y todo) para que queden esos iconos magicos, no quiero usar otra libreria*/}
 
           <button
             onClick={() => toggleLanguage(lang === "es" ? "en" : "es")}
             className="flex items-center gap-1 hover:text-orange-500 transition-colors uppercase"
           >
-            {lang} ▼
+            🌐 {lang}
           </button>
 
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b shadow-lg flex flex-col px-6 py-4 gap-4 text-gray-600 font-bold text-sm">
+          {isAuthenticated ? (
+            <>
+              <Link to={Routes.favorites} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+                ❤️ {texts[lang].favorites}
+              </Link>
+              <Link to={Routes.recipeCreator} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+                ➕ Crear Receta
+              </Link>
+              <Link to={Routes.adminUser} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+                ⚙️ {texts[lang].adminUser}
+              </Link>
+              <button onClick={handleLogout} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
+                🚪 Logout
+              </button>
+            </>
+          ) : (
+            <Link to={Routes.login} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+              👤 Login
+            </Link>
+          )}
+
+          <button
+            onClick={() => {
+              toggleLanguage(lang === "es" ? "en" : "es");
+              closeMenu();
+            }}
+            className="text-left hover:text-orange-500 uppercase py-2"
+          >
+            🌐 {lang}
+          </button>
+        </div>
+      )}
+
     </header>
   );
 };

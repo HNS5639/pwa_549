@@ -21,7 +21,7 @@ function Filter({ filtros = {}, setFiltros }) {
           onChange={(e) => setFiltros({ ...filtros, titulo: e.target.value })}
         />
       </div>
-
+{/*
       <div className="px-2 pb-2">
         <input
           className={inputStyle}
@@ -64,7 +64,7 @@ function Filter({ filtros = {}, setFiltros }) {
           onChange={(e) => setFiltros({ ...filtros, porciones: e.target.value })}
         />
       </div>
-
+*/}
       <div className="px-2">
         <BotonAccion
           className="w-full bg-gray-800 text-white rounded-xl py-3 text-sm font-bold hover:bg-pink-600 transition-colors shadow-sm"
