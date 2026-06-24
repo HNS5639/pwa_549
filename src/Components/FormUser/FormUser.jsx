@@ -43,7 +43,7 @@ const FormUser = ({
           onChange={(e) => setPassword(e.target.value)}
         />
         
-        {/* recupero de contraseña */}
+        {/* recupero de contraseña 
         {!isNew && (
           <div className="text-right mt-1">
             <Link to="/passReset" className="text-xs text-blue-600 hover:underline">
@@ -51,7 +51,9 @@ const FormUser = ({
             </Link>
           </div>
         )}
+          */}
       </div>
+      
 
       <BotonAccion
         texto={isNew ? (t?.registerButton) : (t.loginTitle)}
