@@ -5,7 +5,6 @@ import { getRecetas } from "../../service/api";
 import PagePrincipal from "../../Components/pagePrincipal/PagePrincipal";
 import { useInfiniteScroll } from "../../utils/useInfiniteScroll";
 import { texts } from "../../const/texts";
-import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router";
 import { getRecetasFavoritas, getFavoritosIds } from "../../service/favorite";
 
@@ -26,26 +25,17 @@ function Favorites() {
     glutenFree: "",
   });
   const [favIds, setFavIds] = useState([]);
-  const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchFavIds = async () => {
-      if (isAuthenticated) {
         const respuestaBackend = await getFavoritosIds();
-
-        // Le pedimos la propiedad .data que es donde vienen los números [2, 3, 4]
         setFavIds(respuestaBackend.data || []);
-
-      } else {
-        setFavIds([]);
-      }
     };
     fetchFavIds();
-  }, [isAuthenticated]);
+  }, []);
 
   useEffect(() => {
-    if (!isAuthenticated) return;
     let ignore = false;
     const fetchRecetas = async () => {
       setLoading(true);
@@ -89,7 +79,7 @@ function Favorites() {
     return () => {
       ignore = true;
     };
-  }, [page, isAuthenticated, lang]);
+  }, [page, lang]);
 
   const handleIntersect = useCallback(() => {
     if (loading || !hasMore) return;
@@ -131,24 +121,6 @@ function Favorites() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [loading, hasMore]);
-
-  if (!isAuthenticated) {
-    return (
-      <div className="flex justify-center items-center min-h-[60vh] px-4">
-        <div className="bg-white p-8 rounded-2xl shadow-xl text-center max-w-sm border border-orange-100">
-          <div className="text-6xl mb-4">🔒</div>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">Acceso restringido</h2>
-          <p className="text-gray-600 mb-6">Debes iniciar sesión para ver tus recetas favoritas.</p>
-          <button
-            onClick={() => navigate("/login")}
-            className="bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-600 transition"
-          >
-            Ir al Login
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   if (!loading && favoritosFiltrado.length === 0) {
     const idiomaActual = texts[lang] || texts["es"];
