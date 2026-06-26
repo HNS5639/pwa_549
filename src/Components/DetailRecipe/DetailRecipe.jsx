@@ -6,12 +6,15 @@ import { BotonAccion } from "../Button/BotonAction";
 import { toggleFavorito, getFavoritosIds } from "../../service/favorite";
 import { useAuth } from "../../context/AuthContext";
 import { useState, useEffect } from "react";
+import { deleteReceta } from "../../service/api";
+import { useNavigate } from "react-router";
 
 function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorite }) {
   const { lang } = useLanguage();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, user } = useAuth();
   const data = receta?.traducciones?.[0];
   const [isFavoriteDetail, setIsFavoriteDetail] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const checkSiEsFavorito = async () => {
@@ -26,7 +29,7 @@ function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorit
         }
       }
     };
-    
+
     checkSiEsFavorito();
   }, [isAuthenticated, receta?.idReceta]);
 
@@ -42,6 +45,21 @@ function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorit
     }
   };
 
+  const handleDelete = async () => {
+    const confirm = window.confirm(`¿${texts[lang].confirmDelete} ${receta.idReceta}?`);
+
+    if (confirm) {
+      try {
+        await deleteReceta(receta.idReceta);
+        alert("Receta eliminada con éxito");
+        navigate('/');
+      } catch (error) {
+        console.error("Error al eliminar: ", error);
+        alert("Hubo un error al eliminar la receta");
+      }
+    }
+  }
+
   if (!receta) return <p className="text-center p-6">Cargando receta...</p>;
 
   return (
@@ -51,7 +69,7 @@ function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorit
           <div className="md:w-1/2 w-full relative">
 
             <img
-              src={receta?.image || receta?.urlImagen}
+              src={receta?.urlImagen}
               alt={data?.title}
               className="w-full h-full object-cover"
             />
@@ -78,13 +96,20 @@ function DetailRecipe({ receta, setReceta, onEdit, editButtonText, removeFavorit
                   {texts[lang].gluten}
                 </span>
               )}
-              
-              {isAuthenticated && onEdit && (
-                <BotonAccion
-                  texto={editButtonText}
-                  onClick={onEdit}
-                  className="!bg-blue-500 hover:!bg-blue-600 shadow-md text-xs py-1 px-4 rounded-lg transition-transform hover:scale-105"
-                />
+
+              {isAuthenticated && onEdit && (user?.rol === 'superUsuario' || user?.rol === 'administrador') && (
+                  <div className="flex items-center justify-end gap-3 mt-4">
+                    <BotonAccion
+                      texto={editButtonText}
+                      onClick={onEdit}
+                      className="bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold py-2 px-4 rounded-lg shadow-sm transition-all hover:scale-105 flex items-center justify-center gap-2"
+                    />
+                    <BotonAccion
+                      texto={texts[lang].delete}
+                      onClick={handleDelete}
+                      className="bg-red-500 hover:bg-red-600 text-white text-sm font-bold py-2 px-4 rounded-lg shadow-sm transition-all hover:scale-105 flex items-center justify-center gap-2"
+                    />
+                  </div>
               )}
             </div>
 

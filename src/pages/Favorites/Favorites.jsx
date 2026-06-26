@@ -17,12 +17,7 @@ function Favorites() {
   const [hasMore, setHasMore] = useState(true);
   const loaderRef = useRef(null);
   const [filtros, setFiltros] = useState({
-    titulo: "",
-    ingredientes: "",
-    type: "",
-    tiempo: "",
-    porciones: "",
-    glutenFree: "",
+    titulo: ""
   });
   const [favIds, setFavIds] = useState([]);
   const navigate = useNavigate();
