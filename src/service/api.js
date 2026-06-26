@@ -16,6 +16,8 @@ cambios al implementar axios
 
 import axiosInstance from "./axiosInstance";
 
+const url = "/recetas";
+
 export const getRecetas = async ({
   page = 1,
   limit = 9,
@@ -34,7 +36,7 @@ export const getRecetas = async ({
   if (porciones) query += `&porciones=${encodeURIComponent(porciones)}`;
 
   try {
-    const res = await axiosInstance.get(`/recetas${query}`);
+    const res = await axiosInstance.get(`${url}${query}`);
     return res.data;
   } catch (error) {
     console.error("Error trayendo recetas:", error);
@@ -44,7 +46,7 @@ export const getRecetas = async ({
 
 export const getRecetaById = async (id, lang = 'es') => {
   try {
-    const res = await axiosInstance.get(`/recetas/${id}?lang=${lang}`);
+    const res = await axiosInstance.get(`${url}/${id}?lang=${lang}`);
     return res.data.data;
   } catch (error) {
     console.error("Error trayendo receta por ID:", error);
@@ -55,7 +57,7 @@ export const getRecetaById = async (id, lang = 'es') => {
 // Función para CREAR receta (POST)
 export const createReceta = async (recetaData, lang = 'es') => {
   try {
-    const res = await axiosInstance.post(`/recetas`, recetaData);
+    const res = await axiosInstance.post(`${url}`, recetaData);
     return res.data;
   } catch (error) {
     console.error("Error en createReceta:", error);
@@ -66,10 +68,21 @@ export const createReceta = async (recetaData, lang = 'es') => {
 // Función para EDITAR receta (PUT)
 export const updateReceta = async (idReceta, recetaData) => {
   try {
-    const res = await axiosInstance.put(`/recetas/${idReceta}`, recetaData);
+    const res = await axiosInstance.put(`${url}/${idReceta}`, recetaData);
     return await res.data;
   } catch (error) {
     console.error("Error en updateReceta:", error);
     throw new Error(error.response?.data?.error || 'Error al editar receta');
   }
 };
+
+// Fucnión para elimiinar una receta
+export const deleteReceta = async (idReceta) => {
+  try {
+    const res = await axiosInstance.delete(`${url}/${idReceta}`);
+    return res.data;
+  } catch (error) {
+    console.error(`Error al eliminar la receta ${idReceta}`, error);
+    throw new Error(error.response?.data?.error || 'Error al eliminar receta');
+  }
+}

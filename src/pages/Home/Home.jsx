@@ -18,12 +18,7 @@ function Home() {
   const { isAuthenticated } = useAuth();
 
   const [filtros, setFiltros] = useState({
-    titulo: "",
-    ingredientes: "",
-    type: "",
-    tiempo: "",
-    porciones: "",
-    glutenFree: "",
+    titulo: ""
   });
 
   const [recetario, setRecetario] = useState([]);
@@ -35,7 +30,6 @@ function Home() {
       if (isAuthenticated) {
         const respuestaBackend = await getFavoritosIds();
 
-        // Le pedimos la propiedad .data que es donde vienen los números [2, 3, 4]
         setFavIds(respuestaBackend.data || []);
 
       } else {
@@ -46,6 +40,10 @@ function Home() {
   }, [isAuthenticated]);
 
   useEffect(() => {
+    setPage(1);
+  }, [filtros.titulo]);
+
+  useEffect(() => {
     let ignore = false;
     const fetchRecetas = async () => {
       setLoading(true);
@@ -54,10 +52,7 @@ function Home() {
         page,
         limit: 9,
         lang: lang,
-        search: filtros.titulo,
-        type: filtros.type,
-        tiempo: filtros.tiempo,
-        porciones: filtros.porciones
+        search: filtros.titulo
       });
 
       if (ignore) return;
@@ -67,6 +62,9 @@ function Home() {
 
       if (listRecetas.length === 0) {
         setHasMore(false);
+        if (page === 1) {
+          setRecetario([]); 
+        }
       } else {
         if (page === 1) {
           setRecetario(listRecetas);
@@ -78,7 +76,7 @@ function Home() {
                   (recetaPrevia) => recetaPrevia.idReceta === recetaNueva.idReceta,
                 ),
             );
-            return [...prev, ...listRecetas];
+            return [...prev, ...nuevasRecetas];
           });
         }
       }
