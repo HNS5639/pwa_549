@@ -42,8 +42,14 @@ function PagePrincipal({
         <Filter filtros={filtros} setFiltros={setFiltros} />
       </aside>
       <section className="w-full md:w-5/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-        {recetario.length === 0 ? (
+        {loading && recetario.length === 0 ? (
           <CookingLoader />
+        ) : recetario.length === 0 && !loading ? (
+          <div className="col-span-full flex justify-center mt-12">
+            <p className="text-xl text-gray-500 font-semibold bg-white px-6 py-4 rounded-xl shadow-sm">
+              🍳 {texts[lang].notSearch}
+            </p>
+          </div>
         ) : (
           recetario.map((receta) => (
             <Card

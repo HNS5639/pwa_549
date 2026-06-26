@@ -15,7 +15,7 @@ const getFormDataFromRecipe = (data, lang) => {
   const rawIngredients = traduccionBackend?.ingredients;
   const ingredients = Array.isArray(rawIngredients) ? rawIngredients.join("\n") : rawIngredients;
   const rawInstructions = traduccionBackend?.instruction;
-  const instructions = Array.isArray(rawInstructions) ? rawInstructions.join("\n") : rawInstructions;
+  const instruction = Array.isArray(rawInstructions) ? rawInstructions.join("\n") : rawInstructions;
 
   return {
     title,

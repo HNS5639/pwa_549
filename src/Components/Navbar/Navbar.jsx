@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const { lang, toggleLanguage } = useLanguage();
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated, logout, user } = useAuth();
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,20 +39,27 @@ const Navbar = () => {
         <div className="hidden md:flex flex-1 justify-end items-center gap-6 text-gray-600 font-bold text-sm">
           {isAuthenticated ? (
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-              <button onClick={handleLogout} className="hover:text-orange-500 cursor-pointer px-2">
-                🚪 Logout
-              </button>
+
+              {user?.rol === 'superUsuario' && (
+                <Link to={Routes.adminUser}>
+                  ⚙️ {texts[lang].adminUser}
+                </Link>
+              )}
+
+              {(user?.rol === 'superUsuario' || user?.rol === 'administrador') && (
+                <Link to={Routes.recipeCreator} className="hover:text-orange-500 transition-colors text-lg" title={texts[lang].createRecipe}>
+                  ➕ {texts[lang].create}
+                </Link>
+              )}
+
               <Link to={Routes.favorites} className="px-2">
                 ❤️ {texts[lang].favorites}
               </Link>
 
-              <Link to={Routes.recipeCreator} className="hover:text-orange-500 transition-colors text-lg" title={texts[lang].createRecipe}>
-                ➕ {texts[lang].create}
-              </Link>
+              <button onClick={handleLogout} className="hover:text-orange-500 cursor-pointer px-2">
+                🚪 Logout
+              </button>
 
-              <Link to={Routes.adminUser}>
-                ⚙️ {texts[lang].adminUser}
-              </Link>
             </div>
           )
             : (<Link to={Routes.login}>
@@ -73,15 +80,22 @@ const Navbar = () => {
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b shadow-lg flex flex-col px-6 py-4 gap-4 text-gray-600 font-bold text-sm">
           {isAuthenticated ? (
             <>
+
               <Link to={Routes.favorites} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
                 ❤️ {texts[lang].favorites}
               </Link>
-              <Link to={Routes.recipeCreator} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
-                ➕ Crear Receta
-              </Link>
-              <Link to={Routes.adminUser} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
-                ⚙️ {texts[lang].adminUser}
-              </Link>
+
+              {(user?.rol === 'superUsuario' || user?.rol === 'administrador') && (
+                <Link to={Routes.recipeCreator} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+                  ➕ Crear Receta
+                </Link>
+              )}
+
+              {user?.rol === 'superUsuario' && (
+                <Link to={Routes.adminUser} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+                  ⚙️ {texts[lang].adminUser}
+                </Link>
+              )}
               <button onClick={handleLogout} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
                 🚪 Logout
               </button>
