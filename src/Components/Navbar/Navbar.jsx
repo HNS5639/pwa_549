@@ -81,18 +81,18 @@ const Navbar = () => {
           {isAuthenticated ? (
             <>
 
-              <Link to={Routes.favorites} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+              <Link to={Routes.favorites} onClick={closeMenu} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
                 ❤️ {texts[lang].favorites}
               </Link>
 
               {(user?.rol === 'superUsuario' || user?.rol === 'administrador') && (
-                <Link to={Routes.recipeCreator} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+                <Link to={Routes.recipeCreator} onClick={closeMenu} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
                   ➕ Crear Receta
                 </Link>
               )}
 
               {user?.rol === 'superUsuario' && (
-                <Link to={Routes.adminUser} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+                <Link to={Routes.adminUser} onClick={closeMenu} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
                   ⚙️ {texts[lang].adminUser}
                 </Link>
               )}
@@ -111,7 +111,7 @@ const Navbar = () => {
               toggleLanguage(lang === "es" ? "en" : "es");
               closeMenu();
             }}
-            className="text-left hover:text-orange-500 uppercase py-2"
+            className="text-left hover:text-orange-500 py-2 border-b border-gray-100"
           >
             🌐 {lang}
           </button>
