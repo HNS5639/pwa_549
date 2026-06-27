@@ -47,16 +47,18 @@ const Navbar = () => {
               )}
 
               {(user?.rol === 'superUsuario' || user?.rol === 'administrador') && (
-                <Link to={Routes.recipeCreator} className="hover:text-orange-500 transition-colors text-lg" title={texts[lang].createRecipe}>
+                <Link to={Routes.recipeCreator} 
+                className="text-left hover:text-orange-500 py-2 border-b border-gray-100" 
+                title={texts[lang].createRecipe}>
                   ➕ {texts[lang].create}
                 </Link>
               )}
 
-              <Link to={Routes.favorites} className="px-2">
+              <Link to={Routes.favorites} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
                 ❤️ {texts[lang].favorites}
               </Link>
 
-              <button onClick={handleLogout} className="hover:text-orange-500 cursor-pointer px-2">
+              <button onClick={handleLogout} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
                 🚪 Logout
               </button>
 
@@ -69,7 +71,7 @@ const Navbar = () => {
 
           <button
             onClick={() => toggleLanguage(lang === "es" ? "en" : "es")}
-            className="flex items-center gap-1 hover:text-orange-500 transition-colors uppercase"
+            className="flex items-center gap-1 text-left hover:text-orange-500 py-2 border-b border-gray-100"
           >
             🌐 {lang}
           </button>
@@ -101,7 +103,7 @@ const Navbar = () => {
               </button>
             </>
           ) : (
-            <Link to={Routes.login} onClick={closeMenu} className="hover:text-orange-500 py-2 border-b border-gray-100">
+            <Link to={Routes.login} onClick={closeMenu} className="text-left hover:text-orange-500 py-2 border-b border-gray-100">
               👤 Login
             </Link>
           )}
