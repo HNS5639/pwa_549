@@ -4,26 +4,30 @@ export function filtrosRecetas(recetario, filtros, lang) {
 
     if (!traduccion) return false;
 
-    const coincideTitulo = traduccion.title
+    const tituloFiltro = filtros.titulo || "";
+    const tituloReceta = traduccion.title || "";
+    const coincideTitulo = tituloReceta
       .toLowerCase()
-      .includes(filtros.titulo.toLowerCase());
+      .includes(tituloFiltro.toLowerCase());
 
-    const coincideIngrediente = traduccion.ingredients.some(
+    const ingredienteFiltro = filtros.ingredientes || "";
+    const listaIngredientes = traduccion.ingredients || [];
+    const coincideIngrediente = listaIngredientes.some(
       (ingredient) =>
-        ingredient.toLowerCase().includes(filtros.ingredientes.toLowerCase())
+        (ingredient || "").toLowerCase().includes(ingredienteFiltro.toLowerCase())
     );
 
     const coincideTipo =
-      filtros.type === "" || receta.type === filtros.type;
+      !filtros.type || filtros.type === "" || receta.type === filtros.type;
 
     const coincideTiempo =
-      filtros.tiempo === "" || receta.cookingTime <= filtros.tiempo;
+      !filtros.tiempo || filtros.tiempo === "" || receta.cookingTime <= filtros.tiempo;
 
     const coincidePorciones =
-      filtros.porciones === "" || receta.servings >= filtros.porciones;
+      !filtros.porciones || filtros.porciones === "" || receta.servings >= filtros.porciones;
 
     const coincideGluten =
-      filtros.glutenFree === "" || receta.isGlutenFree === filtros.glutenFree;
+      filtros.glutenFree === undefined || filtros.glutenFree === "" || receta.isGlutenFree === filtros.glutenFree;
 
     return (
       coincideTitulo &&
